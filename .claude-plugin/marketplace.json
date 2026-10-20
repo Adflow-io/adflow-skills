@@ -1,0 +1,13 @@
+{
+  "name": "adflow-ads-machine",
+  "owner": {
+    "name": "Adflow"
+  },
+  "plugins": [
+    {
+      "name": "ads-machine",
+      "source": "./",
+      "description": "Skills en referenties voor het maken van Meta-ads (static en video), van concept-slot tot briefing."
+    }
+  ]
+}

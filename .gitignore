@@ -1,0 +1,8 @@
+.DS_Store
+
+# Geen klantdata in deze repo
+clients/
+*.csv
+*.xlsx
+*.zip
+*.pdf

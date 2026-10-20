@@ -1,10 +1,10 @@
 # Ad-pijplijn (static + video) — rol → workflows → skills → keten
 
-**Methode:** stap 4–5 uit [videos/youre-not-behind-ai-content.md](videos/youre-not-behind-ai-content.md) (Personal Brand
+**Methode:** stap 4–5 uit de transcript van de bronvideo (niet in deze repo) (Personal Brand
 Launch): één **rol** → breek af in **workflows** → **elke workflow = één skill (SOP)** → test op een echte taak &
 verfijn tot ≥ jij → **koppel de handoffs** tot één lineaire keten. Aangescherpt met de kniplijn-principes uit
 [workflow-map.md](workflow-map.md).
-**Rol:** *Ad-creatie* (Creative Strategist + Designer/Editor). **Master-context = `clients/<klant>/brand.md`** (elke skill laadt die).
+**Rol:** *Ad-creatie* (Creative Strategist + Designer/Editor). **Master-context = de brand guidelines in Adflow** (elke skill laadt die). **Per merk leidend = de Drive-handleidingen** (briefing, ad copy, launch), zie [bronnen.md](bronnen.md).
 **Twee gouden regels:** ultra-specifiek (meetbaar), en niks vervangen tot AI het even goed doet als jij. Mens houdt
 **ideation, prioritering, eindbeslissing en QC**.
 
@@ -34,10 +34,10 @@ dimensions + gaps + winners
   goedgekeurd volledig script (video)
         │  S6 brief  [AI + mens QC]
         ▼
-  producereerbare brief + adnaam  →  Adflow → live
+  producereerbare brief + variantcodes  →  ad-copy (copy + templates)  →  launch (Launch handleiding) → live
         │  E feedbackloop  [AI pullt · mens beslist]          ← gedeeld
         ▼
-  winners.md  ──(welke persona/angle/vehicle/delivery/arc wint)──► terug naar S1
+  winners (live uit Adflow of Meta)  ──(welke persona/angle/vehicle/delivery/arc wint)──► terug naar S1
 ```
 
 ## De workflows — per stap, per vehicle
@@ -50,10 +50,10 @@ dimensions + gaps + winners
 | **S4** | voorzet | `static-voorzet` (headline + on-image) | `video-voorzet` (hook(s) + body, via `hook-levers` + `power-hooks` + `ad-body`) | AI · **mens kiest** |
 | **S5** | script *(video only)* | — *(static: voorzet ís de copy)* | volledig script (arc-skelet in de gekozen delivery) → **humanizer-pass** (`humanizer-passes.md`) → mens keurt goed | AI schrijft · **mens keurt goed** |
 | **S6** | brief | `designer-brief` (`designer-brief-static.md`) | `video-brief` (editor/creator-briefing) | AI + mens QC |
-| **E** | feedback | Meta MCP → `winners.md` → terug naar S1 | *idem* | AI pullt, mens beslist |
+| **E** | feedback | Adflow of Meta MCP (live) → terug naar S1 | *idem* | AI pullt, mens beslist |
 
-**Klant-fit per stap:** welke slots/delivery/arcs/hooks bij déze klant passen → `clients/<klant>/format-fit.md`,
-`hooks.md`, `winners.md`, `brand.md`. De referenties (`references/*`) zijn klant-agnostisch — zie
+**Klant-fit per stap:** welke slots/delivery/arcs/hooks bij déze klant passen → de format-fit van de klant (Adflow-document, zie `bronnen.md`),
+de hookbank, de winners en de brand guidelines. De referenties (`references/*`) zijn klant-agnostisch — zie
 [[feedback-no-client-data-in-refs]].
 
 ## De twee assen (video): delivery/format en arc
@@ -79,7 +79,7 @@ De vehicle + uitvoering. Kies uit (Notion-visuele formats als Staged Moment/POV/
 - **Hands / POV (no face)** — handen/eerste-persoon + VO of tekst. (bv. POV, Flat Lay)
 - **Interview / podcast / street-interview** — Q&A of vox-pop, audio-gedreven.
 
-Constraint/weging = klant-fit (`format-fit.md`, winners) + brand.md. De gekozen delivery gaat mee naar S3/S4/S5 en
+Constraint/weging = klant-fit (de format-fit, de winners) + de brand guidelines. De gekozen delivery gaat mee naar S3/S4/S5 en
 staat in de S6-brief als productie-spec (bv. "VO over broll, rustige ouder-stem").
 
 ## S3 — Arc (video) — voorzetjes-menu
@@ -98,10 +98,11 @@ akkoord het volledige script (S5) en dán de brief (S6) — zie [[feedback-voorz
 De delivery/format (S2) en arc (S3) liggen vast; hier schrijf je het **volledige script** uit in die delivery, met de
 arc als beat-skelet (Notion-template als de arc er een heeft, anders `script-frameworks.md` + de DR-laag Deel B–E).
 Draai er de **humanizer** overheen (`humanizer-passes.md` — 2 humanizers + `anti-ai-writing`), en lever het script
-**puur** (geen beeld/tekst-op-scherm tenzij gevraagd). De **brief (S6) maak je pas als de gebruiker tevreden is met het
+**puur** (geen beeld/tekst-op-scherm tenzij gevraagd). Bij typen waar de handleiding een script vraagt maak je de **brief (S6) pas als de gebruiker tevreden is met het
 script** — zie [[feedback-full-script-before-brief]]. Static heeft S3/S5 niet (daar is het voorzet al de on-image copy).
 
 ## Verhouding tot de losse copy-skills
 `power-hooks` (hooks) en `ad-body` (primary text / tekst-op-scherm) zijn de **video-copy-bouwstenen**; `video-voorzet`
 (S4) orkestreert ze tot voorzetjes. `anti-ai-writing` is de gedeelde slop-eindcheck (beide vehicles). `ad-naming`
-(S6, beide) bouwt de adnaam los van de brief.
+(S6, beide) controleert de dims en geeft de variantcodes; de Meta-adnaam maakt Adflow bij het launchen. `ad-copy` schrijft de ad copy en
+maakt de copy templates per regio, na de brief en vóór het launchen.

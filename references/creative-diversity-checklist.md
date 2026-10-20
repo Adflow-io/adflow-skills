@@ -7,7 +7,7 @@ customer journey dragen. Vult de coverage-matrix aan vanaf de *creative-type*-as
 uit [ad-pipeline.md](ad-pipeline.md)).
 
 > **Klant-agnostisch bestand.** Dit is de herbruikbare check + werkwijze — géén klant-uitkomst. De ingevulde
-> scorecard + gaps + voorzetjes horen op klantniveau: `clients/<klant>/creative-diversity.md`.
+> scorecard + gaps + voorzetjes horen op klantniveau: een klantdocument in Adflow.
 
 ---
 
@@ -53,5 +53,5 @@ uit [ad-pipeline.md](ad-pipeline.md)).
 
 ## Lees-tips per check
 - **#3 Partnership:** creator-footage in je eigen ad ≠ Partnership Ad. Alleen ✅ als het als paid partnership draait.
-- **#4 Objection:** weeg tegen de **#1-objectie van de klant** (staat in `clients/<klant>/`), niet generiek.
+- **#4 Objection:** weeg tegen de **#1-objectie van de klant** (staat in de research van de klant), niet generiek.
 - **#8 AI animation:** trend-vinkje; 1 experiment telt. Afwezigheid is een makkelijk te dichten gat.

@@ -18,7 +18,7 @@ een voorbeeld-shot erbij. Voedt het broll-blok van de `video-brief` (S7).
 - **Delivery/format + footage-bron** (uit S2). Voor VO over b-roll: **wall-to-wall dekking** nodig (elke gesproken
   regel = beeld). Bij eigen productie is alles binnen handbereik (ook de werkvloer/machines); bij een externe
   creator: splits wat de creator zelf kan filmen van wat het merk moet aanleveren.
-- **Slot** (Persona × Angle × Awareness) + `brand.md` (DON'Ts, wat wel/niet in beeld mag) + `reviews/`/`comments/`.
+- **Slot** (Persona × Angle × Awareness) + de brand guidelines (DON'Ts, wat wel/niet in beeld mag) + de research.
 
 ## Het format (vast)
 Een **tabel**, gegroepeerd per soort. Kolommen in deze volgorde:
@@ -52,7 +52,7 @@ Een **tabel**, gegroepeerd per soort. Kolommen in deze volgorde:
   en punten i.p.v. em dashes.
 
 ## Werkwijze
-1. Lees script + delivery + footage-bron + brand.md. Bepaal of S6 draait (nieuwe footage) of overslaan (bestaande b-roll).
+1. Lees script + delivery + footage-bron + de brand guidelines. Bepaal of S6 draait (nieuwe footage) of overslaan (bestaande b-roll).
 2. Loop de VO/beats langs en bedenk per stuk **wat een beeld daar moet overbrengen**. Voeg mensen-/personality-shots toe
    zodat het merk een gezicht krijgt.
 3. Schrijf de doel-kolom **zelfstandig leesbaar**; hang er een **realistische** voorbeeld-shot aan.
@@ -61,7 +61,7 @@ Een **tabel**, gegroepeerd per soort. Kolommen in deze volgorde:
 
 ## Output-format
 Lean: korte kop (slot · delivery · footage-bron) + de tabel(len) per groep + evt. één regel tip. Geen intro/samenvatting.
-Sla op in `clients/<klant>/ads/` als de gebruiker akkoord is. Het broll-blok gaat als input naar `video-brief` (S7).
+Het broll-blok gaat als input naar `video-brief` (S6). Sla niets lokaal op: de brief komt in het conceptdocument in Adflow.
 
 ## QC-lat (check vóór je teruggeeft)
 - [ ] **Footage-bron klopt**: S6 draait alleen bij nieuwe footage (eigen productie/creator), niet bij bestaande b-roll.
@@ -71,7 +71,7 @@ Sla op in `clients/<klant>/ads/` als de gebruiker akkoord is. Het broll-blok gaa
 - [ ] **Geen "tekst in beeld"**; puur visueel.
 - [ ] **Niks mooier gemaakt dan het is**; concurrent alleen in beeld als de klant dat wil.
 - [ ] Bij VO over b-roll: **dekking** voor de hele runtime.
-- [ ] **Humanized, geen em dashes**; klopt met brand.md.
+- [ ] **Humanized, geen em dashes**; klopt met de brand guidelines.
 
 ## Notes
 - Workflow **S6 (video)** in `references/ad-pipeline.md`. In = goedgekeurd script (S5) + delivery/footage-bron (S2).

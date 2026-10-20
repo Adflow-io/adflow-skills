@@ -6,7 +6,7 @@ Waar die checklist over *content-types* gaat, gaat deze over **diversificatie-as
 Placements+Formats · Mobile. Draai beide periodiek per klant; overlappende gaten = sterk signaal.
 
 > **Klant-agnostisch bestand.** Herbruikbare check + werkwijze — géén klant-uitkomst. Ingevulde scorecard + gaps +
-> voorzetjes horen op klantniveau: `clients/<klant>/creative-diversity.md`.
+> voorzetjes horen op klantniveau: een klantdocument in Adflow.
 
 ---
 

@@ -11,10 +11,10 @@ Een concept-slot = **Persona × Angle × Awareness**. **Vehicle-agnostisch:** ee
 prioriteert**; de gebruiker beslist (ideation/prioritering/beslissing blijven menselijk). Geen copy hier — dat is S3.
 
 ## Input (lees eerst, raad niet)
-- `clients/<klant>/dimensions/personas.md` + `angles.md` — de bouwstenen (welke persona's, welke angles, beste-persona per angle).
-- `clients/<klant>/winners.md` — wat op **spend** draait (bewezen angles/persona's om te repliceren).
-- `clients/<klant>/comments/comments.md` + `reviews.md` — objecties (bezwaar → counter-slot) + onbenutte persona's/angles.
-- `IMPROVEMENTS.md` (#3 coverage-matrix) + `brand.md` — de gaps en de master-context.
+- de dims in Adflow (persona's en angles) — de bouwstenen (welke persona's, welke angles, beste-persona per angle).
+- de winners (live opgehaald, zie `references/bronnen.md`) — wat op **spend** draait (bewezen angles/persona's om te repliceren).
+- de research (reviews en comments, zie `references/bronnen.md`) — objecties (bezwaar → counter-slot) + onbenutte persona's/angles.
+- De brand guidelines — de master-context. De gaps bepaal je zelf met de methode hieronder.
 
 ## Methode — 3 bronnen voor slots
 1. **Repliceer winners.** Neem de angles/persona's die op spend dragen en zet ze in. Een winner in het ene vehicle
@@ -29,8 +29,8 @@ prioriteert**; de gebruiker beslist (ideation/prioritering/beslissing blijven me
 
 ## Prioriteer op: probleemgrootte × audience-omvang × bewijs/LTV
 Zwaarder = eerst. Markeer per slot of het een **[winner-replica]**, **[gap]** of **[objection]** is. Flag een
-**nieuwe persona/angle** die nog geen token heeft in `clients/<klant>/brand.md` (sectie Naamconventie) als `⚠︎ nieuw token`.
-**Vraag hier NIET om bevestiging** — flaggen is genoeg. Een nieuw token bevestig je pas op het moment dat de
+**nieuwe persona/angle** die nog geen waarde heeft in de dims in Adflow als `⚠︎ nieuwe dim-waarde`.
+**Vraag hier NIET om bevestiging** — flaggen is genoeg. Een nieuwe dim-waarde bevestig je pas op het moment dat de
 gebruiker die specifieke slot kiest om uit te werken (de stap naar S2).
 
 ## Output-format
@@ -42,7 +42,7 @@ Lean tabel, gesorteerd op prioriteit. **Alleen de slots + korte waarom. Geen int
 | # | Persona | Angle | Awareness | Type | Waarom (1 regel) |
 |---|---|---|---|---|---|
 | 1 | … | … | … | winner-replica | … |
-| 2 | … | … | … | gap · ⚠︎ nieuw token | … |
+| 2 | … | … | … | gap · ⚠︎ nieuwe dim-waarde | … |
 …
 
 Aanrader om mee te starten: #<n> (+ één regel waarom).
@@ -61,6 +61,6 @@ Zet er nooit meer dan ~7 slots in; liever scherp dan volledig.
 - Workflow **S1** in `references/ad-pipeline.md`. Uit (gekozen slot) → in voor **S2**: `static-format` (static) of
   `video-format` (video). Het vehicle wordt in S2 gekozen.
 - Deze skill **beslist niet** — hij levert een geprioriteerd menu; de gebruiker kiest wat we maken.
-- **Token-timing:** in S1 alleen flaggen (`⚠︎ nieuw token`), niet vragen te bevestigen. Bevestigen gebeurt pas
+- **Token-timing:** in S1 alleen flaggen (`⚠︎ nieuwe dim-waarde`), niet vragen te bevestigen. Bevestigen gebeurt pas
   wanneer de gebruiker die specifieke slot kiest om uit te werken; dán laat je 't bevestigen en voeg je 't toe aan
-  `clients/<klant>/brand.md` (sectie Naamconventie).
+  de dims in Adflow.

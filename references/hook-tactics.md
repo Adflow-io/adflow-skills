@@ -1,7 +1,7 @@
 # Hook-tactics — types + hit-rate benchmark
 
 **Wat dit is:** de **25 hook-headline-tactics** (types hooks) met een **algemeen hit-rate-benchmark** — hoe vaak elke
-tactiek gemiddeld "raakt" over een grote dataset. **Klant-agnostisch** (generieke benchmark, geen FoY-data).
+tactiek gemiddeld "raakt" over een grote dataset. **Klant-agnostisch** (generieke benchmark, geen klantdata).
 **Rol in de machine:** dit is de **types-laag** voor de hook. Gebruik 'm in **S4 (voorzet)** om te kiezen *welk type
 hook* je test; bouw de hook zelf met de **6 power words** (`hook-frameworks.md`) en vul in met klanttaal.
 
@@ -9,8 +9,8 @@ Verhouding tot de andere hook-bronnen:
 - **`hook-tactics.md` (dit)** = *welk type* hook (Newness, Urgency, Curiosity, Contrast…) + hoe vaak het gemiddeld werkt.
 - **`hook-frameworks.md`** = *hoe* je een hook bouwt (6 power words).
 - **`hook-levers.md`** = 38 levers om de claim te versterken (Breakthrough Advertising) — skill `hook-levers`.
-- **`swipe/1000-viral-hooks.md` + PDF** = concrete fill-in-the-blank **templates** per categorie.
-- **`clients/<klant>/hooks.md`** = de klant-hookbank (echte hooks + performance).
+- **de swipe-file met hook-templates (niet in deze repo)** = concrete fill-in-the-blank **templates** per categorie.
+- **de hookbank van de klant (Adflow-document, zie `bronnen.md`)** = de klant-hookbank (echte hooks + performance).
 
 ## De 25 hook-tactics (gesorteerd op algemene hit rate)
 `Winners` / `Mid-range` = aantallen ads in de bronstudie; `Hit rate %` = aandeel dat aanslaat. **Let op:** dit is een

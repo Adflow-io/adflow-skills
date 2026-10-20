@@ -1,7 +1,7 @@
 # Ad-vehicles en arcs — het volledige overzicht
 
 > Eén naslagbestand met alle **vehicles** (het *hoe*: static of video, en de uitvoering) en alle **arcs** (het *wat*:
-> de verhaalstructuur). Klant-agnostisch. Welke hiervan bij een klant passen → `clients/<klant>/format-fit.md`.
+> de verhaalstructuur). Klant-agnostisch. Welke hiervan bij een klant passen → de format-fit van de klant (Adflow-document, zie `bronnen.md`).
 >
 > **Vehicle ≠ arc.** Het vehicle is de vorm waarin de ad wordt gedragen (een talking-head, een static, een voice-over
 > over b-roll). De arc is de volgorde van beats (Problem→Solution, Before→After). Ze staan los: dezelfde arc kan in

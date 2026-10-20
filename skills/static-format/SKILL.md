@@ -17,22 +17,22 @@ beslist; jij stelt voor en raadt aan.
 - **Concept-slot:** Persona × Angle × Awareness (uit S1).
 - `references/static-formats.md` — de 12 formats (deel A) + extra visual-formats (deel D) + de 2 messaging-wetten
   + tier-verzoening. **Klant-agnostisch** (geen fit).
-- `clients/<klant>/format-fit.md` — de **klant-fit** per format (welke dragers/looks passen bij déze klant).
-- `clients/<klant>/reviews.md` + `comments.md` — voor concrete concept-haakjes (klantwoorden, momenten, bezwaren).
-- `clients/<klant>/winners.md` — welke angle/vehicle al draait (repliceren in static).
-- `brand.md` — DON'Ts + client-specifieke regels (bv. prijs bij organisch, quote-regels).
+- de format-fit van de klant (zie `references/bronnen.md`) — de **klant-fit** per format (welke dragers/looks passen bij déze klant).
+- de research (reviews en comments, zie `references/bronnen.md`) — voor concrete concept-haakjes (klantwoorden, momenten, bezwaren).
+- de winners (live opgehaald, zie `references/bronnen.md`) — welke angle/vehicle al draait (repliceren in static).
+- de brand guidelines — DON'Ts + client-specifieke regels (bv. prijs bij organisch, quote-regels).
 
 ## Methode
 1. Loop de **static-formats** langs: eerst de dragers in `static-formats.md` **deel A** (12 stuks, ~95% van je
    statics), dan de extra visual-formats in **deel D** (swipe-library) voor variatie/supporting. Houd de formats die
    bij deze slot passen qua angle + awareness; laat duidelijk niet-passende weg. Deel A blijft leidend als drager.
-   **De klant-fit (welke passen bij déze klant) haal je uit `clients/<klant>/format-fit.md`**, niet uit de referentie.
+   **De klant-fit (welke passen bij déze klant) haal je uit de format-fit van de klant (zie `references/bronnen.md`)**, niet uit de referentie.
 2. Geef per gekozen format een **concreet 1-regel-concept voor déze slot** (met een klantwoord/moment erin) — niet
    de generieke format-omschrijving.
 3. Zet per format **clarity of curiosity** en een **fit-rating** (✅ sterk · 🟡 kan · ➖ zwak).
 4. Zorg dat er **minstens één curiosity-optie** in staat (bv. publication/native/advertorial) en benoem dat dat een
    ander funnel-pad is (sale ná de klik → aparte LP nodig).
-5. Pas de 2 messaging-wetten toe (assume-no-one-knows bij TOF; clarity↔curiosity keuze) en respecteer brand.md.
+5. Pas de 2 messaging-wetten toe (assume-no-one-knows bij TOF; clarity↔curiosity keuze) en respecteer de brand guidelines.
 6. Sluit af met een **aanrader (1–2 formats)** + de vraag welke naar S4.
 
 ## Output-format
@@ -61,7 +61,7 @@ Mik op ~6–9 formats; scherp genoeg dat elke rij een echte optie is.
 - [ ] Elk concept bevat een **klantwoord/moment**, niet de generieke format-uitleg.
 - [ ] **≥1 curiosity-optie** benoemd (+ dat het een ander funnel-pad is).
 - [ ] **TOF/BOF + clarity/curiosity** logisch per format.
-- [ ] **Klopt met brand.md + format-fit.md** (client-DON'Ts + client-specifieke format-regels).
+- [ ] **Klopt met de brand guidelines + de format-fit** (client-DON'Ts + client-specifieke format-regels).
 - [ ] Winners/angle herkenbaar terug waar relevant.
 
 ## Notes

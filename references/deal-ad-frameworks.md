@@ -6,7 +6,7 @@ Elk framework heeft een psychologisch profiel (Zone / Anchor / Intensity). De vo
 **generieke placeholders** (`<…>`) — klant-agnostisch.
 
 > **Klant-agnostisch bestand.** Ingevulde voorbeelden met echte producten/prijzen/klantwoorden horen op klantniveau:
-> `clients/<klant>/deal-ad-examples.md` (bv. [`clients/full-of-yoga/deal-ad-examples.md`](../clients/full-of-yoga/deal-ad-examples.md)).
+> het Adflow-document met deal-ad voorbeelden van de klant.
 > Vuistregel: deal-ads leunen doorgaans naar **lower-funnel** (product/oplossingsbewust), **Medium–High intensity**.
 > Varieer bewust de trigger (waarde, urgentie, bezwaar, cadeau) zodat je niet alles op korting-alleen test.
 
@@ -86,4 +86,4 @@ Hook: Het cadeau waar <doelgroep> blij van wordt
 ---
 **Gap-tip:** met deze 6 dek je Zone 1/2/3/4, alle anchors en Medium–High intensity. Test niet 6 keer korting-alleen;
 test verschillende triggers (waarde-stack, synergie, prijsanker, urgentie, bezwaar, cadeau) om te leren wát verkoopt.
-Klantwoorden voor de invulling komen uit `clients/<klant>/reviews/`.
+Klantwoorden voor de invulling komen uit de research van de klant (zie `bronnen.md`).

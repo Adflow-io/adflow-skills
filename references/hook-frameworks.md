@@ -14,7 +14,7 @@ Bouw elke hook uit deze bouwstenen (chunks die je stapelt). De eerste 4 zijn de 
 tegelijk objective én contrast zijn. Zoek de best presterende hooks van creators via sandcastles.ai (filter op views/engagement).
 
 > **Klant-agnostisch bestand.** Uitgewerkte, klant-specifieke hook-patronen (bewezen winnaars + formuleringen) horen
-> op klantniveau: `clients/<klant>/hooks.md`.
+> op klantniveau: de hookbank van de klant (Adflow-document, zie `bronnen.md`).
 > **Types + benchmark:** welk *type* hook (Newness, Urgency, Curiosity, Contrast…) en hoe vaak het gemiddeld raakt →
 > `references/hook-tactics.md`. Dit bestand = *hoe* je een hook bouwt (6 power words); hook-tactics = *welk type*;
 > `references/hook-levers.md` = *welke draai* je op de claim zet (38 levers, skill `hook-levers`).

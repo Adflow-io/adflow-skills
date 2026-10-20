@@ -18,9 +18,9 @@ tabel welke familie bij welke awareness/sophistication past.
 > houden de claim bewust in. Objective/contrast mogen dan in regel 2–3 landen.
 
 ## Input (vraag/leid af, niet raden)
-- **Klant + slot:** Persona × Angle × Awareness. Uit de lopende pijplijn of `clients/<klant>/dimensions/`.
+- **Klant + slot:** Persona × Angle × Awareness. Uit de lopende pijplijn of de dims in Adflow.
 - **Kern-claim:** het resultaat/de belofte die de hook draagt. Of een **bestaande hook** om te versterken.
-- **Klantwoorden:** `clients/<klant>/reviews/` + `comments/`, `hooks.md`, `winners.md`, `brand.md` (DON'Ts). Levers
+- **Klantwoorden:** de research (reviews en comments, zie `references/bronnen.md`), de hookbank, de winners, de brand guidelines (DON'Ts). Levers
   vullen we met klanttaal, niet met creator-Engels.
 - **Sophistication** (optioneel): hoeveel claims heeft deze markt al gehoord? Geen info → schat in met één regel waarom.
 
@@ -45,7 +45,7 @@ Ontbreekt de slot of de claim? Vraag het. Geen klant? Werk generiek maar zeg dat
 
 ### C — Varieer (portfolio/iteratie op een winner)
 1. Houd claim + angle vast; draai de hook door **3–4 levers uit families die nog niet gebruikt zijn** in de batch
-   of `hooks.md`.
+   of de hookbank.
 2. Markeer welke familie elke variant test, zodat de test leesbaar blijft.
 
 ## Guardrails
@@ -54,7 +54,7 @@ Ontbreekt de slot of de claim? Vraag het. Geen klant? Werk generiek maar zeg dat
 - **Persona-vriendentest:** zou déze persona dit zo tegen een vriend(in) zeggen? Levers als *naam geven* (22, 27) en
   *condenseer* (20) ontsporen snel in merk-jargon — check extra. Zie [[feedback-persona-friend-test]].
 - **Geloofwaardig blijven:** getallen (1), autoriteit (14) en bron (15) alleen met echte data/claims van de klant;
-  nooit verzinnen. Respecteer `brand.md` (bv. geen agressieve claims).
+  nooit verzinnen. Respecteer de brand guidelines (bv. geen agressieve claims).
 - **Structuur van het voorbeeld houden, woorden vertalen naar klanttaal.** Lever-nr en zinsmal moeten kloppen — label
   geen hook als #30 als 'ie de vorm van #33 heeft.
 - Voorzetjes-first: dit levert hooks, geen script of brief. Zie [[feedback-voorzetjes-first]].

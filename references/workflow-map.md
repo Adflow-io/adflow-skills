@@ -1,7 +1,7 @@
 # Ads Machine — Workflow-map (rol → workflow → actie)
 
 **Doel:** de ad-productie afbreken in workflows die elk één skill/agent kunnen worden, zodat we stap voor stap automatiseren zonder kwaliteit te verliezen.
-**Methode:** stap 4-5 uit [You're Not Behind (Yet)](videos/youre-not-behind-ai-content.md) (Hormozi's rol→workflow→actie), maar aangescherpt (zie principes).
+**Methode:** stap 4-5 uit de video You're Not Behind (Yet) (Hormozi's rol→workflow→actie), maar aangescherpt (zie principes).
 **Status:** levend document. Laatst bijgewerkt 2026-08-29.
 
 ## Kniplijn-principes (hoe we het beter doen dan de video)

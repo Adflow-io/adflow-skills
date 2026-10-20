@@ -1,12 +1,12 @@
 # Static ad-formats + messaging-wetten (Meta)
 
-**Bron:** Adcrate "ULTIMATE Guide to Static Ads 2026" ([videos/adcrate-static-ads-2026.md](videos/adcrate-static-ads-2026.md)).
+**Bron:** Adcrate "ULTIMATE Guide to Static Ads 2026" (videos/adcrate-static-ads-2026.md (transcript niet in deze repo)).
 **Rol in de machine:** dit is de static-tegenhanger van [ugc-format-templates.md](ugc-format-templates.md) (die is
 video/UGC). Kies hier het **static-format**, pas de **messaging-wetten** toe, en schrijf dan de
 [Designer-brief](designer-brief-static.md). Dekt de "vehicle = static"-as van de coverage-matrix.
 
 > **Klant-agnostisch bestand.** Dit is de herbruikbare format-taxonomie — géén klant-fit. De weging "welk format past
-> bij déze klant" hoort op klantniveau: `clients/<klant>/format-fit.md`.
+> bij déze klant" hoort op klantniveau: de format-fit van de klant (Adflow-document, zie `bronnen.md`).
 
 ---
 
@@ -36,7 +36,7 @@ In prioriteitsvolgorde uit de video (bovenaan = meest gebruikt). ~95–98% van a
    - **Curiosity** (na de klik): native/advertorial; de ad opent een gap, de landingspagina verkoopt.
    "No man's land" = half duidelijk, half nieuwsgierig → presteert slecht.
 
-> **Klanten = je copywriters.** De sterkste headline/on-image copy komt uit `clients/<klant>/reviews` / `comments`
+> **Klanten = je copywriters.** De sterkste headline/on-image copy komt uit de research van de klant (zie `bronnen.md`)
 > (klantwoorden-bank), niet uit eigen kop. Dit is al onze werkwijze; de video bevestigt het.
 
 ## Deel C — Verzoening met de tier-list (belangrijk, niet blind overnemen)
@@ -54,7 +54,7 @@ In prioriteitsvolgorde uit de video (bovenaan = meest gebruikt). ~95–98% van a
 over alle vehicles (video inbegrepen) en straft formats die zonder sterk systeem snel generiek/fatigue worden.
 **Vuistregel:** formats waar **beide** bronnen positief zijn (headline+benefits, grid, comparison, persona) zijn de
 veiligste dragers; formats waar de bronnen botsen (testimonial, post-it, press) zijn context-afhankelijk — of ze
-dragen of alleen supporting zijn, is een **klant-keuze** (zie `clients/<klant>/format-fit.md`), niet iets wat hier
+dragen of alleen supporting zijn, is een **klant-keuze** (zie de format-fit van de klant (Adflow-document, zie `bronnen.md`)), niet iets wat hier
 vastligt.
 
 ## Deel D — Uitbreiding: extra visual-formats (bron: visual-formats swipe-library)
@@ -100,7 +100,7 @@ review → Testimonial (#2).
 
 > Dit zijn *looks*, geen boodschap. De messaging-wetten (Deel B) en "klanten = copywriters" gelden onverkort —
 > kies eerst de slot (Persona × Angle × Awareness), dan een format hieruit, dán de [Designer-brief](designer-brief-static.md).
-> **Welke van deze formats bij een klant passen → `clients/<klant>/format-fit.md`.**
+> **Welke van deze formats bij een klant passen → de format-fit van de klant (Adflow-document, zie `bronnen.md`).**
 
 ## Volgende stap
 Format gekozen → schrijf de [Designer-brief](designer-brief-static.md) (leesvolgorde, headline, on-image copy,

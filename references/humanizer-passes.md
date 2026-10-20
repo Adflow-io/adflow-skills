@@ -2,7 +2,7 @@
 
 **Rol in de machine:** dit draai je op het **volledige video-script** in de **script-stap (S3b)** van de
 [ad-pijplijn](ad-pipeline.md) — ná de voorzet (S3), vóór de brief (S4). Doel: het script laten lezen als een échte
-ouder/creator, niet als een model. **Klant-agnostisch.** Klantstem-bron blijft `clients/<klant>/reviews` + `comments`.
+ouder/creator, niet als een model. **Klant-agnostisch.** Klantstem-bron blijft de research van de klant (zie `bronnen.md`).
 
 Er zijn **twee humanizers** (kies naar behoefte) + de losse skill `anti-ai-writing`:
 - **Humanizer A** = snelle ban-lijst-rewriter (woorden/frases/vormen eruit).

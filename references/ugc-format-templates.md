@@ -5,7 +5,7 @@
 > hieronder (breed onderzoek). De verzoening staat in `static-formats.md` deel C.
 
 > **Klant-agnostisch bestand.** Dit is de herbruikbare format-taxonomie + tier-ranking — géén klant-fit. De weging
-> "welk format past bij déze klant" hoort op klantniveau: `clients/<klant>/format-fit.md`.
+> "welk format past bij déze klant" hoort op klantniveau: de format-fit van de klant (Adflow-document, zie `bronnen.md`).
 
 **Bron:** Adflow Notion "Ugc Ad formats inspo" (Proces → Write script). ~38 formats.
 **Kernpunt:** de **demo-structuur is maar één format**. Varieer bewust (dit is de "vehicle/format"-as in de coverage-matrix).
@@ -22,7 +22,7 @@ Maak **S/A eerst**; B = supporting cast; C–F = laag/vermijden. Gecombineerd me
 - **F:** Press · Podcast · Notes-app/UX
 
 **Algemene waarschuwing (geldt breed):** leun niet op problem-solution UGC met VO+B-roll (= de demo-structuur) →
-fatigue; diversifieer. Welke tiers/formats een specifieke klant als drager kiest → `clients/<klant>/format-fit.md`.
+fatigue; diversifieer. Welke tiers/formats een specifieke klant als drager kiest → de format-fit van de klant (Adflow-document, zie `bronnen.md`).
 
 ## Formats + korte structuur
 | Format | Kern |

@@ -1,6 +1,6 @@
 ---
 name: ad-body
-description: Schrijf of scherp de body (primary text / tekst-op-scherm) van een Meta-ad aan. Kiest de structuur die bij het concept past, voedt zich met klantwoorden uit reviews/comments, en haalt AI-slop eruit. Lean output.
+description: Schrijf of scherp de body (primary text / tekst-op-scherm) van een Meta-ad aan. Kiest de structuur die bij het concept past, voedt zich met klantwoorden uit de research, en haalt AI-slop eruit. Lean output.
 ---
 
 # Ad Body
@@ -37,7 +37,7 @@ Natuurlijk > citaat.
 
 Een body is pas af als hij dit allemaal haalt. Check ze voor je 'm teruggeeft.
 
-- [ ] **Klantwoorden.** De taal komt uit `reviews.md` / `comments.md` van de klant, niet uit je eigen kop. In een
+- [ ] **Klantwoorden.** De taal komt uit de research van de klant, niet uit je eigen kop. In een
       klantproject: lees die eerst. Geen letterlijke quotes tussen aanhalingstekens, wel hun woorden verweven.
 - [ ] **Geen lange gedachtestreep (—).** Komma, punt of spatie. Zo schrijft niemand.
 - [ ] **Geen faux-casual openers** ("Eerlijk,", "Look,", "Kijk,", "Here's the thing"). Begin met de zin zelf.
@@ -50,7 +50,7 @@ Een body is pas af als hij dit allemaal haalt. Check ze voor je 'm teruggeeft.
 - [ ] **CTA/afsluiter varieert** (geen vaste tagline, geen verplichte merk-eindtag; volgt de funnel). Zie [[feedback-cta-not-fixed]].
 - [ ] **Eén body kan meerdere hooks bedienen** als de gebruiker dat vraagt — dan mag de body niet naar één
       specifieke hook terugverwijzen.
-- [ ] **Klopt met de winnende angle/taal** uit `clients/<klant>/winners.md` (bv. een NL-first merk → NL eerst).
+- [ ] **Klopt met de winnende angle/taal** uit de winners (live opgehaald, zie `references/bronnen.md`) (bv. een NL-first merk → NL eerst).
 
 **Vorm:** primary text (Meta-copy) mag iets meer ademen; tekst-op-scherm = korte losse regels. Vraag of leid af
 welke van de twee, en schrijf ernaar.
@@ -62,7 +62,7 @@ eigen regels (o.a. de headline ís de ad, "assume no one knows or cares", clarit
 ## Twee modes
 
 ### Mode A — Body schrijven
-1. Verzamel de grondstoffen: concept/angle, persona, de hook(s), en de klantwoorden uit reviews/comments.
+1. Verzamel de grondstoffen: concept/angle, persona, de hook(s), en de klantwoorden uit de research.
 2. Kies de structuur die bij het concept past (zie tabel boven).
 3. Schrijf **één body**. Geen drie varianten dumpen; één goede, plus eventueel één alternatieve opening als je
    twijfelt tussen twee ingangen.
@@ -96,7 +96,7 @@ Voor een aanscherp-pass: toon Was → Nu met één regel waarom.
 
 ## Notities
 
-- In een klantproject: `clients/<klant>/reviews/reviews.md`, `comments/comments.md` en `winners.md` zijn je bron.
+- In een klantproject: de research en de winners (zie `references/bronnen.md`) zijn je bron.
   Zonder die data eerst gelezen te hebben schrijf je geen body.
 - Sluit aan op `power-hooks` (levert de hook) en `anti-ai-writing` (eindcheck op slop). Deze skill is workflow C3 in
   `references/workflow-map.md`.

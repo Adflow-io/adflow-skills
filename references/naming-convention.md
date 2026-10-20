@@ -23,7 +23,7 @@ Workflow D3 in [workflow-map.md](workflow-map.md). Gebruikt door skill `ad-namin
 markeer 'm als nieuw token (dan kan de gebruiker 'm bevestigen). Casing volgt per klant de bestaande stijl.
 
 > **Klant-agnostisch bestand.** De concrete token-woordenlijst per klant (product/persona/angle/creator/offer +
-> casing-stijl + eventuele legacy-formats) staat op klantniveau in `clients/<klant>/brand.md` (sectie Naamconventie).
+> casing-stijl + eventuele legacy-formats) staat op klantniveau in de dims in Adflow.
 > Voeg nieuwe tokens dáár toe, niet hier.
 
 ### Awareness-ladder (voor alle klanten)

@@ -7,16 +7,16 @@ is meta) — die maak je apart met `ad-naming` bij het uploaden. De brief begint
 
 > **Let op:** `ad-body` en `power-hooks` zijn **video**-skills — gebruik ze hier **niet**. Static-copy (headline +
 > on-image tekst) schrijf je rechtstreeks vanuit de klantwoorden (`reviews.md`/`comments.md`) + de twee
-> messaging-wetten in `static-formats.md`. Een eigen static-copy/designer-skill is nog een witte vlek (IMPROVEMENTS #4).
+> messaging-wetten in `static-formats.md`. Een eigen static-copy/designer-skill is nog een witte vlek .
 
-## Discipline (zelfde als editor/creator-brief, zie `memory/reference-briefing-format.md`)
+## Discipline (zelfde als editor/creator-brief, zie de briefing handleiding van het merk (Drive))
 De brief is **puur producereerbaar: alleen wat de designer op de static zet.** Analyse, angle-checks, tags en
 klantwoord-verantwoording horen in een **losse notitie boven de brief**, niet in de brief zelf. Zo weet de designer
 precies wat op scherm moet, zonder ruis.
 
 ## Vaste velden
 
-> Het **Dimensions**-kop-blok is **identiek aan de editor-brief** (zie `memory/reference-briefing-format.md`) —
+> Het **Dimensions**-kop-blok is **identiek aan de editor-brief** (zie de briefing handleiding van het merk (Drive)) —
 > zelfde velden, alleen de Format-waarde verschilt (static-format hier vs video-format daar).
 
 ```
@@ -73,6 +73,6 @@ Gestuurd met: sizing (grootste = 1), contrast (kleur/vlak op de hook), witruimte
 ## Notities
 - **Copy-bron:** klantwoorden uit `reviews.md`/`comments.md` + de messaging-wetten in `static-formats.md`. Voor een
   static is de **headline** de hook. Gebruik hier **niet** `ad-body`/`power-hooks` (die zijn voor video).
-- Design-principes komen uit [videos/adcrate-static-ads-2026.md](videos/adcrate-static-ads-2026.md) (deel 3);
+- Design-principes komen uit videos/adcrate-static-ads-2026.md (transcript niet in deze repo) (deel 3);
   ze staan hier als **briefvelden**, niet als losse designtheorie.
-- ✅ Skill `designer-brief` (S4) codificeert deze brief — `~/.claude/skills/designer-brief/`.
+- ✅ Skill `designer-brief` (S4) codificeert deze brief — `skills/designer-brief/`.

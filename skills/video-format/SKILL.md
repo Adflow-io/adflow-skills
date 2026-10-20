@@ -17,9 +17,9 @@ delivery/formats; de gebruiker kiest (mag meerdere → testvarianten).
 - **Concept-slot:** Persona × Angle × Awareness (uit S1).
 - De delivery/format-lijst in `references/ad-pipeline.md` (S2). Notion-visuele formats (Staged Moment, POV, Flat Lay,
   Green Screen…) zijn **instanties** van deze delivery-vormen. **Klant-agnostisch.**
-- `clients/<klant>/format-fit.md` — de **klant-fit** (welke delivery-vormen passen bij déze klant).
-- `clients/<klant>/winners.md` — wat op spend draait (bv. VO/observational over ouder-kind broll).
-- `brand.md` — DON'Ts + client-specifieke regels.
+- de format-fit van de klant (zie `references/bronnen.md`) — de **klant-fit** (welke delivery-vormen passen bij déze klant).
+- de winners (live opgehaald, zie `references/bronnen.md`) — wat op spend draait (bv. VO/observational over ouder-kind broll).
+- de brand guidelines — DON'Ts + client-specifieke regels.
 
 ## De delivery/formats
 Talking-head (to-cam) · Voice-over over broll · Observational / fly-on-the-wall · Dialoog / two-hander ·
@@ -28,11 +28,11 @@ Interview / podcast / street-interview.
 
 ## Methode
 1. Loop de delivery/formats langs; houd wat bij deze slot + klant past. **Álle vormen mogen als optie op tafel**; laat
-   duidelijk niet-passende weg met één reden. **Klant-fit uit `clients/<klant>/format-fit.md`**, niet uit de referentie.
+   duidelijk niet-passende weg met één reden. **Klant-fit uit de format-fit van de klant (zie `references/bronnen.md`)**, niet uit de referentie.
 2. Geef per optie een **concreet 1-regel-concept voor déze slot** (met een klantwoord/moment erin).
 3. Tag per rij de **Rol** (drager = bewezen/klassiek · verkenner = diversificatie) + een **fit-rating** (✅ · 🟡 · ➖).
 4. **Balans:** minstens 2–3 **dragers** (uit winners/format-fit) + een paar **verkenners**.
-5. Respecteer brand.md (DON'Ts; bv. geen letterlijke review-quotes ópscherm in broll/video).
+5. Respecteer de brand guidelines (DON'Ts; bv. geen letterlijke review-quotes ópscherm in broll/video).
 6. Sluit af met een **aanrader (1–2)** + de vraag welke naar **S3 arc**.
 
 ## Output-format
@@ -58,7 +58,7 @@ Aanrader: <1–2 nummers>. Welke haal ik door S3 (arc)? (bv. "ga verder met 1, 2
 - [ ] Elk concept bevat een **klantwoord/moment**.
 - [ ] **Rol** (drager/verkenner) per rij; **≥2–3 dragers** + verkenners.
 - [ ] Dit is **delivery/format** (vehicle + uitvoering), géén arc — arc is S3.
-- [ ] **Klopt met brand.md + format-fit.md** (client-DON'Ts + client-fit); winners herkenbaar.
+- [ ] **Klopt met de brand guidelines + de format-fit** (client-DON'Ts + client-fit); winners herkenbaar.
 
 ## Notes
 - Workflow **S2 (video)** in `references/ad-pipeline.md`. Uit (gekozen delivery/format(s)) → in voor **S3 arc**.

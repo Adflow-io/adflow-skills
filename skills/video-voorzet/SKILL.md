@@ -1,6 +1,6 @@
 ---
 name: video-voorzet
-description: Maak korte video-ad voorzetjes (hook-opties + body-richting) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit reviews/comments, gebruikt twee aparte hook-flows voor diversiteit (P: hook-tactics + power-hooks · L: hook-levers met zinsmal) + ad-body-structuur, en levert opties om uit te kiezen — vóór de editor/creator-briefing. Alleen voor VIDEO ads (niet static). Lean output.
+description: Maak korte video-ad voorzetjes (hook-opties + body-richting) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit de research, gebruikt twee aparte hook-flows voor diversiteit (P: hook-tactics + power-hooks · L: hook-levers met zinsmal) + ad-body-structuur, en levert opties om uit te kiezen — vóór de editor/creator-briefing. Alleen voor VIDEO ads (niet static). Lean output.
 ---
 
 # Video Voorzet (S4 · video)
@@ -15,15 +15,15 @@ komt. Dit is de "voorzetjes-first"-stap: kort, meerdere opties, geen volledige b
 > voor de zinsbouw, **`ad-body`** voor de body-structuur.
 
 ## Input die je nodig hebt (vraag/leid af, niet raden)
-- **Concept-slot:** Persona × Angle × Awareness (uit S1 / `dimensions/`).
+- **Concept-slot:** Persona × Angle × Awareness (uit S1 / de dims in Adflow).
 - **Delivery/format:** gekozen in **S2** (`video-format`) — vehicle + uitvoering (VO over broll, talking-head,
   observational, tekst-only…). Schrijf de copy passend bij díe vorm.
 - **Arc:** gekozen in **S3** — de verhaalstructuur uit `references/script-frameworks.md` (PAS, Before/After,
   Objection Crusher, Listicle…). De arc bepaalt de beat-volgorde van de body.
 - **Delivery-mode:** gekozen in **S3** (bv. VO over broll · talking-head · observational · dialoog · tekst-only …).
   Schrijf de voorzet-copy passend bij díe vorm — een VO-hook leest anders dan een to-cam- of tekst-only-hook.
-- **Klantwoorden:** `clients/<klant>/reviews/` + `comments/`. **Lees die eerst** — de copy komt hieruit, niet uit je
-  eigen kop. Ook `winners.md` (winnende hook/angle/taal, bv. bewezen hook-patronen in `hooks.md`) en `brand.md`
+- **Klantwoorden:** de research (reviews en comments, zie `references/bronnen.md`). **Lees die eerst** — de copy komt hieruit, niet uit je
+  eigen kop. Ook de winners (winnende hook/angle/taal, bv. bewezen hook-patronen in de hookbank) en de brand guidelines
   (master + DON'Ts).
 
 Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waarom. Raad nooit blind.
@@ -35,12 +35,12 @@ Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waaro
   - **Flow L — levers** (`hook-levers`): kies een lever uit familie **B–F** passend bij **awareness + sophistication**
     (tabel in `references/hook-levers.md`), gebruik het voorbeeld als **zinsmal**, vul in met klanttaal. Wordt
     **niet** op power words gescoord; objective/contrast mogen in regel 2–3 landen.
-  - Beide: een hook is een draai, **geen nieuwe angle**. Bewezen klant-hook-patronen (`clients/<klant>/hooks.md`)
+  - Beide: een hook is een draai, **geen nieuwe angle**. Bewezen klant-hook-patronen (de hookbank van de klant (zie `references/bronnen.md`))
     mogen in beide flows terugkomen.
 - **Body = de structuur die bij het concept past** (`ad-body`): demo (Herkenning → Payoff → Proof → CTA), PAS, BAB…
   Kort, spreekbaar, in klantwoorden. Voor de volledige arc-keuze bij het script (S5): `references/script-frameworks.md`
   (arcs + DR-laag) + het Notion-format-framework.
-- **Video-quote-regel (brand.md DON'T):** géén letterlijke review-quotes/aanhalingstekens ópscherm in broll/video —
+- **Video-quote-regel (de brand guidelines DON'T):** géén letterlijke review-quotes/aanhalingstekens ópscherm in broll/video —
   klantwoorden **verweven** als natuurlijk verhaaltje in de stem van de persona.
 - **Persona-vriendentest (hard):** denk vanuit de persona en toets **elke regel**: *zou déze persona dit écht zo tegen
   een vriend(in) zeggen?* Zo niet → herschrijven. Geen productjargon ("de pose" → "die houding"), geen merk-tagline in
@@ -50,14 +50,14 @@ Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waaro
   Zie [[feedback-variation-keep-angle]].
 
 ## Werkwijze
-1. Lees slot + format + klantwoorden + `hooks.md` + brand.md. Bepaal awareness + sophistication → toon/ingang +
+1. Lees slot + format + klantwoorden + de hookbank + de brand guidelines. Bepaal awareness + sophistication → toon/ingang +
    leidende lever-families.
 2. Schrijf **4 voorzetjes: 2 uit flow P + 2 uit flow L**. Binnen flow P verschillende hook-tactics; binnen flow L
    levers uit verschillende families (B mechanisme · C geloofwaardigheid · D bezwaar · E doelgroep/probleem ·
    F nieuwsgierigheid). Geen omgeschreven tweelingen, ook niet over de flows heen.
 3. Per voorzet: de **body-richting** als 3–5 korte beats (geen volledig script), in klantwoorden, passend bij het format.
 4. Kies-hulp: markeer de **flow** en zet één regel **waarom** (P: tactic + sterkste power-word · L: lever-# + zinsmal)
-   + welk klantwoord/moment. Zo zie je later in de performance welke flow wint → `hooks.md`.
+   + welk klantwoord/moment. Zo zie je later in de performance welke flow wint → de hookbank.
 5. **Geen editor/creator-brief hier.** Dat is S6 (`video-brief`), pas ná akkoord.
 
 **Format-specifieke noten:**
@@ -91,7 +91,7 @@ slot: <persona × angle × awareness>  ·  format: <format>  ·  sophistication:
 - [ ] **Flow L-hooks:** zinsmal herkenbaar, lever-nr klopt met de vorm, families B–F en onderling verschillend;
       **niet** op power words afgerekend (objective/contrast landt dan in de body).
 - [ ] **4 echt verschillende** hook-ingangen (2P + 2L), angle van de slot onveranderd; geen verzonnen cijfers/autoriteit.
-- [ ] **Klantwoorden** uit reviews/comments, **verweven** (geen letterlijke quote ópscherm — video-regel).
+- [ ] **Klantwoorden** uit de research, **verweven** (geen letterlijke quote ópscherm — video-regel).
 - [ ] **Persona-vriendentest** gehaald: elke regel is iets wat déze persona écht tegen een vriend(in) zou zeggen
       (geen jargon/merk-tagline in de body; concreet i.p.v. glad). Zie [[feedback-persona-friend-test]].
 - [ ] **Product minstens één keer natuurlijk benoemd** (wát het is), ook in organische ads — niet pitchen. Zie
@@ -99,7 +99,7 @@ slot: <persona × angle × awareness>  ·  format: <format>  ·  sophistication:
 - [ ] **CTA/afsluiter varieert** per script (geen vaste tagline, geen verplichte merk-eindtag); volgt de funnel
       (organisch = zacht). Zie [[feedback-cta-not-fixed]].
 - [ ] **Body-structuur** past bij het format; kort en spreekbaar.
-- [ ] **Klopt met brand.md** (DON'Ts) + bewezen hook-patronen uit `hooks.md`/`winners.md`.
+- [ ] **Klopt met de brand guidelines** (DON'Ts) + bewezen hook-patronen uit de hookbank/de winners.
 - [ ] Eén duidelijke boodschap per voorzet.
 
 ## Notes

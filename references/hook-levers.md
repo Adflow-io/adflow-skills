@@ -2,13 +2,13 @@
 
 **Wat dit is:** 38 technieken om een hook/headline sterker te maken, afgeleid uit Eugene Schwartz' *Breakthrough
 Advertising* (1966), vertaald naar short-form/social. **Klant-agnostisch.** Klant-fit (welke levers werken bij wie)
-hoort in `clients/<klant>/hooks.md`.
+hoort in de hookbank van de klant (Adflow-document, zie `bronnen.md`).
 
 Verhouding tot de andere hook-bronnen:
 - **`hook-tactics.md`** = *welk type* hook (Newness, Urgency, Curiosity…) + hit-rate-benchmark.
 - **`hook-frameworks.md`** = *hoe je 'm bouwt* (6 power words: subject · action · objective · contrast · proof · time).
 - **`hook-levers.md` (dit)** = *hoe je de claim versterkt* — de lens/draai die je op de kern-claim zet.
-- **`swipe/1000-viral-hooks.md`** = fill-in-the-blank templates.
+- **de swipe-file met hook-templates (niet in deze repo)** = fill-in-the-blank templates.
 
 **Kernidee (Schwartz):** je verzint geen verlangen, je **kanaliseert** een bestaand verlangen naar je product. Een
 hook is de claim + één (of twee) levers die de claim groter, geloofwaardiger, concreter of persoonlijker maken.

@@ -1,6 +1,6 @@
 ---
 name: static-voorzet
-description: Maak korte static-ad voorzetjes (headline + on-image kernregels) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit reviews/comments, past de 2 static-messaging-wetten toe, en levert opties om uit te kiezen — vóór de designer-brief. Alleen voor STATIC ads (niet video). Lean output.
+description: Maak korte static-ad voorzetjes (headline + on-image kernregels) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit de research, past de 2 static-messaging-wetten toe, en levert opties om uit te kiezen — vóór de designer-brief. Alleen voor STATIC ads (niet video). Lean output.
 ---
 
 # Static Voorzet (S4)
@@ -13,11 +13,11 @@ geen volledige brief.
 > **Alleen voor statics.** Voor video-copy: `ad-body` + `power-hooks`. Die gebruik je hier niet.
 
 ## Input die je nodig hebt (vraag/leid af, niet raden)
-- **Concept-slot:** Persona × Angle × Awareness (uit S1 / `dimensions/`).
+- **Concept-slot:** Persona × Angle × Awareness (uit S1 / de dims in Adflow).
 - **Format:** uit `references/static-formats.md` (headline+benefits · testimonial · offer · persona-based ·
   collection · comparison · publication/press/native · post-it · meme).
-- **Klantwoorden:** `clients/<klant>/reviews/reviews.md` + `comments/comments.md`. **Lees die eerst** — de copy komt
-  hieruit, niet uit je eigen kop. Ook `winners.md` (winnende angle/taal) en `brand.md` (master + DON'Ts).
+- **Klantwoorden:** de research (reviews en comments, zie `references/bronnen.md`). **Lees die eerst** — de copy komt
+  hieruit, niet uit je eigen kop. Ook de winners (winnende angle/taal) en de brand guidelines (master + DON'Ts).
 
 Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waarom. Raad nooit blind.
 
@@ -30,7 +30,7 @@ Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waaro
    klik (curiosity: native/advertorial opent een gap)? Blijf niet in "no man's land" ertussenin.
 
 ## Werkwijze
-1. Lees slot + format + klantwoorden + brand.md. Bepaal TOF/BOF en clarity/curiosity (leid af uit awareness + format).
+1. Lees slot + format + klantwoorden + de brand guidelines. Bepaal TOF/BOF en clarity/curiosity (leid af uit awareness + format).
 2. Schrijf **3 headline-voorzetjes** die echt verschillen in ingang (bv. één probleem-forward, één
    verlangen/payoff-forward, één klantquote/social-proof-forward) — geen omgeschreven tweelingen.
 3. Per voorzet: de **on-image kernregels** (max 2–4 korte regels: sub/benefits of qualifier), in klantwoorden.
@@ -63,9 +63,9 @@ slot: <persona × angle × awareness>  ·  format: <format>  ·  <TOF/BOF · cla
 ## QC-lat (check vóór je teruggeeft)
 - [ ] **Assume-no-one-knows** gehaald op TOF-headlines (of bewust BOF).
 - [ ] **Clarity of curiosity** gekozen, niet ertussenin.
-- [ ] **Klantwoorden** uit reviews/comments (geen eigen marketingtaal).
+- [ ] **Klantwoorden** uit de research (geen eigen marketingtaal).
 - [ ] **3 echt verschillende** ingangen, geen synoniem-varianten.
-- [ ] **Klopt met brand.md** (DON'Ts). NB: letterlijke quote mág op testimonial-static; niet in broll/video.
+- [ ] **Klopt met de brand guidelines** (DON'Ts). NB: letterlijke quote mág op testimonial-static; niet in broll/video.
 - [ ] **Squint-test:** is er één duidelijke hoofdboodschap per voorzet?
 
 ## Notes

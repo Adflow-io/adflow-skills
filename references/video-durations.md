@@ -21,4 +21,4 @@ een script hoort in de **S6-brief** (productie-spec).
 - **Duur schatten (tekst-only):** som van de leestijden per kaart. **VO:** ~2,5–3 woorden/sec spreektempo.
 
 > **Klant-default lengte** (welke bucket een specifieke klant standaard aanhoudt) staat op klantniveau
-> (`clients/<klant>/format-fit.md` of `brand.md`), niet hier.
+> (de format-fit van de klant (Adflow-document, zie `bronnen.md`) of `brand.md`), niet hier.

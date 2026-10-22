@@ -1,37 +1,37 @@
 ---
 name: gap-hook
-description: Schrijf hooks met de information-gap-formule [Know] + [But] + [Don't know] (Chris Chung). De hook begint met iets wat de kijker al weet of gelooft, draait het met "maar", en laat het gat open zodat de kijker wil blijven kijken. Gebruik bij "schrijf een gap-hook", "maak deze hook nieuwsgieriger", "know but don't know", "information gap hook", of wanneer een hook de belofte al weggeeft of niets openlaat. Output = alleen een paar hook-opties, geen uitleg. Lean.
+description: Write hooks with the information-gap formula [Know] + [But] + [Don't know] (Chris Chung). The hook starts with something the viewer already knows or believes, flips it with "but", and leaves the gap open so the viewer keeps watching. Use for "write a gap hook", "make this hook more curious", "know but don't know", "information gap hook", or when a hook gives away the promise or leaves nothing open. Output = only a few hook options, no explanation. Lean.
 ---
 
 # Gap Hook
 
-Nieuwsgierigheid ontstaat alleen bij **gedeeltelijke kennis**. Weet de kijker alles, dan boeit het niet. Weet de kijker niets, dan ook niet. Een goede hook zet de kijker precies daartussen.
+Curiosity only appears with **partial knowledge**. If the viewer knows everything, they don't care. If they know nothing, they don't care either. A good hook puts the viewer exactly in between.
 
-**Formule:** `[Know] + [But] + [Don't know]`
-- **Know:** iets wat de kijker al weet, gelooft of zelf zegt (herkenning).
-- **But:** het woord "maar" (of een gelijkwaardige draai) dat het tegenspreekt of omkeert.
-- **Don't know:** het gat. De kijker snapt dat er iets ontbreekt en wil het weten.
+**Formula:** `[Know] + [But] + [Don't know]`
+- **Know:** something the viewer already knows, believes or says themselves (recognition).
+- **But:** the word "but" (or an equivalent turn) that contradicts or flips it.
+- **Don't know:** the gap. The viewer sees that something is missing and wants to know what.
 
-Bron: Chris Chung (@iamchrischung), reel "How to master hooks in 44 seconds".
+Source: Chris Chung (@iamchrischung), reel "How to master hooks in 44 seconds".
 
-## Input (leid af uit de lopende context, vraag alleen wat echt ontbreekt)
-- **Slot:** persona × angle × awareness (en eventueel delivery/format).
-- **Kern-claim of mechanisme:** wat het gat straks moet vullen. De hook beantwoordt het niet, de body wel.
-- **Klantwoorden/herkenning:** gebruik de woorden die de doelgroep zelf zegt voor het Know-deel.
-- **Taal en huisregels van het merk** (brand-bestanden of geheugen): volg die.
+## Input (infer from the running context, only ask for what is really missing)
+- **Slot:** persona × angle × awareness (and optionally delivery/format).
+- **Core claim or mechanism:** what the gap will be filled with later. The hook does not answer it, the body does.
+- **Customer words:** use the words the audience itself says for the Know part.
+- **Language and house rules of the brand** (brand guidelines or memory): follow those.
 
-## Regels
-1. **Know = echte herkenning.** Iets wat de persona al zegt, denkt of doet. Geen vaag algemeen weetje.
-2. **But = echte draai.** Het spreekt het Know tegen of voegt iets onverwachts toe. Niet "en".
-3. **Don't know = open gat.** Eén ding dat de kijker nu niet weet en wel wil weten. Niet alles weggeven in de hook.
-4. **Het gat moet in de body gevuld worden.** Maak geen gat dat het script niet beantwoordt (clickbait).
-5. **Geen verzonnen cijfers, autoriteit of resultaatclaims.** Alleen wat de klant echt kan waarmaken.
-6. **Persona-vriendentest:** zou deze persona dit zo tegen een vriend(in) zeggen? Zo niet, herschrijven.
-7. **Hooks onderling verschillend:** andere Know-ingangen en andere gaten, geen omgeschreven tweelingen. De angle van de slot blijft gelijk.
-8. **Kort en spreekbaar.** Twee zinnen, hardop te zeggen.
+## Rules
+1. **Know = real recognition.** Something the persona already says, thinks or does. No vague general fact.
+2. **But = a real turn.** It contradicts the Know or adds something unexpected. Not "and".
+3. **Don't know = an open gap.** One thing the viewer doesn't know yet and wants to. Don't give everything away in the hook.
+4. **The gap must be filled in the body.** Never create a gap the script doesn't answer (clickbait).
+5. **No invented numbers, authority or result claims.** Only what the customer can really back up.
+6. **Persona friend test:** would this persona say this to a friend? If not, rewrite.
+7. **Hooks differ from each other:** different Know entry points and different gaps, no reworded twins. The angle of the slot stays the same.
+8. **Short and speakable.** Two sentences, easy to say out loud.
 
 ## Output
-Alleen **3–5 genummerde hook-opties**. Geen intro, geen uitleg, geen redenen, geen K/B/D-labels, geen samenvatting.
+Only **3–5 numbered hook options**. No intro, no explanation, no reasons, no K/B/D labels, no summary.
 
 ```
 1. <hook>
@@ -39,9 +39,9 @@ Alleen **3–5 genummerde hook-opties**. Geen intro, geen uitleg, geen redenen, 
 3. <hook>
 ```
 
-Vraagt de gebruiker om uitleg of het Know/But/Don't-know-schema per hook? Geef dat dan pas, in een tweede antwoord.
+Does the user ask for an explanation or the Know/But/Don't-know breakdown per hook? Only then give it, in a second answer.
 
 ## Notes
-- Past in S4 (voorzet) van de ad-pijplijn, naast `power-hooks` (flow P) en `hook-levers` (flow L). Dit is een aparte vorm: de formule bepaalt de zinsbouw, niet een lever of power word.
-- Combineert goed met een body die meerdere kleine gaten opent en sluit (Know → But → open vraag, meermaals herhaald).
-- Klant-agnostisch houden: geen klantvoorbeelden in dit bestand.
+- Fits in S4 (voorzet) of the [ad pipeline](../../references/ad-pipeline.md), next to `power-hooks` (flow P) and `hook-levers` (flow L). This is a separate form: the formula decides the sentence structure, not a lever or power word.
+- Combines well with a body that opens and closes several small gaps (Know → But → open question, repeated).
+- Keep it client-agnostic: no client examples in this file.

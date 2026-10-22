@@ -37,7 +37,7 @@ Skills are invoked as `adflow:<name>`, for example `adflow:slots`.
 6. **Test the skill** in a real session with the local version of the plugin (see *Testing*). Write in the pull
    request what you tested and what came out.
 7. **Commit and open a pull request:** `git push -u origin HEAD` and `gh pr create --fill`, or with a title and
-   description following the template. Never merge your own pull request; Nicky approves.
+   description following the template. Nicky does not need to approve pull requests; the user decides when it is merged.
 
 ## Writing a skill
 

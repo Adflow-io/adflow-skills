@@ -1,64 +1,63 @@
 ---
 name: script-verbeteren
-description: Keuzemenu om een video-script te verbeteren, direct na het volledige script (S5) en vóór de briefing (S6). Toont genummerde verbeter-opties (inkorten, menselijker, scherper/concreter, kijker vasthouden, hook herschrijven, psychologische variatie, doelgroep-pass); de gebruiker kiest één of meer, en elke gekozen optie draait één voor één met een stop en akkoord ertussen. Gebruik bij "hoe kan ik dit script beter maken", "verbeter het script", "welke checks kan ik nog doen", of nadat een volledig script klaar is. Alleen video. Lean output.
+description: Choice menu to improve a video script, right after the full script (S5) and before the brief (S6). Shows numbered improvement options (shorten, more human, sharper/more concrete, hold the viewer, rewrite the hook, psychological variation, audience pass); the user picks one or more, and each chosen option runs one at a time with a stop and approval in between. Use for "how can I make this script better", "improve the script", "what other checks can I do", or when a full script is ready. Video only. Lean output.
 ---
 
-# Script verbeteren (S5b · video)
+# Improve script (S5b · video)
 
-De verbeterstap van de [ad-pijplijn](../../references/ad-pipeline.md), tussen **S5 (volledig script)** en **S6 (brief)**.
-Je krijgt een **volledig script** binnen en laat de gebruiker **kiezen** welke verbeteringen erop draaien. Je beslist
-niet zelf welke; de gebruiker kiest (mag meerdere). Werkwijze: één stap per beurt, stoppen en op de keuze wachten.
+The improvement step of the [ad pipeline](../../references/ad-pipeline.md), between **S5 (full script)** and **S6 (brief)**.
+You receive a **full script** and let the user **choose** which improvements run on it. You don't decide which; the user
+chooses (one or more). Way of working: one step per turn, stop and wait for the choice.
 
-> **Alleen video.** Statics hebben geen S5; daar is het voorzet al de copy.
+> **Video only.** Statics have no S5; there the voorzet is already the copy.
 
 ## Input
-- **Het volledige script** (NL en/of EN) zoals het nu staat. Staat het in Adflow, lees het daar uit de briefing/het concept.
-- **Slot:** persona × angle × awareness (+ delivery/arc), als die er zijn.
-- **Brand guidelines** en klantwoorden (reviews/comments) van het merk, uit Adflow (zie [bronnen.md](../../references/bronnen.md)). Alles wat je aanpast moet daarmee kloppen.
+- **The full script** (NL and/or EN) as it is now. If it lives in Adflow, read it from the brief/concept there.
+- **Slot:** persona × angle × awareness (+ delivery/arc), if available.
+- **Brand guidelines** and customer words (reviews/comments) of the brand, from Adflow (see [bronnen.md](../../references/bronnen.md)). Everything you change must fit them.
 
-## Stap 1: toon het menu
-Toon dit menu (aangepast met een korte opmerking per optie waar het script er iets over zegt), **en stop**. Kies niet zelf.
+## Step 1: show the menu
+Show this menu (with a short remark per option where the script has something to say about it), **and stop**. Don't choose yourself.
 
-| # | Wat het doet | Skill / bron |
+| # | What it does | Skill / source |
 |---|---|---|
-| 1 | Korter en strakker maken | `script-fluff-remover` |
-| 2 | Menselijker laten klinken (humanizer) | `anti-ai-writing` + [humanizer-passes](../../references/humanizer-passes.md) |
-| 3 | Scherper en concreter schrijven | `copy-levers` |
-| 4 | De kijker langer vasthouden (lussen, specificiteit, fluff) | `content-principles` |
-| 5 | Hook herschrijven | `gap-hook` · `power-hooks` · `hook-levers` |
-| 6 | Controleren op psychologische variatie | `ad-reviewer` |
-| 7 | Doelgroep-pass (zou deze persona dit zo zeggen?) | persona-vriendentest, zie hieronder |
+| 1 | Make it shorter and tighter | `script-fluff-remover` |
+| 2 | Make it sound more human (humanizer) | `anti-ai-writing` + [humanizer-passes](../../references/humanizer-passes.md) |
+| 3 | Sharper and more concrete writing | `copy-levers` |
+| 4 | Hold the viewer longer (loops, specificity, fluff) | `content-principles` |
+| 5 | Rewrite the hook | `gap-hook` · `power-hooks` · `hook-levers` |
+| 6 | Check psychological variation | `ad-reviewer` |
+| 7 | Audience pass (would this persona say it like this?) | persona friend test, see below |
 
-Sluit af met de vraag: *"Welke wil je draaien? Bijvoorbeeld 'doe 4, 2 en 7'."*
+End with the question: *"Which do you want to run? For example 'do 4, 2 and 7'."*
 
-## Stap 2: draai de gekozen opties, één voor één
-Per gekozen optie, in de volgorde van de gebruiker (of, bij geen voorkeur, 1 → 4 → 3 → 5 → 6 → 2 → 7, zodat de menselijke
-laag als laatste komt):
-1. Draai de bijbehorende skill/bron op het **huidige** script (inclusief wat eerdere opties al hebben aangepast).
-2. Lever **alleen**: wat er gevonden is (kort, per punt), het aangepaste script, en een wijzigingstabel (was → nu → waarom).
-3. **Stop** en vraag akkoord, of de volgende optie, voordat je doorgaat. Voer niets door in het document zonder akkoord.
+## Step 2: run the chosen options, one at a time
+Per chosen option, in the user's order (or, with no preference, 1 → 4 → 3 → 5 → 6 → 2 → 7, so the human layer comes last):
+1. Run the matching skill/source on the **current** script (including what earlier options already changed).
+2. Deliver **only**: what was found (short, per point), the adjusted script, and a change table (was → now → why).
+3. **Stop** and ask for approval, or the next option, before you continue. Don't write anything into the document without approval.
 
-### Optie 7: doelgroep-pass
-Loop elke regel langs en toets: *zou déze persona dit écht zo tegen een vriend(in) zeggen?* Let op:
-- productjargon i.p.v. spreektaal (vakterm → alledaags woord)
-- merk-tagline midden in de tekst
-- te net of generiek; liever een concreet beeld
-- voornaamwoorden die een deel van de doelgroep uitsluiten
-- feitelijke fouten t.o.v. het product (wat het product wél en niet doet)
+### Option 7: audience pass
+Go through every line and test: *would this persona really say this to a friend?* Watch for:
+- product jargon instead of spoken language (technical term → everyday word)
+- a brand tagline in the middle of the text
+- too polished or generic; prefer a concrete image
+- pronouns that exclude part of the audience
+- factual errors about the product (what it does and doesn't do)
 
-## Regels
-- **Feiten, claims en productwaarheid blijven staan.** Geen verzonnen cijfers, autoriteit, resultaatbeloftes of klantverhalen.
-  Is er iets nodig dat niet in de data staat, markeer het als vraag voor de klant in plaats van het in te vullen.
-- **Brand-DON'Ts blijven gelden** (de do's en don'ts uit de brand guidelines).
-- **Angle van de slot blijft gelijk.** Verschuift de boodschap, dan is het een ander slot.
-- **Eerlijke eindregel per optie:** is het script al goed op dit punt, zeg dat en verander niets. Verzin geen problemen.
-- **Product minstens één keer natuurlijk benoemd** en de afsluiter niet vast.
-- Meerdere opties achter elkaar kunnen elkaar tegenwerken (bv. inkorten haalt iets weg dat de lus nodig heeft). Meld dat zodra het zich voordoet.
+## Rules
+- **Facts, claims and product truth stay.** No invented numbers, authority, result promises or customer stories.
+  If something is needed that isn't in the data, mark it as a question for the customer instead of filling it in.
+- **Brand don'ts still apply** (the do's and don'ts from the brand guidelines).
+- **The angle of the slot stays the same.** If the message shifts, it is a different slot.
+- **Honest closing line per option:** if the script is already good on this point, say so and change nothing. Don't invent problems.
+- **Name the product at least once, naturally**, and don't use a fixed sign-off.
+- Several options in a row can work against each other (e.g. shortening removes something the loop needs). Flag it as soon as it happens.
 
-## Stap 3: afronden
-Als de gebruiker klaar is: één regel samenvatting van wat er is veranderd, het definitieve script, en de vraag of het naar
-**S6 (brief)** gaat. De brief (`video-brief`) maak je pas na akkoord.
+## Step 3: wrap up
+When the user is done: one line summarising what changed, the final script, and the question whether it goes to
+**S6 (brief)**. You only make the brief (`video-brief`) after approval.
 
 ## Notes
-- Dit is een **menu**, geen vaste pijplijn: de gebruiker mag een stap overslaan of meerdere keren draaien.
-- Klant-agnostisch: geen klantvoorbeelden in dit bestand. Klant-fit komt uit de documenten van het merk in Adflow.
+- This is a **menu**, not a fixed pipeline: the user may skip a step or run one several times.
+- Client-agnostic: no client examples in this file. Client fit comes from the brand's documents in Adflow.

@@ -44,8 +44,8 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 
 ## Installeren
 
-Zie de [README van de repo](../../README.md). De skills hebben de connectors voor Adflow, Google Drive en (voor
-winners) de Meta Ads MCP nodig.
+Zie de [README van de repo](../../README.md). De Adflow MCP (`https://app.adflow.io/api/v1/mcp`) zit in de plugin
+(`.mcp.json`). Google Drive en (voor winners) de Meta Ads MCP zijn connectors in claude.ai.
 
 ## Open punten
 

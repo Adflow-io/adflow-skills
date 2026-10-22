@@ -40,7 +40,8 @@ De losse notitie (kort, in comment/kop) + daaronder de brief exact in het `desig
 Zet de brief als eigen brief onder het concept in Adflow (niet in het conceptdocument zelf) als de gebruiker akkoord
 geeft. Het conceptdocument bevat de hypothese, het bewijs, de dims, de ad copy en de launchplek, zie de skill `concept`.
 Bestaat het concept nog niet, maak het dan eerst met `concept`. Staat er in een bestaande brief al tekst, overschrijf
-niets en lever de brief in de chat. Gebruik lijsten, geen tabellen.
+niets en lever de brief in de chat. Gebruik lijsten, geen tabellen, en geen `/` in de tekst: de editor gebruikt dat
+teken voor nodes. Zie `references/adflow-documents.md`.
 
 ## QC-lat (uit designer-brief-static.md)
 - [ ] Assume-no-one-knows op TOF-headline (of bewust BOF).
@@ -50,6 +51,7 @@ niets en lever de brief in de chat. Gebruik lijsten, geen tabellen.
 - [ ] Leesbaar op mobiel.
 - [ ] Klopt met de brand guidelines (quote mág op testimonial-static; niet in broll/video).
 - [ ] **Dimensions-blok bovenaan**; variantcodes volgens de handleiding; **geen Meta-adnaam** in de brief.
+- [ ] Geen `/` in de tekst (alleen in links).
 
 ## Notes
 - Workflow **S6** in `references/ad-pipeline.md`. In = goedgekeurd voorzet (S4) → Uit = producereerbare brief

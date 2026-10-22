@@ -59,6 +59,7 @@ Per variant: landing page URL, primary text, headline (the layout follows the br
 ## Writing rules
 - **Short.** The whole concept document fits on one screen. Details go in the brief.
 - **Use lists, not tables.** Markdown tables show as plain text in Adflow documents.
+- **No `/` in the text.** See [adflow-documents.md](adflow-documents.md) for the editor rules and the alternatives.
 - Headings as written above, so every concept reads the same.
 - Numbers are dated and come from live data, not from memory.
 - Plain language, short sentences, no dashes as pause marks.

@@ -35,6 +35,8 @@ writing rules: [concept-document.md](../../references/concept-document.md). Pipe
 - **Name the confounds.** Evidence from a different offer or audience says less than it seems.
 - **Additive only.** Create, attach, write; don't delete, rename or overwrite what others made.
 - **Short.** The concept fits on one screen; detail belongs in the brief.
+- **No `/` in the text.** The Adflow editor uses it to place nodes. Links keep theirs; everything else is rephrased, see
+  [adflow-documents.md](../../references/adflow-documents.md).
 
 ## Output
 A concept in Adflow with its dims and a filled document (five sections), plus a short chat summary: the concept

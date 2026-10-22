@@ -50,7 +50,8 @@ tekst in het conceptdocument zelf. Het conceptdocument bevat de hypothese, het b
 launchplek (zie [concept-document.md](../../references/concept-document.md) en de skill `concept`). Bestaat het
 concept nog niet, maak het dan eerst met `concept`. De brief erft de dims van het concept.
 Staat er in een bestaande brief al tekst, overschrijf dan niets: lever de brief in de chat. Een lokaal bestand maak
-je niet. Gebruik lijsten, geen tabellen: tabellen worden in Adflow platte tekst.
+je niet. Gebruik lijsten, geen tabellen: tabellen worden in Adflow platte tekst. Gebruik ook geen `/` in de tekst:
+de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).
 
 ## Output-format
 De losse notitie (kort) en daaronder de brief exact in de opbouw van de handleiding. Lean.
@@ -62,6 +63,7 @@ De losse notitie (kort) en daaronder de brief exact in de opbouw van de handleid
 - [ ] Briefdiepte past bij het concepttype (geen script waar de originele ad het script is).
 - [ ] Elke hook of taal is een eigen variant met een eigen code.
 - [ ] Voorbeelden, b-roll, muziek en CTA staan als embed.
+- [ ] Geen `/` in de tekst (alleen in links).
 - [ ] Tekst in beeld klopt met de tekstregels in de handleiding en de brand guidelines.
 - [ ] Analyse en tags staan boven de brief, niet erin.
 - [ ] De check voor oplevering uit de handleiding is afgevinkt.

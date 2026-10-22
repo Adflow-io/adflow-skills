@@ -46,7 +46,8 @@ Gebruik voor de zinsbouw `body` en, voor klantwoorden, de research (zie bronnen.
 ## Stap 3: opmaak in het conceptdocument
 Zet de copy onder het kopje Ad copy en landingspagina in het conceptdocument (niet in de brief), per variant, in de
 volgorde die de handleiding noemt. Zie [concept-document.md](../../references/concept-document.md). Staat er al tekst,
-overschrijf dan niets en lever de copy in de chat.
+overschrijf dan niets en lever de copy in de chat. Gebruik geen `/` in de tekst (ook niet in primary text, headline of
+description): de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).
 
 ## Stap 4: copy templates per regio
 Pas als de gebruiker de copy heeft goedgekeurd:
@@ -73,6 +74,7 @@ bijgewerkt (naam, taal, landingspagina).
 - [ ] Prijs, besparing en aantallen kloppen met de landingspagina.
 - [ ] Het copytype klopt: een evergreen-ad noemt geen prijs of korting.
 - [ ] Geen verboden woorden of tekens uit de schrijfregels van het merk.
+- [ ] Geen `/` in de tekst van het conceptdocument (alleen in links).
 - [ ] Headline-lengte volgens de handleiding.
 - [ ] Templates volgen de naam uit de launch handleiding, en bestaande templates zijn bijgewerkt, niet gedupliceerd.
 

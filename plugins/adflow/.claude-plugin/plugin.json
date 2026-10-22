@@ -1,6 +1,6 @@
 {
   "name": "adflow",
-  "description": "Verbindt Claude met je Adflow-workspace. Bekijk en beheer merken, dimensies, concepten en briefs, bewerk documenten, lees reviews en comments, haal performance op, en maak en lanceer ads vanuit een concept. Je logt in met je eigen Adflow-account en ziet alleen de merken waar je toegang toe hebt. Nodig voor de andere Adflow-plugins.",
+  "description": "Adflow in Claude: de verbinding met je Adflow-workspace plus de Adflow-werkwijze voor ads. Via de verbinding bekijk en beheer je merken, dimensies, concepten en briefs, bewerk je documenten, lees je reviews en comments en haal je performance op; je logt in met je eigen Adflow-account en ziet alleen je eigen merken. De skills begeleiden je van idee tot launch-klare briefing, voor static en video: concept-slots kiezen (persona × angle × awareness), formats brainstormen, hooks en voorzetjes schrijven, editor-, creator- en designer-briefs maken, en Meta ad copy en naamgeving klaarzetten. Werkt met de merkhandleidingen in Google Drive.",
   "author": {
     "name": "Adflow"
   }

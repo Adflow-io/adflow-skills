@@ -32,6 +32,9 @@ dimensions + gaps + winners
         │  S5 script  [VIDEO only · AI schrijft · mens keurt goed]   ← volledig script + humanizer-pass
         ▼
   goedgekeurd volledig script (video)
+        │  S5b verbeteren  [VIDEO only · menu · mens kiest]   ← optioneel: kies welke verbeteringen erop draaien
+        ▼
+  verbeterd script (video)
         │  S6 brief  [AI + mens QC]
         ▼
   producereerbare brief + variantcodes  →  meta-copy (copy + templates)  →  launch (Launch handleiding) → live
@@ -49,6 +52,7 @@ dimensions + gaps + winners
 | **S3** | arc *(video only)* | — *(structuur zit in static-format)* | **menu** van de 20 arcs (`script-frameworks.md`) met fit → mens kiest | AI stelt voor · **mens kiest** |
 | **S4** | voorzet | `static-voorzet` (headline + on-image) | `video-voorzet` (hook(s) + body, via `hook-levers` + `power-hooks` + `body`) | AI · **mens kiest** |
 | **S5** | script *(video only)* | — *(static: voorzet ís de copy)* | volledig script (arc-skelet in de gekozen delivery) → **humanizer-pass** (`humanizer-passes.md`) → mens keurt goed | AI schrijft · **mens keurt goed** |
+| **S5b** | script verbeteren *(video only, optioneel)* | — | `script-verbeteren`: **menu** van verbeter-opties (inkorten · menselijker · scherper/concreter · kijker vasthouden · hook herschrijven · psychologische variatie · doelgroep-pass); elke gekozen optie draait apart met akkoord ertussen | mens kiest · AI draait |
 | **S6** | brief | `designer-brief` (`designer-brief-static.md`) | `video-brief` (editor/creator-briefing) | AI + mens QC |
 | **E** | feedback | Adflow of Meta MCP (live) → terug naar S1 | *idem* | AI pullt, mens beslist |
 

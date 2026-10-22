@@ -1,53 +1,52 @@
 # AGENTS.md
 
-Regels voor AI-agents (Claude Code, Codex, Cursor) die in deze repo skills aanpassen. Marketeers sturen de agent aan;
-de agent houdt zich aan deze regels, ook als de vraag anders klinkt. Twijfel je, vraag het de gebruiker in plaats van te
-gokken.
+Rules for AI agents (Claude Code, Codex, Cursor) that change skills in this repo. Marketers direct the agent; the agent
+follows these rules, even when a request sounds different. When in doubt, ask the user instead of guessing.
 
-## Wat deze repo is
+## What this repo is
 
-Eén Claude-plugin, `adflow`, verspreid als private marketplace. Alles wat in `main` komt, staat binnen een paar minuten
-bij iedereen die de plugin heeft, ook bij klanten later. Een fout in `main` is dus meteen een fout bij iedereen.
+One Claude plugin, `adflow`, distributed as a private marketplace. Everything that lands on `main` reaches everyone who
+has the plugin within minutes, including clients later on. A mistake on `main` is a mistake for everyone, immediately.
 
 ```
-.claude-plugin/marketplace.json    de marketplace (niet aanpassen zonder Nicky)
+.claude-plugin/marketplace.json    the marketplace (do not change without Nicky)
 plugins/adflow/
-  .claude-plugin/plugin.json       naam en beschrijving van de plugin (niet aanpassen zonder Nicky)
-  .mcp.json                        de verbinding met Adflow (niet aanpassen zonder Nicky)
-  skills/<naam>/SKILL.md           één map per skill; hier werk je
-  skills/<naam>/*.md               voorbeelden of hulpbestanden die alleen bij die skill horen
-  references/*.md                  frameworks die meerdere skills delen
-scripts/check.py                   de check die op elke pull request draait
+  .claude-plugin/plugin.json       plugin name and description (do not change without Nicky)
+  .mcp.json                        the connection to Adflow (do not change without Nicky)
+  skills/<name>/SKILL.md           one folder per skill; this is where you work
+  skills/<name>/*.md               examples or helper files that belong to that skill only
+  references/*.md                  frameworks shared by several skills
+scripts/check.py                   the check that runs on every pull request
 ```
 
-Skills roep je aan als `adflow:<naam>`, bijvoorbeeld `adflow:slots`.
+Skills are invoked as `adflow:<name>`, for example `adflow:slots`.
 
-## Werkwijze (verplicht)
+## Workflow (required)
 
-1. **Begin altijd vanaf een verse `main`:** `git switch main && git pull`.
-2. **Maak een branch** met een korte naam die zegt wat er verandert: `git switch -c skill/meta-copy-headlines`.
-   Werk nooit direct op `main` en push nooit naar `main`.
-3. **Eén onderwerp per pull request.** Eén skill aanpassen, of één nieuwe skill. Geen opruimacties erbij.
-4. **Lees eerst** de skill die je aanpast, de referenties waar hij naar linkt en de skills die naar hem verwijzen
-   (`grep -rn "<naam>" plugins/`).
-5. **Draai de checks** en los elke fout op voordat je commit:
+1. **Always start from a fresh `main`:** `git switch main && git pull`.
+2. **Create a branch** with a short name that says what changes: `git switch -c skill/meta-copy-headlines`.
+   Never work directly on `main` and never push to `main`.
+3. **One topic per pull request.** Change one skill, or add one new skill. No unrelated cleanups.
+4. **Read first**: the skill you change, the references it links to, and the skills that refer to it
+   (`grep -rn "<name>" plugins/`).
+5. **Run the checks** and fix every error before you commit:
    ```bash
    python3 scripts/check.py
    claude plugin validate .
    ```
-6. **Test de skill** in een echte sessie met de lokale versie van de plugin (zie *Testen*). Zet in de pull request
-   wat je hebt getest en wat eruit kwam.
-7. **Commit en open een pull request:** `git push -u origin HEAD` en `gh pr create --fill`, of met een titel en
-   beschrijving volgens het template. Merge nooit je eigen pull request; Nicky keurt goed.
+6. **Test the skill** in a real session with the local version of the plugin (see *Testing*). Write in the pull
+   request what you tested and what came out.
+7. **Commit and open a pull request:** `git push -u origin HEAD` and `gh pr create --fill`, or with a title and
+   description following the template. Never merge your own pull request; Nicky approves.
 
-## Een skill schrijven
+## Writing a skill
 
-### Naam en map
-- De mapnaam is de skillnaam: kleine letters, cijfers en streepjes, maximaal 64 tekens (`static-voorzet`).
-- `name:` in de frontmatter is precies gelijk aan de mapnaam.
-- Geen `adflow-` of `ad-` ervoor: de plugin zet al `adflow:` voor de naam.
-- Platformspecifiek? Begin met het platform: `meta-copy`, `tiktok-copy`. Werkt het voor elk platform, dan geen
-  platform in de naam.
+### Name and folder
+- The folder name is the skill name: lowercase letters, digits and hyphens, at most 64 characters (`static-voorzet`).
+- `name:` in the frontmatter is exactly the folder name.
+- No `adflow-` or `ad-` prefix: the plugin already puts `adflow:` in front of the name.
+- Platform-specific? Start with the platform: `meta-copy`, `tiktok-copy`. If it works for every platform, leave the
+  platform out of the name.
 
 ### Frontmatter
 ```yaml
@@ -56,64 +55,61 @@ name: meta-copy
 description: Schrijf de Meta ad copy (primary text, headline, description) voor een concept volgens de ad copy handleiding van het merk. Gebruik bij "schrijf de copy", "maak de ad copy", of als een concept klaar is voor launch.
 ---
 ```
-- `description` staat op **één regel** en is maximaal 1024 tekens.
-- De `description` bepaalt wanneer Claude de skill kiest. Zet erin **wat** de skill doet, **wanneer** je hem gebruikt
-  (met woorden die een gebruiker echt typt) en **wat niet** (verwijs naar de skill die dat wel doet).
-- Geen andere velden toevoegen zonder overleg.
+- `description` is on **one line** and at most 1024 characters.
+- The `description` decides when Claude picks the skill. Say **what** the skill does, **when** to use it (in words a
+  user actually types) and **what not** (point to the skill that does).
+- Do not add other fields without agreement.
 
-### Inhoud
-- Schrijf in het Nederlands. Vaktermen die het team in het Engels gebruikt (hook, angle, persona, awareness, b-roll)
-  blijven Engels.
-- Begin met één alinea: wat levert deze skill op en voor welke stap in de pijplijn
+### Content
+- Write skills in Dutch, the language of the team. Terms the team uses in English (hook, angle, persona, awareness,
+  b-roll) stay English.
+- Open with one paragraph: what the skill delivers and which step of the pipeline it serves
   ([references/ad-pipeline.md](plugins/adflow/references/ad-pipeline.md)).
-- Daarna de stappen in volgorde, als genummerde lijst. Concreet en uitvoerbaar, geen achtergrondverhaal.
-- Sluit af met de vorm van de output (een tabel, een lijst, een brief) en wat de gebruiker daarna doet.
-- Houd `SKILL.md` onder de 300 regels. Langere uitleg of een framework dat meerdere skills gebruiken hoort in
-  `references/`; voorbeelden die alleen bij deze skill horen in de map van de skill (`voorbeelden.md`).
-- Verwijs naar bestanden met een **relatieve markdown-link**, vanuit een skill bijvoorbeeld
-  `[hook-levers](../../references/hook-levers.md)`.
-  Nooit een pad op je eigen computer (`/Users/...`), nooit links met dubbele blokhaken naar notities buiten de repo.
-- Verwijs naar een andere skill met zijn naam tussen backticks: `` `power-hooks` ``.
+- Then the steps in order, as a numbered list. Concrete and actionable, no background story.
+- End with the shape of the output (a table, a list, a brief) and what the user does next.
+- Keep `SKILL.md` under 300 lines. Longer explanations, or a framework several skills use, belong in `references/`;
+  examples that belong to one skill go in that skill's folder (`voorbeelden.md`).
+- Link to files with a **relative markdown link**, from a skill for example
+  `[hook-levers](../../references/hook-levers.md)`. Never a path on your own computer (`/Users/...`), never
+  double-bracket links to notes outside the repo.
+- Refer to another skill by its name in backticks: `` `power-hooks` ``.
 
-### Bronnen: wat wel en niet in de repo hoort
-- **Geen klantdata.** Geen klantnamen, reviews, comments, winners, cijfers, briefs, scripts of screenshots van een
-  klant. Ook niet als voorbeeld. Gebruik verzonnen, generieke voorbeelden.
-- **Klantkennis staat in Adflow**, de handleidingen per merk in Google Drive. De skill zegt waar hij die ophaalt
-  (zie [references/bronnen.md](plugins/adflow/references/bronnen.md)), niet wat erin staat.
-- **Merkspecifieke regels horen in de Drive-handleiding van dat merk**, niet in een skill. Een skill is de werkwijze
-  voor alle merken.
-- Noem gegevens uit Adflow naar wat ze zijn (dims, concepten, Copy library), niet naar de technische naam van een
-  tool. Toolnamen kunnen veranderen.
-- **Geen gekopieerde tekst** uit cursussen, boeken, swipe files of betaalde bronnen. Vat samen in eigen woorden en
-  noem de bron.
+### Sources: what does and does not belong in the repo
+- **No client data.** No client names, reviews, comments, winners, numbers, briefs, scripts or screenshots of a
+  client. Not even as an example. Use invented, generic examples.
+- **Client knowledge lives in Adflow**, the per-brand handbooks in Google Drive. A skill says where it fetches them
+  (see [references/bronnen.md](plugins/adflow/references/bronnen.md)), not what they contain.
+- **Brand-specific rules belong in that brand's Drive handbook**, not in a skill. A skill is the method for all brands.
+- Refer to Adflow data by what it is (dims, concepts, Copy library), not by the technical name of a tool. Tool names
+  can change.
+- **No copied text** from courses, books, swipe files or paid sources. Summarise in your own words and cite the source.
 
-## Hernoemen of verwijderen
+## Renaming or deleting
 
-Gebruikers roepen skills aan bij naam, en andere skills verwijzen ernaar. Daarom:
-- Hernoem of verwijder alleen als de gebruiker daar expliciet om vraagt.
-- Zoek alle verwijzingen (`grep -rn "<oude-naam>" plugins/ README.md`) en werk ze in dezelfde pull request bij.
-- Zet in de pull request **"Hernoemd: oud → nieuw"** of **"Verwijderd: naam"**, zodat het team het weet.
+Users invoke skills by name, and other skills refer to them. So:
+- Only rename or delete when the user explicitly asks for it.
+- Find every reference (`grep -rn "<old-name>" plugins/ README.md`) and update them in the same pull request.
+- Write **"Renamed: old → new"** or **"Deleted: name"** in the pull request, so the team knows.
 
-## Testen
+## Testing
 
-Laad de plugin uit je eigen map in plaats van de geïnstalleerde versie:
+Load the plugin from your own checkout instead of the installed version:
 
 ```bash
 claude --plugin-dir ./plugins/adflow
 ```
 
-Roep de skill aan (`/adflow:<naam>`) of stel een vraag die hem zou moeten activeren, voor een echt merk in Adflow.
-Controleer:
-- Kiest Claude de skill bij een normale vraag? Zo niet, scherp de `description` aan.
-- Volgt de output de stappen en de vorm uit de skill?
-- Haalt hij de juiste bronnen op uit Adflow en Drive, zonder iets te verzinnen?
+Invoke the skill (`/adflow:<name>`) or ask a question that should trigger it, for a real brand in Adflow. Check:
+- Does Claude pick the skill for a normal question? If not, sharpen the `description`.
+- Does the output follow the steps and the shape described in the skill?
+- Does it fetch the right sources from Adflow and Drive, without making anything up?
 
-Zet geen klantoutput uit de test in de repo of in de pull request; beschrijf alleen wat je controleerde.
+Do not put client output from the test in the repo or in the pull request; only describe what you checked.
 
-## Wat een agent nooit doet
+## What an agent never does
 
-- Pushen naar `main`, force-pushen, of de geschiedenis herschrijven.
-- `.claude-plugin/`, `plugins/adflow/.mcp.json`, `scripts/` of `.github/` aanpassen zonder dat Nicky erom vraagt.
-- Een `version` toevoegen aan `plugin.json`: zonder versie komt elke merge vanzelf bij gebruikers aan.
-- Wachtwoorden, tokens of API-keys in een bestand zetten.
-- Een check uitzetten of omzeilen om een pull request groen te krijgen.
+- Push to `main`, force-push, or rewrite history.
+- Change `.claude-plugin/`, `plugins/adflow/.mcp.json`, `scripts/` or `.github/` unless Nicky asks for it.
+- Add a `version` to `plugin.json`: without a version, every merge reaches users automatically.
+- Put passwords, tokens or API keys in a file.
+- Disable or work around a check to get a pull request green.

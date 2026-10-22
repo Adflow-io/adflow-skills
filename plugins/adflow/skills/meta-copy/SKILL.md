@@ -25,7 +25,7 @@ Loop de vier bronnen af en zet de bevindingen kort onder elkaar.
 | Vergelijkbare ad | Adflow (zoek op dezelfde angle, persona of awareness) en de Copy library (`list_ad_copy_sets`) | Copy van een ad met dezelfde soort hoek die goed liep |
 | Landingspagina | De pagina uit de brief, op het domein of de taalmap uit de launch handleiding | Productnaam, prijs, aanbod, aantallen, verzending |
 | Creative | De video of image van de ad | Hook en boodschap |
-| Brief | Het conceptdocument in Adflow | Persona, angle, hook type, awareness |
+| Concept en brief | Het conceptdocument en de brief in Adflow | Persona, angle, hook type, awareness |
 
 Regels:
 - Prijs, besparing, einddata en aantallen haal je van de landingspagina, nooit uit een oude ad.
@@ -44,8 +44,9 @@ Gebruik voor de zinsbouw `body` en, voor klantwoorden, de research (zie bronnen.
 `anti-ai-writing` over het resultaat.
 
 ## Stap 3: opmaak in het conceptdocument
-Zet de copy onder het kopje Ad copy in het conceptdocument, in de volgorde die de handleiding noemt. Is het document
-leeg, gebruik dan `edit_document`. Staat er al tekst, overschrijf dan niets en lever de copy in de chat.
+Zet de copy onder het kopje Ad copy en landingspagina in het conceptdocument (niet in de brief), per variant, in de
+volgorde die de handleiding noemt. Zie [concept-document.md](../../references/concept-document.md). Staat er al tekst,
+overschrijf dan niets en lever de copy in de chat.
 
 ## Stap 4: copy templates per regio
 Pas als de gebruiker de copy heeft goedgekeurd:

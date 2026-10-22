@@ -45,9 +45,12 @@ handleiding dat vraagt, een goedgekeurd script) om in een **producereerbare brie
 6. **Loop de check voor oplevering** uit de handleiding en de QC-lat hieronder.
 
 ## Waar de brief terechtkomt
-Het conceptdocument heeft een document-ID (`get_concept`). Is het leeg, vul het dan met `edit_document` (eerst
-`get_document_edit_context`). Staat er al tekst in, overschrijf dan niets: lever de brief in de chat. Een lokaal
-bestand maak je niet.
+De brief is een **eigen brief onder het concept** (een creator-brief of editor-brief als kind van het concept), niet
+tekst in het conceptdocument zelf. Het conceptdocument bevat de hypothese, het bewijs, de dims, de ad copy en de
+launchplek (zie [concept-document.md](../../references/concept-document.md) en de skill `concept`). Bestaat het
+concept nog niet, maak het dan eerst met `concept`. De brief erft de dims van het concept.
+Staat er in een bestaande brief al tekst, overschrijf dan niets: lever de brief in de chat. Een lokaal bestand maak
+je niet. Gebruik lijsten, geen tabellen: tabellen worden in Adflow platte tekst.
 
 ## Output-format
 De losse notitie (kort) en daaronder de brief exact in de opbouw van de handleiding. Lean.
@@ -65,6 +68,6 @@ De losse notitie (kort) en daaronder de brief exact in de opbouw van de handleid
 
 ## Notes
 - Workflow **S6 (video)** in `references/ad-pipeline.md`. In = concept uit Adflow (+ goedgekeurd script waar nodig).
-  Uit = brief in het conceptdocument, daarna productie, launch volgens de Launch handleiding, en feedback uit de cijfers.
+  Uit = brief onder het concept, daarna productie, launch volgens de Launch handleiding, en feedback uit de cijfers.
 - Beslist niet over de copy. Die is in S4 en S5 gekozen; deze skill maakt hem producereerbaar.
 - De Meta-adnaam maakt Adflow bij het launchen uit de dims. Zie `naming`.

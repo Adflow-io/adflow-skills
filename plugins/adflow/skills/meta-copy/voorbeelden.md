@@ -5,7 +5,7 @@ Heeft het merk wel een handleiding, dan gaat die voor.
 
 ## Opmaak (vertrekpunt)
 
-Onder het kopje Ad copy in het conceptdocument, in deze volgorde, met een witregel tussen de blokken:
+Onder het kopje Ad copy en landingspagina in het conceptdocument, in deze volgorde, met een witregel tussen de blokken:
 
 | Deel | Wat | Verplicht |
 |---|---|---|

@@ -11,8 +11,8 @@ Skills van Adflow, verpakt als private Claude-marketplace. De skills zelf (`SKIL
 Je hebt een GitHub-account nodig met toegang tot deze repo.
 
 1. Open Claude (desktop of claude.ai) → **Customize** → **Add marketplace**.
-2. Koppel je GitHub-account en geef de Claude GitHub App toegang tot `Adflow-io/skills`.
-3. Vul `Adflow-io/skills` in, zet **Sync automatically** aan en installeer `ads-machine`.
+2. Koppel je GitHub-account en geef de Claude GitHub App toegang tot `Adflow-io/adflow-skills`.
+3. Vul `Adflow-io/adflow-skills` in, zet **Sync automatically** aan en installeer `ads-machine`.
 4. Zet de connectors aan die de skills nodig hebben: Adflow, Google Drive en (voor winners) Meta Ads.
 
 Daarna heb je de plugin in Chat, Cowork en Claude Code (daar heet hij `ads-machine@synced`). Wijzigingen die in `main`

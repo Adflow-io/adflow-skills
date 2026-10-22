@@ -61,7 +61,7 @@ Een **tabel**, gegroepeerd per soort. Kolommen in deze volgorde:
 
 ## Output-format
 Lean: korte kop (slot · delivery · footage-bron) + de tabel(len) per groep + evt. één regel tip. Geen intro/samenvatting.
-Het broll-blok gaat als input naar `video-brief` (S6). Sla niets lokaal op: de brief komt in het conceptdocument in Adflow.
+Het broll-blok gaat als input naar `video-brief` (S6). Sla niets lokaal op: de brief komt als eigen brief onder het concept in Adflow.
 
 ## QC-lat (check vóór je teruggeeft)
 - [ ] **Footage-bron klopt**: S6 draait alleen bij nieuwe footage (eigen productie/creator), niet bij bestaande b-roll.

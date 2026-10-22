@@ -32,6 +32,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 | S1 | `slots` |
 | S2 | `static-format`, `video-format` |
 | S4 | `static-voorzet`, `video-voorzet` (met `power-hooks`, `hook-levers`, `body`, `copy-levers`) |
+| Tussen S5 en S6 | `concept` (conceptdocument: hypothese, bewijs, dims, ad copy, launchplek) |
 | S6 | `video-brief` (editor en creator), `designer-brief` (static), `broll-shotlist` |
 | Naamgeving | `naming` |
 | Ad copy en copy templates | `meta-copy` |
@@ -41,7 +42,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 - Alle verwijzingen naar lokale klantmappen (`clients/<klant>/...`) vervangen door bronnen in Adflow en Drive.
 - Nieuw: `references/bronnen.md`, de skill `meta-copy` en generieke voorbeelden bij `video-brief` en `meta-copy`.
 - `video-brief` en `naming` herschreven rond de briefing handleiding: naamgeving met conceptnummer en variantcodes,
-  briefdiepte per concepttype, brief in het conceptdocument in Adflow.
+  briefdiepte per concepttype, brief als eigen brief onder het concept in Adflow.
 - `designer-brief` volgt een Designer-handleiding als die bestaat.
 
 ## Installeren

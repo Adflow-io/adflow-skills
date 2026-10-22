@@ -61,8 +61,8 @@ description: Schrijf de Meta ad copy (primary text, headline, description) voor 
 - Do not add other fields without agreement.
 
 ### Content
-- Write skills in Dutch, the language of the team. Terms the team uses in English (hook, angle, persona, awareness,
-  b-roll) stay English.
+- Write skills in English. Existing Dutch skills stay as they are until someone translates them. Terms the team uses
+  (hook, angle, persona, awareness, b-roll) stay as they are.
 - Open with one paragraph: what the skill delivers and which step of the pipeline it serves
   ([references/ad-pipeline.md](plugins/adflow/references/ad-pipeline.md)).
 - Then the steps in order, as a numbered list. Concrete and actionable, no background story.

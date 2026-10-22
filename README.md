@@ -26,7 +26,7 @@ same GitHub account is connected in Claude (Settings → Connectors → GitHub).
 ## Changing skills with Claude Code
 
 You change skills by telling Claude Code what you want to change. Claude follows the rules in [AGENTS.md](AGENTS.md):
-own branch, checks, pull request. Nicky approves, after which everyone has the new version.
+own branch, checks, pull request. No approval is needed; once merged, everyone has the new version.
 
 ### One-time setup
 
@@ -49,7 +49,7 @@ gh repo clone Adflow-io/adflow-skills ~/Projects/adflow-skills
 4. Test the skill for a real brand: open a new session with `claude --plugin-dir ./plugins/adflow` and invoke the
    skill, or ask a question that should trigger it.
 5. Happy with it? Ask Claude to open a pull request. Write in it what you tested.
-6. Nicky reviews and merges. Within minutes everyone has the new version.
+6. Merge it. Within minutes everyone has the new version.
 
 Want to start over or throw a change away? Tell Claude ("discard this branch and start again from main").
 

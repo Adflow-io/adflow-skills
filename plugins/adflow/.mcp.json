@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "adflow": {
+    "mcp": {
       "type": "http",
       "url": "https://app.adflow.io/api/v1/mcp"
     }

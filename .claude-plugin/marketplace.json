@@ -1,12 +1,15 @@
 {
-  "name": "adflow-ads-machine",
+  "name": "adflow",
   "owner": {
     "name": "Adflow"
+  },
+  "metadata": {
+    "description": "Claude-plugins van Adflow"
   },
   "plugins": [
     {
       "name": "ads-machine",
-      "source": "./",
+      "source": "./plugins/ads-machine",
       "description": "Skills en referenties voor het maken van Meta-ads (static en video), van concept-slot tot briefing."
     }
   ]

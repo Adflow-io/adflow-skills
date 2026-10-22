@@ -1,6 +1,6 @@
 {
   "name": "adflow",
-  "description": "Verbinding met Adflow (MCP): merken, dims, concepten, documenten, Copy library en performance.",
+  "description": "Verbindt Claude met je Adflow-workspace. Bekijk en beheer merken, dimensies, concepten en briefs, bewerk documenten, lees reviews en comments, haal performance op, en maak en lanceer ads vanuit een concept. Je logt in met je eigen Adflow-account en ziet alleen de merken waar je toegang toe hebt. Nodig voor de andere Adflow-plugins.",
   "author": {
     "name": "Adflow"
   }

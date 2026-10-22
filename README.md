@@ -1,41 +1,80 @@
 # Adflow skills
 
-Skills van Adflow, verpakt als private Claude-marketplace. De skills zelf (`SKILL.md`) zijn ook bruikbaar in andere agents.
+The Claude plugin `adflow`: the connection to Adflow plus the skills we use to make ads, from concept slot to brief and
+copy. Distributed as a private marketplace. The skills themselves (`SKILL.md`) also work in other agents.
 
-| Plugin | Wat |
-|---|---|
-| [`adflow`](plugins/adflow/README.md) | De verbinding met Adflow (MCP) en skills voor ads (static en video), van concept-slot tot briefing en copy |
+Skills are invoked as `adflow:<skill>`, for example `adflow:slots`. Overview and pipeline:
+[plugins/adflow/README.md](plugins/adflow/README.md).
 
-## Installeren (eenmalig)
+## Using the plugin (one-time setup)
 
-Je hebt een GitHub-account nodig met toegang tot deze repo.
+You need a GitHub account that is a member of `Adflow-io`.
 
-1. Open Claude (desktop of claude.ai) → **Customize** → **Add marketplace**.
-2. Koppel je GitHub-account en geef de Claude GitHub App toegang tot `Adflow-io/adflow-skills`.
-3. Vul `Adflow-io/adflow-skills` in, zet **Sync automatically** aan en installeer `adflow`.
-4. De Adflow-verbinding (MCP) zit in de plugin `adflow`: log de eerste keer in met je Adflow-account (in Claude Code via `/mcp`). Heb je Adflow ook als connector in claude.ai, zet die dan uit, anders heb je hem dubbel.
-5. Zet de connectors voor Google Drive en (voor winners) Meta Ads aan in claude.ai.
+1. Open Claude (desktop or claude.ai) → **Customize** → **Add marketplace**.
+2. Connect your GitHub account and give the Claude GitHub App access to `Adflow-io/adflow-skills`.
+3. Enter exactly `Adflow-io/adflow-skills`, turn on **Sync automatically** and install `adflow`.
+4. The first time, sign in to Adflow with your own Adflow account (in Claude Code via `/mcp`, server
+   `plugin:adflow:mcp`). If you also have Adflow as a connector in claude.ai, turn that one off, or you will have it
+   twice.
+5. Turn on the Google Drive and (for winners) Meta Ads connectors in claude.ai.
 
-Daarna heb je de plugin in Chat, Cowork en Claude Code (daar heet hij `adflow@synced`). Skills roep je aan als
-`adflow:<skill>`, bijvoorbeeld `adflow:slots`. Wijzigingen die in `main`
-komen, worden vanzelf bijgewerkt.
+After that you have the plugin in Chat, Cowork and Claude Code. Whatever lands on `main` is updated automatically.
 
-## Een skill aanpassen
+**Adding it fails** ("Repository not accessible")? Check that you accepted the invitation to `Adflow-io` and that the
+same GitHub account is connected in Claude (Settings → Connectors → GitHub). Disconnect and reconnect if in doubt.
 
-1. Open het bestand op GitHub, bijvoorbeeld `plugins/adflow/skills/meta-copy/SKILL.md`, en klik op het potlood
-   (of druk op `.` voor de editor met meerdere bestanden).
-2. Kies **Create a new branch and start a pull request** en beschrijf wat je verandert en waarom.
-3. De check controleert de frontmatter en de links. Na goedkeuring en merge heeft iedereen de nieuwe versie.
+## Changing skills with Claude Code
 
-Elke `SKILL.md` begint met frontmatter met `name` (gelijk aan de mapnaam) en een `description`. Claude gebruikt de
-`description` om te kiezen wanneer de skill wordt gebruikt, dus schrijf die zorgvuldig.
+You change skills by telling Claude Code what you want to change. Claude follows the rules in [AGENTS.md](AGENTS.md):
+own branch, checks, pull request. Nicky approves, after which everyone has the new version.
 
-## Indeling
+### One-time setup
+
+```bash
+brew install gh
+gh auth login
+gh auth setup-git
+gh repo clone Adflow-io/adflow-skills ~/Projects/adflow-skills
+```
+
+### How it works
+
+1. Open Claude Code in the `adflow-skills` folder (desktop: Code tab → choose the folder; terminal:
+   `cd ~/Projects/adflow-skills` and `claude`).
+2. Say what you want, as concretely as possible. For example:
+   - *"`meta-copy` writes headlines that are too long. Max 40 characters, and give 3 options instead of 1."*
+   - *"Create a new skill `tiktok-copy`, based on `meta-copy`, for TikTok captions."*
+   - *"`video-voorzet` should always include a CTA direction."*
+3. Claude creates a branch, changes the skill and runs the checks. Read what it changed.
+4. Test the skill for a real brand: open a new session with `claude --plugin-dir ./plugins/adflow` and invoke the
+   skill, or ask a question that should trigger it.
+5. Happy with it? Ask Claude to open a pull request. Write in it what you tested.
+6. Nicky reviews and merges. Within minutes everyone has the new version.
+
+Want to start over or throw a change away? Tell Claude ("discard this branch and start again from main").
+
+### Ground rules
+
+- **One topic per pull request.** Small and easy to review.
+- **No client data in the repo**: no client names, reviews, winners, numbers or briefs, not even as an example.
+  Client knowledge lives in Adflow, the per-brand handbooks in Drive.
+- **Brand-specific rules belong in the brand's Drive handbook**, not in a skill.
+- **The `description` decides when Claude uses a skill.** If you change it, test that Claude still picks the skill
+  for an ordinary question.
+- **Rename or delete only after agreement.** Users and other skills rely on the name.
+- **No copied text** from courses, books or swipe files. Your own words, with the source cited.
+
+All rules for the agent are in [AGENTS.md](AGENTS.md).
+
+## Layout
 
 ```
-.claude-plugin/marketplace.json   lijst van plugins in deze marketplace
-plugins/<plugin>/                 één map per plugin, met eigen .claude-plugin/plugin.json
-scripts/check.py                  de check die op elke pull request draait
+AGENTS.md                         rules for agents (CLAUDE.md points to it)
+.claude-plugin/marketplace.json   the marketplace
+plugins/adflow/
+  .claude-plugin/plugin.json      plugin name and description
+  .mcp.json                       the connection to Adflow
+  skills/<name>/SKILL.md          the skills
+  references/                     frameworks shared by several skills
+scripts/check.py                  the check that runs on every pull request
 ```
-
-Geen klantdata in deze repo. Klantkennis staat in Adflow, de handleidingen per merk in Drive.

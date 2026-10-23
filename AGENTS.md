@@ -106,6 +106,29 @@ Invoke the skill (`/adflow:<name>`) or ask a question that should trigger it, fo
 
 Do not put client output from the test in the repo or in the pull request; only describe what you checked.
 
+## Thinking along on briefing and concept templates
+
+Marketers correct briefs and concept documents all the time: they cut a line, add a step, rewrite a format. Treat
+that as a signal about how the brand's briefing templates and concept templates should work, and think along about
+making them better.
+
+- **Notice the pattern.** When the user edits a brief or a concept document, or gives feedback on one, say in one or
+  two lines what changed and what seems to be behind it. Do not wait to be asked.
+- **Keep the types apart.** An editor brief, a creator brief and a designer brief differ, and so do the concept types
+  inside them (for example a remake, a language version, a new format on existing footage), video versus static,
+  voice-over versus talking head. The same goes for the concept document: its sections (hypothesis, insight, slot
+  and dims, ad copy, launch place) can weigh differently per concept type. A fix for one type is not a fix for the
+  others. Say which type the feedback applies to, and do not carry it over to another type without asking.
+- **One correction is not a rule.** Ask if it should become the standard before you propose it as one. A line the
+  user deliberately removed stays out; note it as a conscious omission and do not add it back.
+- **Say where a change belongs.** Brand-specific rules and brand-specific templates go in that brand's Drive
+  handbook (for example the editor briefing handbook, or a separate template next to it). A method that works for
+  every brand goes in the skill (`video-brief`, `designer-brief`, `concept`) and follows the workflow above. Never put brand
+  names or client data in the repo, not even as an example.
+- **Propose first.** Show the proposed change and let the user approve it before you edit a Drive handbook or open a
+  pull request. Both are shared and reach other people.
+- **Keep briefs lean.** Suggest cutting before adding. A brief the editor can read in half a minute beats a complete one.
+
 ## What an agent never does
 
 - Push to `main`, force-push, or rewrite history.

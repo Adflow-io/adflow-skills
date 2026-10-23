@@ -25,7 +25,8 @@ Skills are invoked as `adflow:<name>`, for example `adflow:slots`.
 
 1. **Always start from a fresh `main`:** `git switch main && git pull`.
 2. **Create a branch** with a short name that says what changes: `git switch -c skill/meta-copy-headlines`.
-   Never work directly on `main` and never push to `main`.
+   Don't work on `main` or push to it, unless the user has said they may commit directly to `main`. For those users
+   (and only when they say so) skip the branch and the pull request: run the checks, commit on a fresh `main` and push.
 3. **One topic per pull request.** Change one skill, or add one new skill. No unrelated cleanups.
 4. **Read first**: the skill you change, the references it links to, and the skills that refer to it
    (`grep -rn "<name>" plugins/`).
@@ -131,7 +132,8 @@ making them better.
 
 ## What an agent never does
 
-- Push to `main`, force-push, or rewrite history.
+- Push to `main` unless the user has said they may commit directly to `main`.
+- Force-push or rewrite history, whoever the user is.
 - Change `.claude-plugin/`, `plugins/adflow/.mcp.json`, `scripts/` or `.github/` unless Nicky asks for it.
 - Add a `version` to `plugin.json`: without a version, every merge reaches users automatically.
 - Put passwords, tokens or API keys in a file.

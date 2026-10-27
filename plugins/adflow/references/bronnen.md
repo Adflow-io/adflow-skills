@@ -10,7 +10,7 @@ connectors, per merk. Zet nooit merk-ID's of klantgegevens vast in een skill.
 | Concepten, briefs, status | Adflow-concepten | `search_concepts`, `get_concept` |
 | Research (reviews, comments, bewijs per dimensie) | Adflow-documenten met tag research | `search_workspace_items`, dan `get_document`. De ruwe CSV's staan in de Drive-klantmap |
 | Winners en performance | Live, nooit uit een bestand | Adflow (`get_top_ads`, `get_dimension_performance`, `analyze_ad_performance`) of de Meta Ads MCP |
-| Ad copy die al bestaat | Adflow Copy library | `list_ad_copy_sets` |
+| Ad copy die al bestaat | Adflow Copy library | Zoeken in de Copy library (op naam, dims of concept) |
 | Hoe we briefen, copy schrijven en launchen voor dit merk | Drive-handleidingen, zie hieronder | Drive `search_files`, dan `read_file_content` |
 | Format-fit en hookbank van de klant | Adflow-documenten "Format fit — <merk>" en "Hooks — <merk>" als ze bestaan | Zoals research. Bestaan ze niet, zeg dat dan en ga door zonder |
 | Voorbeeldbriefs | De sectie Referentiebriefs in de briefing handleiding van het merk | Zoek de brief op titel in Adflow |

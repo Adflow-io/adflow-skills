@@ -1,6 +1,6 @@
 ---
 name: meta-copy
-description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive, en maak daarna per regio de copy templates in de Adflow Copy library volgens de launch handleiding. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Lean output.
+description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive, en zet die daarna met een versie per taal in de Adflow Copy library volgens de launch handleiding. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Lean output.
 ---
 
 # Ad copy
@@ -8,9 +8,15 @@ description: Schrijf de Meta ad copy (URL, primary text, headline, description) 
 Schrijft de ad copy van één concept en zet die klaar voor het launchen. Ad copy is niet de tekst in beeld: die staat in
 de briefing handleiding. Dit gaat over primary text, headline en description.
 
-> **De handleiding van het merk is leidend.** Opmaak, copytypes, schrijfregels en de naam van de templates staan in
+> **De handleiding van het merk is leidend.** Opmaak, copytypes, schrijfregels en de naam van de copy staan in
 > `<Merk> – Ad copy handleiding Meta` en `<Merk> – Launch handleiding Meta` in Drive. Zie
 > [bronnen.md](../../references/bronnen.md). Deze skill bevat alleen de generieke werkwijze.
+
+## Tools
+Gebruik de tools van de Adflow MCP. Deze skill noemt bewust geen toolnamen, want die kunnen veranderen. Kies de tool op
+wat hij doet: copy zoeken, copy lezen, copy aanmaken of bijwerken, een taal- of market-versie zetten, copy of
+landingspagina aan een concept koppelen. Vind je geen tool die doet wat een stap vraagt, zeg dat. Niet gokken en niet
+omheen werken.
 
 ## Voordat je begint
 1. **Zoek de ad copy handleiding en de launch handleiding** van het merk in Drive en lees ze helemaal.
@@ -22,7 +28,7 @@ Loop de vier bronnen af en zet de bevindingen kort onder elkaar.
 
 | Bron | Waar | Wat |
 |---|---|---|
-| Vergelijkbare ad | Adflow (zoek op dezelfde angle, persona of awareness) en de Copy library (`list_ad_copy_sets`) | Copy van een ad met dezelfde soort hoek die goed liep |
+| Vergelijkbare ad | Adflow (zoek op dezelfde angle, persona of awareness) en de Copy library (zoek op dezelfde dims) | Copy van een ad met dezelfde soort hoek die goed liep |
 | Landingspagina | De pagina uit de brief, op het domein of de taalmap uit de launch handleiding | Productnaam, prijs, aanbod, aantallen, verzending |
 | Creative | De video of image van de ad | Hook en boodschap |
 | Concept en brief | Het conceptdocument en de brief in Adflow | Persona, angle, hook type, awareness |
@@ -49,23 +55,35 @@ volgorde die de handleiding noemt. Zie [concept-document.md](../../references/co
 overschrijf dan niets en lever de copy in de chat. Gebruik geen `/` in de tekst (ook niet in primary text, headline of
 description): de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).
 
-## Stap 4: copy templates per regio
-Pas als de gebruiker de copy heeft goedgekeurd:
-1. Haal de regio's, talen, landingspagina's en de naam van de templates op uit de launch handleiding.
-2. Vertaal de copy per regio volgens de vertaalinstructies in de launch handleiding (natuurlijk boven letterlijk,
-   taalregels, notatie).
-3. Controleer eerst `list_ad_copy_sets`: bestaat het template al, werk het dan bij met `update_ad_copy_set` in plaats
-   van een nieuw aan te maken. Anders `create_ad_copy_set`.
-4. Zet de landingspagina van de regio als standaard-URL van het template.
-5. Is een vertaling niet zeker, zet dan één of twee alternatieven in de chat met de letterlijke betekenis en waarom je
-   de gekozen versie beter vindt. Klopt een bestaande vertaling al, zeg dat en verander niets.
+## Stap 4: copy in de Copy library
+Eén concept krijgt één copy in de library. Die copy heeft een versie per taal, niet per regio.
 
-Het aanmaken of bijwerken van templates is een schrijfactie in een gedeelde library. Laat de gebruiker eerst de
-vertalingen zien en vraag akkoord.
+1. **Opzoeken.** Haal uit de launch handleiding de naam van de copy, de talen en de regio's. Haal de talen en markets
+   van het merk ook op in Adflow.
+2. **Bestaat hij al?** Zoek in de Copy library op de naam of via het concept. Bestaat hij, werk hem bij. Maak nooit
+   een tweede aan.
+3. **Aanmaken.** Bestaat hij niet, maak hem aan met de naam uit de handleiding, de dims van het concept, de copy in
+   de mastertaal en de landingspagina als standaard-URL. Koppel hem aan het concept.
+4. **Vertalen.** Lees de mastertaal, vertaal per taal volgens de vertaalinstructies in de launch handleiding
+   (natuurlijk boven letterlijk, taalregels, notatie) en zet per taal één versie. Regio's met dezelfde taal delen die
+   versie (bijvoorbeeld NL en BE-NL).
+5. **Market-versie alleen bij afwijking.** Wijkt een regio inhoudelijk af van zijn taal (andere valuta, ander aanbod,
+   andere verzenddrempel), maak dan een versie voor die market. Anders niet.
+6. **Copygroepen.** Een groep die je meestuurt (primary texts, headlines, descriptions) vervangt die groep van die
+   versie. Stuur alleen de groepen mee die je wilt zetten.
+7. **Template of concept.** Zonder concept bewerk je de library-copy, en elk concept dat hem gebruikt krijgt de
+   wijziging. Gaat het om een afwijking voor één concept, bewerk dan alleen de copy van dat concept.
+8. **Twijfel.** Is een vertaling niet zeker, zet dan één of twee alternatieven in de chat met de letterlijke
+   betekenis en waarom je de gekozen versie beter vindt. Klopt een bestaande vertaling al, zeg dat en verander niets.
+
+De regio-URL hoort bij de landingspagina in Adflow, niet bij de copy. Zet de landingspagina met zijn market-paden
+klaar en koppel die aan het concept.
+
+Maak en vul de copy direct, zonder akkoordstap, tenzij de handleiding van het merk er wel een vraagt.
 
 ## Output-format
-De copy in de opmaak van de handleiding. Daarna, na akkoord, een korte lijst: welke templates zijn aangemaakt of
-bijgewerkt (naam, taal, landingspagina).
+De copy in de opmaak van de handleiding. Daarna een korte lijst: welke copy is aangemaakt of bijgewerkt, welke
+taalversies en market-versies zijn gevuld, en wat de gebruiker nog moet checken (zoals valuta of drempels per regio).
 
 ## QC-lat
 - [ ] Handleiding(en) van het merk gelezen en gevolgd (of gemeld dat ze ontbreken).
@@ -76,7 +94,8 @@ bijgewerkt (naam, taal, landingspagina).
 - [ ] Geen verboden woorden of tekens uit de schrijfregels van het merk.
 - [ ] Geen `/` in de tekst van het conceptdocument (alleen in links).
 - [ ] Headline-lengte volgens de handleiding.
-- [ ] Templates volgen de naam uit de launch handleiding, en bestaande templates zijn bijgewerkt, niet gedupliceerd.
+- [ ] Eén copy per concept, met de naam uit de handleiding. Bestaande copy bijgewerkt, niet gedupliceerd.
+- [ ] Elke taal van het merk heeft een versie. Market-versies alleen waar een regio echt afwijkt.
 
 ## Notes
 - Hoort bij de launch-voorbereiding in `references/ad-pipeline.md` (na S6, voor het launchen).

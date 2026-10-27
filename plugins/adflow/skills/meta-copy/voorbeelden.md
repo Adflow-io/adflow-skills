@@ -58,8 +58,9 @@ Headline:
 - De copy zegt hetzelfde als de creative.
 - Prijs, besparing en aantallen altijd van de landingspagina.
 
-## Copy templates per regio (vertrekpunt)
+## Copy in de Copy library (vertrekpunt)
 
-Eén template per concept en regio, met de naam `C[conceptnummer]_[REGIO]`, bijvoorbeeld `C64_NL`. De landingspagina van
-de regio is de standaard-URL van het template. Vertaal natuurlijk, niet letterlijk, en laat de gebruiker de
-vertalingen controleren voordat je ze aanmaakt.
+Eén copy per concept, met de naam `C[conceptnummer]`, bijvoorbeeld `C64`. De copy heeft een versie per taal (zoals NL
+en DE), niet per regio. Regio's met dezelfde taal delen die versie. Een market-versie maak je alleen als een regio
+inhoudelijk afwijkt, zoals een andere valuta of verzenddrempel. De landingspagina van de regio hoort bij de
+landingspagina in Adflow. Vertaal natuurlijk, niet letterlijk.

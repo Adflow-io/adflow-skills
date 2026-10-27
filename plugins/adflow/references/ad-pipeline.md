@@ -109,4 +109,4 @@ script** — zie [[feedback-full-script-before-brief]]. Static heeft S3/S5 niet 
 `power-hooks` (hooks) en `body` (primary text / tekst-op-scherm) zijn de **video-copy-bouwstenen**; `video-voorzet`
 (S4) orkestreert ze tot voorzetjes. `anti-ai-writing` is de gedeelde slop-eindcheck (beide vehicles). `naming`
 (S6, beide) controleert de dims en geeft de variantcodes; de Meta-adnaam maakt Adflow bij het launchen. `meta-copy` schrijft de ad copy en
-maakt de copy templates per regio, na de brief en vóór het launchen.
+zet de copy met een versie per taal in de Copy library, na de brief en vóór het launchen.

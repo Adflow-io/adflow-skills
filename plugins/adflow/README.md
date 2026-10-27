@@ -35,7 +35,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 | Tussen S5 en S6 | `concept` (conceptdocument: hypothese, bewijs, dims, ad copy, launchplek) |
 | S6 | `video-brief` (editor en creator), `designer-brief` (static), `broll-shotlist` |
 | Naamgeving | `naming` |
-| Ad copy en copy templates | `meta-copy` |
+| Ad copy en Copy library | `meta-copy` |
 
 ## Wijzigingen in 0.2.0
 

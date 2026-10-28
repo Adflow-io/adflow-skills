@@ -39,8 +39,9 @@ partnership: empower de creator, vertel een verhaal.
 ---
 
 ## Werkwijze (via Adflow MCP)
-1. `set_active_brand` → klant; venster 90d (breed genoeg voor alle assen).
-2. `get_top_ads` (main_metric = **spend**) + `list_ads` voor de volledige inventaris.
+1. Kies het merk in de Adflow MCP; venster 90d (breed genoeg voor alle assen).
+2. Haal de top ads op, gesorteerd op **spend**, plus de volledige lijst ads voor de inventaris.
+   Kijk in de Adflow MCP welke tools er zijn voor deze taak en lees hun beschrijving voordat je ze gebruikt.
 3. Map ads op de assen via de **adnaam-tokens** ([naming-convention.md](naming-convention.md)):
    `PR` → product diversity · `CR` (naam/none/founders) → talent + lo-fi/brand-led · `AN` → messaging-motivator ·
    `OF` → offer-based · `ST:Testimonial` → social proof · `TY` + `_9x16` → format/aspect ratio.

@@ -37,8 +37,9 @@ uit [ad-pipeline.md](ad-pipeline.md)).
 ---
 
 ## Werkwijze (via Adflow MCP)
-1. `set_active_brand` → juiste klant. Kies venster (default 90d voor diversity — breed genoeg voor alle types).
-2. `get_top_ads` (main_metric = **spend**) voor de winners + `list_ads` voor de volledige type-inventaris.
+1. Kies het juiste merk in de Adflow MCP. Kies venster (default 90d voor diversity — breed genoeg voor alle types).
+2. Haal de top ads op, gesorteerd op **spend**, voor de winners, plus de volledige lijst ads voor de type-inventaris.
+   Kijk in de Adflow MCP welke tools er zijn voor deze taak en lees hun beschrijving voordat je ze gebruikt.
 3. Map elke ad op de 10 checks. De **adnaam-tokens** doen het meeste werk
    ([naming-convention.md](naming-convention.md)): `AN` (angle) → #1/#4, `CR` (creator: none/founders/naam) → #2/#3/#7,
    `TY` (video/image) + `AW` (awareness) → #5/#6, `AN`×`CR`/`LNG` variatie → #9, `AN`×`PRS` variatie → #10.

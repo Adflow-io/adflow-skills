@@ -13,7 +13,7 @@ Drive handbooks (see [bronnen.md](bronnen.md)).
 
 | What | Where |
 |---|---|
-| Hypothesis, insight and evidence, slot and dims, ad copy, landing pages, launch place | The concept document |
+| Hypothesis, insight and evidence, slot and dims, ad copy, launch place | The concept document |
 | Instruction, script, shotlist, text on screen, film rules, check before delivery | A separate brief under the concept (`video-brief`, `designer-brief`) |
 | Embeds of examples, b-roll, music | The brief |
 | Dims (persona, angle, product, offer, awareness, creator, language) | Attached to the concept; the brief inherits them |
@@ -46,9 +46,13 @@ List the values, one per line: persona, angle, awareness, product, language, and
 - The offer can differ per variant; dims sit on the ad, so only the variant that uses the offer gets it.
 
 ### 4. Ad copy and landing page
-Per variant: landing page URL, primary text, headline (the layout follows the brand's ad copy handbook).
+Two separate parts:
+- **Ad copy** per variant: primary text, headline (the layout follows the brand's ad copy handbook).
+- **Landing page** per variant: the exact page. It is set separately in Adflow, not in the copy template.
+
 - Price, saving and dates come from the landing page, never from an old ad.
 - Copy must say the same as the creative. No new promises.
+- The landing page is a source for price, saving and dates; it is not part of the copy.
 - Unknown URL or price on the site? Write `[check]`.
 
 ### 5. Launch place
@@ -84,8 +88,8 @@ Per variant: landing page URL, primary text, headline (the layout follows the br
 > - Offer: variant 1 starter bundle *(to be created)*, variant 2 none
 >
 > **Ad copy and landing page**
-> - Variant 1: URL, primary text, headline
-> - Variant 2: URL, primary text, headline
+> - Variant 1: primary text, headline. Landing page: [exact page]
+> - Variant 2: primary text, headline. Landing page: [exact page]
 >
 > **Launch place**
 > - Ad set: per the launch handbook. To create: campaign, ad set, copy template.

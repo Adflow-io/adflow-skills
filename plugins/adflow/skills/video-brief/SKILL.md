@@ -22,7 +22,7 @@ handleiding dat vraagt, een goedgekeurd script) om in een **producereerbare brie
    uit het concept niet blijkt.
 
 ## Input (lees eerst, raad niet)
-- **Het concept uit Adflow** (`search_concepts`, `get_concept`): nummer, dims (product, persona, angle, awareness,
+- **Het concept uit Adflow** (zoek het concept en lees het): nummer, dims (product, persona, angle, awareness,
   offer, creator, taal) en het gekoppelde conceptdocument. Het conceptnummer komt uit Adflow, **nooit zelf verzinnen**.
 - **Het concepttype** zoals de handleiding het noemt (bv. remake, taalversie, nieuw format, founders ad). Het type
   bepaalt hoe uitgebreid de brief wordt.
@@ -30,7 +30,7 @@ handleiding dat vraagt, een goedgekeurd script) om in een **producereerbare brie
   script. Bij typen met een uitgeschreven script (bv. nieuw format, founders ad) maak je de brief pas **na akkoord op
   het script** (S5, met humanizer-pass).
 - **De brand guidelines** en **de research** voor klantwoorden en DON'Ts (zie bronnen.md).
-- **De Referentiebriefs** uit de handleiding: haal de brief van hetzelfde type op in Adflow (`get_document`) en gebruik
+- **De Referentiebriefs** uit de handleiding: haal de brief van hetzelfde type op in Adflow (lees het document) en gebruik
   hem voor inhoud en opbouw. Niet voor de naam: oudere briefs gebruiken een andere naamgeving.
 
 ## Werkwijze

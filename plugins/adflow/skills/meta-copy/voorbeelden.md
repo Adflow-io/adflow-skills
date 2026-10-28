@@ -5,11 +5,12 @@ Heeft het merk wel een handleiding, dan gaat die voor.
 
 ## Opmaak (vertrekpunt)
 
-Onder het kopje Ad copy en landingspagina in het conceptdocument, in deze volgorde, met een witregel tussen de blokken:
+Onder het kopje Ad copy in het conceptdocument, in deze volgorde, met een witregel tussen de blokken. De landingspagina
+hoort niet bij de ad copy: die staat in Adflow los van de copy.
+
 
 | Deel | Wat | Verplicht |
 |---|---|---|
-| URL | De exacte product- of collectiepagina, geen homepage | Altijd |
 | Primary text | De eerste regel is de hook. Dan kort wat de klant krijgt of doet, dan een rustige afsluiter | Altijd |
 | Headline | 1 stuk, rond de 40 tekens | Altijd |
 | Description | 1 korte regel, alleen wat op de landingspagina staat | Optioneel |
@@ -23,8 +24,6 @@ Onder het kopje Ad copy en landingspagina in het conceptdocument, in deze volgor
 
 ## Voorbeeld evergreen
 
-URL: [exacte productpagina]
-
 Primary text:
 [Hook in de woorden van de klant, bijvoorbeeld een herkenbaar moment.]
 
@@ -36,8 +35,6 @@ Headline:
 [Het moment of de hoek, geen prijs]
 
 ## Voorbeeld deal
-
-URL: [exacte productpagina of collectie]
 
 Primary text:
 [Hook die het aanbod noemt]
@@ -60,6 +57,6 @@ Headline:
 
 ## Copy templates per regio (vertrekpunt)
 
-Eén template per concept en regio, met de naam `C[conceptnummer]_[REGIO]`, bijvoorbeeld `C64_NL`. De landingspagina van
-de regio is de standaard-URL van het template. Vertaal natuurlijk, niet letterlijk, en laat de gebruiker de
+Eén template per concept en regio, met de naam `C[conceptnummer]_[REGIO]`, bijvoorbeeld `C64_NL`. Een template bevat alleen
+primary text, headline en description, geen landingspagina. Vertaal natuurlijk, niet letterlijk, en laat de gebruiker de
 vertalingen controleren voordat je ze aanmaakt.

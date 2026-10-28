@@ -28,7 +28,7 @@ De velden zijn de waardes van de **dims in Adflow**. Er is geen aparte woordenli
 van het concept en zorg dat de waardes kloppen voor het launchen.
 
 ## Werkwijze
-1. Haal het concept en zijn dims op (`get_concept`, `list_dimension_values` voor de bestaande waardes).
+1. Haal het concept en zijn dims op (lees het concept en haal de bestaande waardes van de dimensions op).
 2. Controleer de 7 velden: product, persona, angle, creator, offer, awareness, taal. Ontbreekt er een, meld dat.
    Awareness kun je afleiden uit de hook en de angle (zie de ladder in de referentie). Offer is `none` als er geen
    aanbod is.

@@ -1,6 +1,8 @@
 ---
 name: gap-hook
 description: Write hooks with the information-gap formula [Know] + [But] + [Don't know] (Chris Chung). The hook starts with something the viewer already knows or believes, flips it with "but", and leaves the gap open so the viewer keeps watching. Use for "write a gap hook", "make this hook more curious", "know but don't know", "information gap hook", or when a hook gives away the promise or leaves nothing open. Output = only a few hook options, no explanation. Lean.
+metadata:
+  adbase: "true"
 ---
 
 # Gap Hook

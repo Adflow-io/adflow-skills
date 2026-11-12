@@ -1,6 +1,8 @@
 ---
 name: script-fluff-remover
 description: World-class editor for short-form video scripts (Instagram Reels, TikToks, YouTube Shorts) that mainly SHORTENS scripts. Use whenever the user wants a script shorter or tighter — trigger on "shorten this script", "make this shorter", "can you tighten this script", "remove the fluff", "this is too long", "make this more compact", or just "shorter". Also trigger when someone pastes a reel/TikTok/Shorts script and asks to shorten or review it, or asks for line-by-line feedback. Besides shortening, the skill can also simplify and review for speakability/retention, but shortening is the main task. It keeps the creator's voice and message intact and only cuts where it really raises retention.
+metadata:
+  adbase: "true"
 ---
 
 # Short-form Script Editor

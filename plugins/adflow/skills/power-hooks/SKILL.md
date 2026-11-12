@@ -1,6 +1,8 @@
 ---
 name: power-hooks
 description: Write, improve, or score ad hooks and scroll-stoppers using the 6 power words framework (subject, action, objective/end-state, contrast, proof, time). Use this whenever the user wants hooks, openers, or first lines for ads, video (Reels/TikTok/Shorts/YouTube), UGC scripts, emails, or thumbnails — including "make this hook stronger", "score my hook", "give me hook variations", "why isn't this hook stopping the scroll", or when writing an ad script and the opening line needs work. Trigger even when the user says "opener", "scroll-stopper", "first line", or "thumbnail text" rather than the literal word "hook".
+metadata:
+  adbase: "true"
 ---
 
 # Power Hooks

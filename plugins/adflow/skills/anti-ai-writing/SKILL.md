@@ -1,6 +1,8 @@
 ---
 name: anti-ai-writing
 description: Rewrite text to sound natural, human, and conversational. Only trigger this skill when the user explicitly asks to "humanize" text, "remove AI tone", or "make this sound more natural" (or very close variants of these phrases). Do not trigger for general rewriting, editing, or tone improvement requests unless one of those specific phrases is used.
+metadata:
+  adbase: "true"
 ---
 
 # Anti-AI Writing Rewriter

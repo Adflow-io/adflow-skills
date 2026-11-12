@@ -1,6 +1,8 @@
 ---
 name: static-format
 description: Brainstorm een breed menu static-formats voor één concept-slot (Persona × Angle × Awareness) — elk format met een concreet 1-regel-concept voor die slot, clarity/curiosity, en fit-rating. Stap S2 van de ad-pijplijn. Levert een menu om uit te kiezen (mag meerdere), beslist niet. Alleen statics. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Static Format (S2)

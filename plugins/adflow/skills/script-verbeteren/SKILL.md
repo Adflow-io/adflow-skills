@@ -1,6 +1,8 @@
 ---
 name: script-verbeteren
 description: Choice menu to improve a video script, right after the full script (S5) and before the brief (S6). Shows numbered improvement options (shorten, more human, sharper/more concrete, hold the viewer, rewrite the hook, psychological variation, audience pass); the user picks one or more, and each chosen option runs one at a time with a stop and approval in between. Use for "how can I make this script better", "improve the script", "what other checks can I do", or when a full script is ready. Video only. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Improve script (S5b · video)

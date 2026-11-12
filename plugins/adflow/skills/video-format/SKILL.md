@@ -1,6 +1,8 @@
 ---
 name: video-format
 description: Brainstorm een menu delivery/formats (het vehicle + de uitvoering) voor een gekozen concept-slot — talking-head, VO over broll, observational, dialoog, tekst-only, green screen, foto+VO, animatie, hands/POV, interview. Elk met een 1-regel-concept, Rol (drager/verkenner) en fit-rating. Stap S2 (video) van de ad-pijplijn. Levert een menu (mag meerdere), beslist niet. Alleen video. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Video Delivery/Format (S2 · video)

@@ -1,6 +1,8 @@
 ---
 name: copy-levers
 description: Verbeter bestaande copy als senior direct-response copywriter — website copy (hero, features, landingspagina), Meta ad teksten (primary text, headline), video-scripts, e-mails, sales pages. Diagnose eerst de 3–5 grootste zwaktes, kiest 3–6 copywriting-levers (concreet maken, mechanisme uitleggen, relevantie, geloofwaardigheid, contrast, weerstand wegnemen, nieuwsgierigheid), herschrijft zonder de kern-claim of productwaarheid te veranderen, en toont de belangrijkste wijzigingen met lever + waarom. Gebruik bij "haal dit door de copy-levers", "maak deze copy sterker", "verbeter deze tekst/hero/mail/ad", "diagnose deze copy", of wanneer copy vaag, generiek of ongeloofwaardig is. Voor losse hooks: gebruik hook-levers of power-hooks. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Copy Levers

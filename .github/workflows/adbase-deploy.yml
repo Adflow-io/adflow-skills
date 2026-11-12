@@ -1,0 +1,21 @@
+name: adbase-deploy
+
+# Skills marked `adbase: "true"` are fetched when Adbase's agent service deploys. This starts that deploy on
+# staging after every merge, so the agent there runs the latest skills. Production takes them on its next deploy.
+on:
+  push:
+    branches: [main]
+    paths: [plugins/adflow/skills/**, plugins/adflow/references/**]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the staging deploy of the Adbase agent
+        env:
+          TOKEN: ${{ secrets.ADBASE_PIPELINE_TRIGGER_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then echo "::warning::ADBASE_PIPELINE_TRIGGER_TOKEN is not set; skipping"; exit 0; fi
+          curl --fail --silent --show-error -X POST \
+            --form "token=$TOKEN" --form ref=staging --form "variables[SKILLS_UPDATED]=true" \
+            https://gitlab.com/api/v4/projects/adflow%2Fflow/trigger/pipeline > /dev/null

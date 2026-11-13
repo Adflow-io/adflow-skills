@@ -1,6 +1,8 @@
 ---
 name: ad-reviewer
-description: Expert psychological ad reviewer and creative strategist. Use this skill whenever a user wants to audit, grade, score, review, or improve ad scripts, hooks, or creative copy using the three-dimension psychological diversity framework (Valence Zone, Self-Concept Anchor, Language Intensity). Also trigger when the user wants to: generate psychologically distinct ad variations, run a gap analysis on a portfolio of ads, check if ads are over-indexing on a single emotional zone, or rewrite ads to target different psychological profiles. Trigger even for loosely related requests like "review my ad", "make a variation of this script", "what's missing from my ad creative", or "score this hook" — the psychological framework should always be applied.
+description: "Expert psychological ad reviewer and creative strategist. Use this skill whenever a user wants to audit, grade, score, review, or improve ad scripts, hooks, or creative copy using the three-dimension psychological diversity framework (Valence Zone, Self-Concept Anchor, Language Intensity). Also trigger when the user wants to: generate psychologically distinct ad variations, run a gap analysis on a portfolio of ads, check if ads are over-indexing on a single emotional zone, or rewrite ads to target different psychological profiles. Trigger even for loosely related requests like \"review my ad\", \"make a variation of this script\", \"what's missing from my ad creative\", or \"score this hook\" — the psychological framework should always be applied."
+metadata:
+  adbase: "true"
 ---
 
 # Psychologically Distinct Ad Reviewer

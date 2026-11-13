@@ -1,6 +1,8 @@
 ---
 name: concept
 description: Create or fill the concept document in Adflow (hypothesis, insight and evidence, slot and dims, ad copy and landing page, launch place) for a chosen slot, after the script or voorzet is approved. Use for "make the concept", "write the hypothesis", "put this in Adflow as a concept", or before the brief. Not for the brief itself (use video-brief or designer-brief) and not for writing the copy (use meta-copy).
+metadata:
+  adbase: "true"
 ---
 
 # Concept (between S5 and S6)

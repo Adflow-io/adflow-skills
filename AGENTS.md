@@ -59,6 +59,13 @@ description: Schrijf de Meta ad copy (primary text, headline, description) voor 
 - `description` is on **one line** and at most 1024 characters.
 - The `description` decides when Claude picks the skill. Say **what** the skill does, **when** to use it (in words a
   user actually types) and **what not** (point to the skill that does).
+- One more field is allowed: `metadata` with `adbase: "true"`, which also gives the skill to the agent inside Adbase (the
+  Adflow app). Add it only when the skill works with Adflow data alone: no Google Drive, no local files or programs
+  (ffmpeg, scripts), no other tools. Leave it out when unsure; skills without it stay out of Adbase.
+  ```yaml
+  metadata:
+    adbase: "true"
+  ```
 - Do not add other fields without agreement.
 
 ### Content

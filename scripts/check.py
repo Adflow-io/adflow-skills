@@ -66,6 +66,8 @@ for plugin in marketplace["plugins"]:
             errors.append(f"{rel(skill_md)}: zet de description op één regel")
         elif len(description) > 1024:
             errors.append(f"{rel(skill_md)}: description is {len(description)} tekens, maximaal 1024")
+        elif description[0] not in "\"'" and (": " in description or " #" in description):
+            errors.append(f"{rel(skill_md)}: description bevat ': ' of ' #'; zet hem tussen dubbele aanhalingstekens, anders is het geen geldige YAML en kan Adbase de skill niet lezen")
         lines = text.count("\n") + 1
         if lines > MAX_SKILL_LINES:
             errors.append(f"{rel(skill_md)}: {lines} regels, maximaal {MAX_SKILL_LINES}; verplaats uitleg naar references/")

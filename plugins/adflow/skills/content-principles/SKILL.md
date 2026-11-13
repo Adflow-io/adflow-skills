@@ -1,6 +1,8 @@
 ---
 name: content-principles
 description: The psychology behind short-form content that holds attention. Use it whenever you plan, write, review or edit a short-form video script (Reels, TikTok, Shorts), a hook, or a social post. It teaches how a viewer's mind works, never a template to fill in, so apply the principles silently instead of turning them into a checklist or format.
+metadata:
+  adbase: "true"
 ---
 
 # Content Principles: the psychology under short form

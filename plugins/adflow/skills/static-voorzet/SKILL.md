@@ -1,6 +1,8 @@
 ---
 name: static-voorzet
 description: Maak korte static-ad voorzetjes (headline + on-image kernregels) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit de research, past de 2 static-messaging-wetten toe, en levert opties om uit te kiezen — vóór de designer-brief. Alleen voor STATIC ads (niet video). Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Static Voorzet (S4)

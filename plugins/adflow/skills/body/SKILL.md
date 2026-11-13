@@ -1,6 +1,8 @@
 ---
 name: body
 description: Schrijf of scherp de body (primary text / tekst-op-scherm) van een Meta-ad aan. Kiest de structuur die bij het concept past, voedt zich met klantwoorden uit de research, en haalt AI-slop eruit. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Ad Body

@@ -1,6 +1,8 @@
 ---
 name: slots
 description: Stel een geprioriteerde shortlist van ad concept-slots (Persona × Angle × Awareness) voor, op basis van dimensions, coverage-gaps, objection-map en winners. Stap S1 van de ad-pijplijn — vehicle-agnostisch (dient zowel static als video). Beslissing blijft menselijk — deze skill stelt voor en prioriteert, kiest niet. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Ad Slots (S1)

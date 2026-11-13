@@ -1,6 +1,8 @@
 ---
 name: broll-shotlist
-description: Maak een b-roll shotlist vanuit een goedgekeurd video-script (S5), alleen als er nieuwe footage geschoten wordt (eigen productie of externe creator, niet bij bestaande b-roll). Levert een tabel per shot: wat de shot moet overbrengen (leidend, zelfstandig leesbaar) + een voorbeeld-shot (suggestie, ruimte voor eigen invulling). Mix van product, proces, mensen en zuiverheid. Realistisch produceerbaar. Stap S6 (video) van de ad-pijplijn. Alleen video. Lean output.
+description: "Maak een b-roll shotlist vanuit een goedgekeurd video-script (S5), alleen als er nieuwe footage geschoten wordt (eigen productie of externe creator, niet bij bestaande b-roll). Levert een tabel per shot: wat de shot moet overbrengen (leidend, zelfstandig leesbaar) + een voorbeeld-shot (suggestie, ruimte voor eigen invulling). Mix van product, proces, mensen en zuiverheid. Realistisch produceerbaar. Stap S6 (video) van de ad-pijplijn. Alleen video. Lean output."
+metadata:
+  adbase: "true"
 ---
 
 # Video B-roll shotlist (S6 · video)

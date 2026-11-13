@@ -1,6 +1,8 @@
 ---
 name: hook-levers
 description: Versterk, varieer of genereer ad-hooks met de 38 hook-levers uit Breakthrough Advertising (Schwartz) — getal, snelheid, vergelijking, metafoor, mechanisme, autoriteit, case history, paradox, beperking wegnemen, probleem een naam geven… Kiest de levers die passen bij awareness + market sophistication van de slot, bouwt de zin op het voorbeeld van de lever (zinsmal), en levert 3–4 hooks met waarom. Dit is flow L — de tegenhanger van power-hooks (flow P) voor hook-diversiteit. Gebruik bij "maak deze hook sterker", "geef hook-varianten", "andere invalshoeken voor deze hook", "welke lever mis ik", "breakthrough hooks", of wanneer een hook te vlak/generiek is. Lean output.
+metadata:
+  adbase: "true"
 ---
 
 # Hook Levers

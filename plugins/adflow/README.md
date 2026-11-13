@@ -34,6 +34,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 | S4 | `static-voorzet`, `video-voorzet` (met `power-hooks`, `hook-levers`, `body`, `copy-levers`) |
 | Tussen S5 en S6 | `concept` (conceptdocument: hypothese, bewijs, dims, ad copy, launchplek) |
 | S6 | `video-brief` (editor en creator), `designer-brief` (static), `broll-shotlist` |
+| Na S6 (video) | `video-montage` (Claude monteert de varianten zelf uit footage in Adflow) |
 | Naamgeving | `naming` |
 | Ad copy en Copy library | `meta-copy` |
 

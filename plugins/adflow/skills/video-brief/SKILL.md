@@ -54,7 +54,8 @@ je niet. Gebruik lijsten, geen tabellen: tabellen worden in Adflow platte tekst.
 de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).
 
 ## Output-format
-De losse notitie (kort) en daaronder de brief exact in de opbouw van de handleiding. Lean.
+De losse notitie (kort) en daaronder de brief in de volgorde van de handleiding, elk onderdeel als `##` kop met
+lijsten voor varianten en codes (zie Layout in `references/adflow-documents.md`). Lean.
 
 ## QC-lat
 - [ ] De handleiding van het merk is gelezen en gevolgd (of expliciet gemeld dat hij ontbreekt).

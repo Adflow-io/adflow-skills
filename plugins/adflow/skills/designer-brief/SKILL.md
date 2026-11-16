@@ -36,7 +36,8 @@ in een **producereerbare designer-brief** die de designer zo kan bouwen. Format 
 5. Loop de **QC-checklist** uit `designer-brief-static.md` en vink af.
 
 ## Output-format
-De losse notitie (kort, in comment/kop) + daaronder de brief exact in het `designer-brief-static.md`-format. Lean.
+De losse notitie (kort, in comment/kop) + daaronder de brief exact in het `designer-brief-static.md`-format, met de
+`##` koppen en lijsten zoals daar (zie Layout in `references/adflow-documents.md`). Lean.
 Zet de brief als eigen brief onder het concept in Adflow (niet in het conceptdocument zelf) als de gebruiker akkoord
 geeft. Het conceptdocument bevat de hypothese, het bewijs, de dims, de ad copy en de launchplek, zie de skill `concept`.
 Bestaat het concept nog niet, maak het dan eerst met `concept`. Staat er in een bestaande brief al tekst, overschrijf

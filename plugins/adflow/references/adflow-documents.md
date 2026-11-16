@@ -34,6 +34,17 @@ Rules of thumb:
 - This includes quoted copy: on-screen text, headlines and example hooks that you put in a document. Rephrase them
   without the `/` and tell the user you did.
 
+## Layout
+
+Write the document as structured markdown, not as a column of `Label: value` lines. The editor turns it into real
+headings and lists.
+- Every section of the template (Instructie, Varianten, Messaging, Dimensions and so on) becomes a `##` heading.
+- Several items, such as variant codes, languages, steps or shots, become a bulleted list. Order matters: numbered list.
+  Things to check off: `- [ ]` checklist.
+- Use **bold** only for a short label in front of a value (`**Format:** 9:16`) or a UI name, never for whole sentences.
+- Keep paragraphs to two or three sentences.
+- Follow the template's order and wording, not its plain layout.
+
 ## Other editor limits
 - **Lists, not tables.** Markdown tables show as plain text in Adflow documents.
 - **Never overwrite** a document that already has text. Ask first, or hand the text over in chat. An empty document can

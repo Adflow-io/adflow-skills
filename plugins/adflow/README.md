@@ -55,16 +55,11 @@ zet die dan uit, anders heb je hem dubbel. Google Drive en (voor winners) de Met
 
 ## Open punten
 
-1. **Ontbrekende regels.** Skills en referenties verwijzen met `[[...]]` naar notities uit Louis' lokale geheugen die
-   niet in de repo staan: `feedback-token-confirm-timing`, `feedback-persona-friend-test`,
-   `feedback-full-script-before-brief`, `feedback-voorzetjes-first`, `feedback-variation-keep-angle`,
-   `feedback-name-product-once`, `feedback-cta-not-fixed`, `feedback-no-client-data-in-refs`,
-   `reference-briefing-format` en `feedback-script-framework`. Zodra ze beschikbaar zijn, horen ze in de skills.
-2. **Nog niet gecontroleerd met een echte run.** De aangepaste skills zijn niet end-to-end getest tegen Adflow en Drive.
-3. **Format-fit en hookbank per klant.** De skills verwijzen naar Adflow-documenten "Format fit — <merk>" en
+1. **Nog niet gecontroleerd met een echte run.** De aangepaste skills zijn niet end-to-end getest tegen Adflow en Drive.
+2. **Format-fit en hookbank per klant.** De skills verwijzen naar Adflow-documenten "Format fit — <merk>" en
    "Hooks — <merk>". Die bestaan nog niet.
-4. **Designer-handleiding.** Er is nog geen `<Merk> – Designer briefing handleiding`; `designer-brief` valt terug op
+3. **Designer-handleiding.** Er is nog geen `<Merk> – Designer briefing handleiding`; `designer-brief` valt terug op
    `references/designer-brief-static.md`.
-5. **Verwijzingen naar bronvideo's** in `references/` wijzen naar transcripts die bewust niet in de repo staan.
-6. **Niet meegenomen** (bewust): swipe-bestanden (herkomst en licentie nakijken), transcripts van externe video's,
+4. **Verwijzingen naar bronvideo's** in `references/` wijzen naar transcripts die bewust niet in de repo staan.
+5. **Niet meegenomen** (bewust): swipe-bestanden (herkomst en licentie nakijken), transcripts van externe video's,
    klantmappen, ruwe data, zips.

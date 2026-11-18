@@ -65,5 +65,4 @@ Aanrader: <1–2 nummers>. Welke haal ik door S3 (arc)? (bv. "ga verder met 1, 2
 ## Notes
 - Workflow **S2 (video)** in `references/ad-pipeline.md`. Uit (gekozen delivery/format(s)) → in voor **S3 arc**.
 - Beslist niet — levert een menu; de gebruiker kiest.
-- Nieuwe token dat bij de gekozen slot hoort? Bevestigen bij de keuze om uit te werken — zie
-  [[feedback-token-confirm-timing]].
+- Nieuwe token dat bij de gekozen slot hoort? Bevestigen bij de keuze om uit te werken.

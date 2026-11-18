@@ -32,7 +32,7 @@ in een **producereerbare designer-brief** die de designer zo kan bouwen. Format 
 4. **Naamgeving volgt de handleiding van het merk.** De variantcode (conceptnummer uit Adflow, taal, variant en
    formaat, zie `naming`) staat in de brief en wordt de bestandsnaam. De Meta-adnaam maakt Adflow bij het
    launchen uit de dims; die zet je niet in de brief. Komt er een nieuwe dim-waarde bovendrijven, bevestig die dan
-   pas bij de keuze (zie [[feedback-token-confirm-timing]]).
+   pas bij de keuze.
 5. Loop de **QC-checklist** uit `designer-brief-static.md` en vink af.
 
 ## Output-format

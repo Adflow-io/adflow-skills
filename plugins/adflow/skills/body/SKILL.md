@@ -1,6 +1,6 @@
 ---
 name: body
-description: Schrijf of scherp de body (primary text / tekst-op-scherm) van een Meta-ad aan. Kiest de structuur die bij het concept past, voedt zich met klantwoorden uit de research, en haalt AI-slop eruit. Lean output.
+description: Schrijf of scherp de body (primary text / tekst-op-scherm) van een Meta-ad aan. Kiest de structuur die bij het concept past, voedt zich met klantwoorden uit de research, en haalt AI-slop eruit. Gebruik bij "schrijf de body", "primary text", "tekst-op-scherm", "maak deze body beter" of "write the ad body". Niet voor hooks (gebruik power-hooks of hook-levers) en niet voor de volledige Meta copy met headline en Copy library (gebruik meta-copy). Lean output.
 metadata:
   adbase: "true"
 ---

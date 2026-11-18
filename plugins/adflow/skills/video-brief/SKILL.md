@@ -1,6 +1,6 @@
 ---
 name: video-brief
-description: Maak een editor-brief of creator-brief voor een video-concept, in de opbouw en met de naamgeving uit de briefing handleiding van het merk in Drive. Leest het concept uit Adflow, kiest het brieftype en het concepttype, vult de vaste opbouw en levert een producereerbare brief. Stap S6 (video) van de ad-pijplijn. Alleen video. Lean output.
+description: Maak een editor-brief of creator-brief voor een video-concept, in de opbouw en met de naamgeving uit de briefing handleiding van het merk in Drive. Leest het concept uit Adflow, kiest het brieftype en het concepttype, vult de vaste opbouw en levert een producereerbare brief. Stap S6 (video) van de ad-pijplijn. Alleen video. Gebruik bij "maak de editor-brief", "creator-brief", "brief voor de editor" of "video brief". Niet voor statics (gebruik designer-brief) en niet voor een shotlist voor nieuwe footage (gebruik broll-shotlist). Lean output.
 ---
 
 # Video-brief (S6 · video)

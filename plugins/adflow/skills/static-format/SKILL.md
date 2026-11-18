@@ -69,5 +69,4 @@ Mik op ~6–9 formats; scherp genoeg dat elke rij een echte optie is.
 ## Notes
 - Workflow **S2** in `references/ad-pipeline.md`. Uit (gekozen format(s)) → in voor **S4 `static-voorzet`**.
 - Beslist niet — levert een menu; de gebruiker kiest welk(e) format(s) we uitwerken.
-- Nieuwe token dat bij de gekozen slot hoort? Bevestigen gebeurt bij de keuze om uit te werken — zie
-  [[feedback-token-confirm-timing]].
+- Nieuwe token dat bij de gekozen slot hoort? Bevestigen gebeurt bij de keuze om uit te werken.

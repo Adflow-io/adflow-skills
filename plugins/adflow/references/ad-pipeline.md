@@ -57,8 +57,7 @@ dimensions + gaps + winners
 | **E** | feedback | Adflow of Meta MCP (live) → terug naar S1 | *idem* | AI pullt, mens beslist |
 
 **Klant-fit per stap:** welke slots/delivery/arcs/hooks bij déze klant passen → de format-fit van de klant (Adflow-document, zie `bronnen.md`),
-de hookbank, de winners en de brand guidelines. De referenties (`references/*`) zijn klant-agnostisch — zie
-[[feedback-no-client-data-in-refs]].
+de hookbank, de winners en de brand guidelines. De referenties (`references/*`) zijn klant-agnostisch.
 
 ## De twee assen (video): delivery/format en arc
 Een videoscript wordt bepaald door **twee onafhankelijke keuzes**, allebei vóór de copy:
@@ -95,15 +94,14 @@ beat-skelet voor S5; anders het arc-schema uit `script-frameworks.md` + de DR-la
 ## Output-conventie (alle voorstel-stappen)
 S1–S4 leveren **genummerde** opties, zodat de gebruiker met nummers kan kiezen ("ga verder met 1, 2, 5").
 Voorstel-stappen **beslissen niet** — de gebruiker kiest. Voorzetjes-first: eerst korte voorzetjes (S4), pas ná
-akkoord het volledige script (S5) en dán de brief (S6) — zie [[feedback-voorzetjes-first]],
-[[feedback-full-script-before-brief]].
+akkoord het volledige script (S5) en dán de brief (S6).
 
 ## S5 — Script-stap (video)
 De delivery/format (S2) en arc (S3) liggen vast; hier schrijf je het **volledige script** uit in die delivery, met de
 arc als beat-skelet (Notion-template als de arc er een heeft, anders `script-frameworks.md` + de DR-laag Deel B–E).
 Draai er de **humanizer** overheen (`humanizer-passes.md` — 2 humanizers + `anti-ai-writing`), en lever het script
 **puur** (geen beeld/tekst-op-scherm tenzij gevraagd). Bij typen waar de handleiding een script vraagt maak je de **brief (S6) pas als de gebruiker tevreden is met het
-script** — zie [[feedback-full-script-before-brief]]. Static heeft S3/S5 niet (daar is het voorzet al de on-image copy).
+script**. Static heeft S3/S5 niet (daar is het voorzet al de on-image copy).
 
 ## Verhouding tot de losse copy-skills
 `power-hooks` (hooks) en `body` (primary text / tekst-op-scherm) zijn de **video-copy-bouwstenen**; `video-voorzet`

@@ -46,10 +46,9 @@ Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waaro
   klantwoorden **verweven** als natuurlijk verhaaltje in de stem van de persona.
 - **Persona-vriendentest (hard):** denk vanuit de persona en toets **elke regel**: *zou déze persona dit écht zo tegen
   een vriend(in) zeggen?* Zo niet → herschrijven. Geen productjargon ("de pose" → "die houding"), geen merk-tagline in
-  de body (alleen als sign-off), liever een **concreet beeld/scène** dan een gladde boog. Zie [[feedback-persona-friend-test]].
+  de body (alleen als sign-off), liever een **concreet beeld/scène** dan een gladde boog.
 - **Variatie houdt de angle vast:** maak je meerdere voorzetjes of psych-varianten (zone/anchor/intensity), dan blijft
   de **angle van de slot** constant — verschuift 'ie (bv. KorteVerbinding → SchermVrij), dan is het een andere slot.
-  Zie [[feedback-variation-keep-angle]].
 
 ## Werkwijze
 1. Lees slot + format + klantwoorden + de hookbank + de brand guidelines. Bepaal awareness + sophistication → toon/ingang +
@@ -95,11 +94,10 @@ slot: <persona × angle × awareness>  ·  format: <format>  ·  sophistication:
 - [ ] **4 echt verschillende** hook-ingangen (2P + 2L), angle van de slot onveranderd; geen verzonnen cijfers/autoriteit.
 - [ ] **Klantwoorden** uit de research, **verweven** (geen letterlijke quote ópscherm — video-regel).
 - [ ] **Persona-vriendentest** gehaald: elke regel is iets wat déze persona écht tegen een vriend(in) zou zeggen
-      (geen jargon/merk-tagline in de body; concreet i.p.v. glad). Zie [[feedback-persona-friend-test]].
-- [ ] **Product minstens één keer natuurlijk benoemd** (wát het is), ook in organische ads — niet pitchen. Zie
-      [[feedback-name-product-once]].
+      (geen jargon/merk-tagline in de body; concreet i.p.v. glad).
+- [ ] **Product minstens één keer natuurlijk benoemd** (wát het is), ook in organische ads — niet pitchen.
 - [ ] **CTA/afsluiter varieert** per script (geen vaste tagline, geen verplichte merk-eindtag); volgt de funnel
-      (organisch = zacht). Zie [[feedback-cta-not-fixed]].
+      (organisch = zacht).
 - [ ] **Body-structuur** past bij het format; kort en spreekbaar.
 - [ ] **Klopt met de brand guidelines** (DON'Ts) + bewezen hook-patronen uit de hookbank/de winners.
 - [ ] Eén duidelijke boodschap per voorzet.
@@ -108,8 +106,7 @@ slot: <persona × angle × awareness>  ·  format: <format>  ·  sophistication:
 - Workflow **S4 (video)** in `references/ad-pipeline.md`. In = gekozen delivery/format (S2) + arc (S3). Uit (gekozen
   voorzet) → in voor **S5 (script-stap)**: volledig script (arc-skelet in de gekozen delivery) + **humanizer**
   (`references/humanizer-passes.md`), script **puur** (geen beeld/tekst-op-scherm tenzij gevraagd); de **brief (S6) pas
-  ná akkoord op het script** — zie [[feedback-full-script-before-brief]].
+  ná akkoord op het script**.
 - **Delivery/format (S2) en arc (S3) liggen al vast.** Schrijf de voorzet-copy passend bij die delivery én die arc.
 - Mens kiest het winnende voorzet; jij levert alleen de opties + waaroms. Beslissing blijft menselijk.
-- Draai bij twijfel `anti-ai-writing` over de hooks/body voor de slop-eindcheck. Voorzetjes-first, zie
-  [[feedback-voorzetjes-first]].
+- Draai bij twijfel `anti-ai-writing` over de hooks/body voor de slop-eindcheck. Voorzetjes-first.

@@ -47,9 +47,9 @@ Een body is pas af als hij dit allemaal haalt. Check ze voor je 'm teruggeeft.
       als vulling), geen stapeling van bijvoeglijke naamwoorden. Bij twijfel: draai `anti-ai-writing` eroverheen.
 - [ ] **Natuurlijk, niet over-gecomprimeerd.** Korter mag, maar niet tot het niet meer als een mens klinkt.
 - [ ] **Persona-vriendentest.** Elke regel: zou déze persona dit écht zo tegen een vriend(in) zeggen? Geen
-      productjargon, geen merk-tagline in de body, concreet i.p.v. glad. Zie [[feedback-persona-friend-test]].
-- [ ] **Product minstens één keer natuurlijk benoemd** (wát het is), ook in organische ads. Zie [[feedback-name-product-once]].
-- [ ] **CTA/afsluiter varieert** (geen vaste tagline, geen verplichte merk-eindtag; volgt de funnel). Zie [[feedback-cta-not-fixed]].
+      productjargon, geen merk-tagline in de body, concreet i.p.v. glad.
+- [ ] **Product minstens één keer natuurlijk benoemd** (wát het is), ook in organische ads.
+- [ ] **CTA/afsluiter varieert** (geen vaste tagline, geen verplichte merk-eindtag; volgt de funnel).
 - [ ] **Eén body kan meerdere hooks bedienen** als de gebruiker dat vraagt — dan mag de body niet naar één
       specifieke hook terugverwijzen.
 - [ ] **Klopt met de winnende angle/taal** uit de winners (live opgehaald, zie `references/bronnen.md`) (bv. een NL-first merk → NL eerst).

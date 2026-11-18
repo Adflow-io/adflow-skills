@@ -52,14 +52,13 @@ Ontbreekt de slot of de claim? Vraag het. Geen klant? Werk generiek maar zeg dat
 
 ## Guardrails
 - **Lever ≠ nieuwe angle.** Verschuift de boodschap (bv. van "rust" naar "prijs"), dan is het een andere slot.
-  Zie [[feedback-variation-keep-angle]].
 - **Persona-vriendentest:** zou déze persona dit zo tegen een vriend(in) zeggen? Levers als *naam geven* (22, 27) en
-  *condenseer* (20) ontsporen snel in merk-jargon — check extra. Zie [[feedback-persona-friend-test]].
+  *condenseer* (20) ontsporen snel in merk-jargon — check extra.
 - **Geloofwaardig blijven:** getallen (1), autoriteit (14) en bron (15) alleen met echte data/claims van de klant;
   nooit verzinnen. Respecteer de brand guidelines (bv. geen agressieve claims).
 - **Structuur van het voorbeeld houden, woorden vertalen naar klanttaal.** Lever-nr en zinsmal moeten kloppen — label
   geen hook als #30 als 'ie de vorm van #33 heeft.
-- Voorzetjes-first: dit levert hooks, geen script of brief. Zie [[feedback-voorzetjes-first]].
+- Voorzetjes-first: dit levert hooks, geen script of brief.
 
 ## Output
 Lean. Geen intro, geen samenvatting.

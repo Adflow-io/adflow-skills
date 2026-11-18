@@ -37,6 +37,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 | Na S6 (video) | `video-montage` (Claude monteert de varianten zelf uit footage in Adflow) |
 | Naamgeving | `naming` |
 | Ad copy en Copy library | `meta-copy` |
+| Na launch (Meta) | `meta-partnership-ads` (creators uit het concept als partner koppelen aan de gelanceerde ads) |
 
 ## Wijzigingen in 0.2.0
 

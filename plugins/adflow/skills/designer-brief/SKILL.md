@@ -1,6 +1,6 @@
 ---
 name: designer-brief
-description: Vul de static designer-brief in vanuit een goedgekeurd voorzet (S4) + gekozen format + slot. Levert een puur producereerbare brief met Dimensions-blok bovenaan (leesvolgorde/eye-flow, on-screen, visuele behandeling, QC). Adnaam staat NIET in de brief (apart via de skill naming). Stap S6 van de ad-pijplijn. Alleen statics. Lean output.
+description: Vul de static designer-brief in vanuit een goedgekeurd voorzet (S4) + gekozen format + slot. Levert een puur producereerbare brief met Dimensions-blok bovenaan (leesvolgorde/eye-flow, on-screen, visuele behandeling, QC). Adnaam staat NIET in de brief (apart via de skill naming). Stap S6 van de ad-pijplijn. Alleen statics. Gebruik bij "maak de designer-brief", "brief voor de designer", "static brief" of "designer brief". Niet voor video (gebruik video-brief) en niet voor de headline-opties zelf (gebruik static-voorzet). Lean output.
 ---
 
 # Designer-brief (S6)

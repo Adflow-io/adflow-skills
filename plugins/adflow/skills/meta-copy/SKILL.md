@@ -1,6 +1,6 @@
 ---
 name: meta-copy
-description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive, en zet die daarna met een versie per taal in de Adflow Copy library volgens de launch handleiding. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Lean output.
+description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive, en zet die daarna met een versie per taal in de Adflow Copy library volgens de launch handleiding. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Gebruik bij "schrijf de ad copy", "maak de Meta copy", "headline en primary text", "zet de copy in de Copy library" of als een concept klaar is voor launch. Niet voor alleen de body (gebruik body). Lean output.
 ---
 
 # Ad copy

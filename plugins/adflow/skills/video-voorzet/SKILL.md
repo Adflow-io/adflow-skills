@@ -1,6 +1,6 @@
 ---
 name: video-voorzet
-description: "Maak korte video-ad voorzetjes (hook-opties + body-richting) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit de research, gebruikt twee aparte hook-flows voor diversiteit (P: hook-tactics + power-hooks · L: hook-levers met zinsmal) + body-structuur, en levert opties om uit te kiezen — vóór de editor/creator-briefing. Alleen voor VIDEO ads (niet static). Lean output."
+description: "Maak korte video-ad voorzetjes (hook-opties + body-richting) voor een gekozen concept-slot + format. Voedt zich met klantwoorden uit de research, gebruikt twee aparte hook-flows voor diversiteit (P: hook-tactics + power-hooks · L: hook-levers met zinsmal) + body-structuur, en levert opties om uit te kiezen — vóór de editor/creator-briefing. Alleen voor VIDEO ads (niet static). Gebruik bij \"maak voorzetjes voor de video\", \"hook-opties voor de video\" of \"video-ideeën voor deze slot\". Niet voor statics (gebruik static-voorzet) en niet voor het volledige script of de brief. Lean output."
 metadata:
   adbase: "true"
 ---

@@ -1,6 +1,6 @@
 ---
 name: naming
-description: Check of de dims van een concept in Adflow compleet en consistent zijn, laat zien welke Meta-adnaam Adflow daaruit maakt (product-persona-angle-creator-offer-awareness-taal), en geef de variantcodes voor de bestanden volgens de briefing handleiding van het merk. Het ID komt uit Adflow (nooit zelf verzinnen). Lean output.
+description: Check of de dims van een concept in Adflow compleet en consistent zijn, laat zien welke Meta-adnaam Adflow daaruit maakt (product-persona-angle-creator-offer-awareness-taal), en geef de variantcodes voor de bestanden volgens de briefing handleiding van het merk. Het ID komt uit Adflow (nooit zelf verzinnen). Gebruik bij "check de dims", "welke adnaam wordt het", "naamgeving", "variantcodes" of "ad name". Lean output.
 ---
 
 # Ad Naming

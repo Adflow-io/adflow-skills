@@ -114,7 +114,7 @@ Answer per creative, yes or no:
 
 All yes: **Approve**. One no: **Feedback**.
 
-### 10. Delivery check
+### 10. Delivery check (final delivery only)
 - The creative sits in Adflow in the right place (the concept's brief board or the agreed view).
 - File names follow the brand's handbook (see `naming`).
 - Canva link added when Canva was used; source files (PSD, AI, Canva) in the client folder.

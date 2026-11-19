@@ -46,9 +46,9 @@ handleiding dat vraagt, een goedgekeurd script) om in een **producereerbare brie
 
 ## Waar de brief terechtkomt
 De brief is een **eigen brief onder het concept** (een creator-brief of editor-brief als kind van het concept), niet
-tekst in het conceptdocument zelf. Het conceptdocument bevat de hypothese, het bewijs, de dims, de ad copy en de
-launchplek (zie [concept-document.md](../../references/concept-document.md) en de skill `concept`). Bestaat het
-concept nog niet, maak het dan eerst met `concept`. De brief erft de dims van het concept.
+tekst in het conceptdocument zelf. Het conceptdocument bevat de hypothese, de referentie, de key message en het
+launchvoorstel, en eventueel de ad copy (zie [concept-document.md](../../references/concept-document.md) en de skill
+`concept`). Bestaat het concept nog niet, maak het dan eerst met `concept`. De brief erft de dims van het concept.
 Staat er in een bestaande brief al tekst, overschrijf dan niets: lever de brief in de chat. Een lokaal bestand maak
 je niet. Gebruik lijsten, geen tabellen: tabellen worden in Adflow platte tekst. Gebruik ook geen `/` in de tekst:
 de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).

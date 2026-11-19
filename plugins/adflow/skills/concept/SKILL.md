@@ -20,7 +20,8 @@ writing rules: [concept-document.md](../../references/concept-document.md). Pipe
    the default in [concept-document.md](../../references/concept-document.md). Brand-specific rules live there, not in
    this skill. No Concept format? Use the default.
 4. **Gather the evidence** from the sources in [bronnen.md](../../references/bronnen.md): research (reviews and
-   comments), live winners judged on spend first per creative family (all ads and markets of a creative together,
+   comments), the pillar document for this format or creator if there is one (it can name the winner and the original
+   it was based on), live winners judged on spend first per creative family (all ads and markets of a creative together,
    not one ad or one country), and the brand's handbooks. Note any confound (audience, offer, volume).
 5. **Check the dims.** Reuse values that exist. List new values you would need and ask the user to confirm the names
    before you create them. Never remove or replace values on other concepts.

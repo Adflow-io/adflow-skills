@@ -44,9 +44,14 @@ win when they say otherwise (see [bronnen.md](../../references/bronnen.md)).
      transparent PNG shows white where the photo will be. Ask for the example with product when the brief asks for
      one. Steps 3 and 7 count less; readability on every photo counts most.
    Unclear: ask.
-2. **Completeness:** count what the brief asks (variants × languages × sizes, plus any examples) against what was
+2. **Only a screenshot or overview delivered** (for example a grid of all designs from the design tool): judge what
+   is visible, zoom in per design, and give Feedback for delivery: the real files per size are missing, so
+   resolution, file size and file names cannot be checked.
+3. **Brief contradicts itself** (for example two different totals): say so first, judge against the most specific
+   part, and ask the user which is right.
+4. **Completeness:** count what the brief asks (variants × languages × sizes, plus any examples) against what was
    delivered. Name what is missing.
-3. **Text check against the brief:** compare the text on every creative, per language, **word for word** with the
+5. **Text check against the brief:** compare the text on every creative, per language, **word for word** with the
    text in the brief. A missing line, other wording or another offer is Feedback, even when the new text is fine.
 
 ### 3. First impression (scroll-stop)

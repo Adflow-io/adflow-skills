@@ -41,10 +41,14 @@ One or two sentences, no more.
 
 ### 2. Reference
 What the concept builds on, so a reader sees the evidence in one look.
-- **One embed** of the source ad, only the winner this concept builds on.
-- **One source line** under it: which ad or concept it is, and the result, judged on **spend first** (spend is the
-  algorithm's vote) and results second, with the date. Numbers come from live data, never from memory.
-- Name a **confound** when there is one: another market, another audience, another offer or small volumes say less
+- **One embed** of the source ad, only the winner this concept builds on. Pick the winner by looking for the format,
+  the creator or the idea in the live data, and rank the candidates per **creative family**.
+- **One source line** under it: which creative it is, and the result, judged on **spend first** (spend is the
+  algorithm's vote) and results second, with the period. Numbers come from live data, never from memory.
+- **Judge a creative as a family**: all its ads and all its markets together, never one ad or one country. The same
+  creative runs as many ads (one per language or market), so one ad shows only a slice of its spend. Say how many ads
+  and markets the number covers.
+- Name a **confound** when there is one: another audience, another offer, a single product or small volumes say less
   than they seem.
 - No winner to build on? Write a short evidence list instead. Every line says where it comes from: the share of
   reviews or comments that mention the problem, and spend and purchases from live data with the period.
@@ -90,7 +94,7 @@ Dims are attached to the concept, not listed in the document.
 >
 > **Reference**
 > - [embed of the source ad]
-> - Source: the starter bottle demo video. In the last 30 days it had the most spend of the account, with X purchases
+> - Source: the starter bottle demo video, all its ads and markets together. In the last 30 days it had the most spend of the account, with X purchases
 >   (period Z). Caveat: it ran without an offer.
 >
 > **Key message**

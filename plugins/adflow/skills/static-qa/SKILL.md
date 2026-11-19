@@ -74,10 +74,15 @@ Look at it as someone scrolling on a phone:
 
 ### 5. Visual quality and text
 - Clear hierarchy, balanced (not too busy, not empty), enough white space.
-- No pixelated or low-quality images.
+- No pixelated or low-quality images. The image is bright enough, not dull or too dark.
+- **The product is the hero:** large enough, facing the camera (a stone or detail turned away is Feedback), and it
+  stands out from the background or props instead of disappearing into them.
 - **Spelling and grammar 100% right**, in every size and language. Also check that each translation sounds natural to
   a native speaker, not only that it is correct.
-- Fonts readable on a small screen, text large enough, enough contrast with the background.
+- **Right language everywhere:** in a translated version no line is left in another language (a bullet, a label, a
+  small print line). Compare every language version line by line.
+- Fonts readable on a small screen, text large enough, enough contrast with the background. Text on a photo needs a
+  shadow, a plain area or a bar behind it; a shadow must not cover the text itself.
 - At most 2–3 fonts (branded) or a native font style (native).
 
 ### 6. Sizes and technical
@@ -85,6 +90,9 @@ Look at it as someone scrolling on a phone:
 - **Safe zones:** nothing important where it can be cut off or covered. In 9:16 keep roughly the top 14%, the bottom
   35% and 6% on each side free of text, logo and CTA (Meta's Stories and Reels interface).
 - Nothing important cut off in any size; 9:16 is a re-stack, not a crop of the 1:1.
+- **Check every size on its own:** an image that works in 9:16 can fail in 1:1 or 4:5. Per size: the product still
+  visible and large enough, a model still flattering in that crop, and the **logo clearly visible** (not too small, not
+  lost on a busy part of the photo).
 - Resolution at least 1080 px on the short side; file at most 30 MB (Meta).
 
 ### 7. Ad copy (when present)

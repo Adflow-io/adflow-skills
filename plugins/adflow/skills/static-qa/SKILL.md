@@ -21,6 +21,9 @@ win when they say otherwise (see [bronnen.md](../../references/bronnen.md)).
   post a comment or change a status only when the user says so.
 - **No guessing on spelling.** Read every word on the image in the language of the market. Not sure about a word in a
   language you know less well: flag it as "check", not as an error.
+- **Read the text yourself.** The automatic description or tags of an asset in Adflow can misread the text on it.
+- **The brief wins over the defaults here.** Sizes, texts, number of variants and file names come from the brief
+  first, then the brand's handbook, then this skill.
 
 ## Steps
 
@@ -32,9 +35,19 @@ win when they say otherwise (see [bronnen.md](../../references/bronnen.md)).
 4. **Drive handbooks** of the brand, when they exist: designer briefing (sizes, naming, delivery) and ad copy.
 5. **The ad copy** of the concept (primary text, headline), when it is already there.
 
-### 2. Native or branded
-Decide per creative from the brief or the format: **native** (should look like organic content) or **branded** (should
-be recognisable as the brand). It changes steps 4 and 6. Unclear: ask.
+### 2. Type and completeness
+1. **Type**, from the brief or the format:
+   - **Native**: should look like organic content.
+   - **Branded**: should be recognisable as the brand.
+   - **Overlay or template**: a frame that goes over product photos (for example a catalogue overlay in a feed tool),
+     often a transparent PNG. Judge it **on top of a product photo**, light and dark, not on its own: a preview of a
+     transparent PNG shows white where the photo will be. Ask for the example with product when the brief asks for
+     one. Steps 3 and 7 count less; readability on every photo counts most.
+   Unclear: ask.
+2. **Completeness:** count what the brief asks (variants × languages × sizes, plus any examples) against what was
+   delivered. Name what is missing.
+3. **Text check against the brief:** compare the text on every creative, per language, **word for word** with the
+   text in the brief. A missing line, other wording or another offer is Feedback, even when the new text is fine.
 
 ### 3. First impression (scroll-stop)
 Look at it as someone scrolling on a phone:
@@ -55,7 +68,8 @@ Look at it as someone scrolling on a phone:
 ### 5. Visual quality and text
 - Clear hierarchy, balanced (not too busy, not empty), enough white space.
 - No pixelated or low-quality images.
-- **Spelling and grammar 100% right**, in every size.
+- **Spelling and grammar 100% right**, in every size and language. Also check that each translation sounds natural to
+  a native speaker, not only that it is correct.
 - Fonts readable on a small screen, text large enough, enough contrast with the background.
 - At most 2–3 fonts (branded) or a native font style (native).
 
@@ -73,7 +87,8 @@ Look at it as someone scrolling on a phone:
 - Copy and image tell the same story, with the same offer.
 
 ### 8. Red flags (Feedback straight away)
-- Spelling mistake
+- Spelling mistake, or text that differs from the brief
+- Text without its own background on an overlay, so it disappears on some product photos
 - Unreadable text: too small or too little contrast
 - Pixelated image
 - Brand guidelines broken (branded) or too branded (native)

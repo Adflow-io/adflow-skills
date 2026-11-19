@@ -41,9 +41,10 @@ One or two sentences, no more.
 
 ### 2. Reference
 What the concept builds on, so a reader sees the evidence in one look.
-- **One embed** of the source ad, only the winner this concept builds on. Pick the winner by looking for the format,
-  the creator or the idea in the live data, and rank the candidates per **creative family**.
-- **One source line** under it: which creative it is, and the result, judged on **spend first** (spend is the
+- **An embed per reference**: the winner this concept builds on and, when that winner is an iteration, the original it
+  was based on. Several references are fine; keep it to the ads that matter. Pick them by looking for the format, the
+  creator or the idea in the live data, and rank the candidates per **creative family**.
+- **One source line** under each embed: which creative it is, and the result, judged on **spend first** (spend is the
   algorithm's vote) and results second, with the period. Numbers come from live data, never from memory.
 - **Judge a creative as a family**: all its ads and all its markets together, never one ad or one country. The same
   creative runs as many ads (one per language or market), so one ad shows only a slice of its spend. Say how many ads

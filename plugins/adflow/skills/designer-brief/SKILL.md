@@ -39,7 +39,8 @@ in een **producereerbare designer-brief** die de designer zo kan bouwen. Format 
 De losse notitie (kort, in comment/kop) + daaronder de brief exact in het `designer-brief-static.md`-format, met de
 `##` koppen en lijsten zoals daar (zie Layout in `references/adflow-documents.md`). Lean.
 Zet de brief als eigen brief onder het concept in Adflow (niet in het conceptdocument zelf) als de gebruiker akkoord
-geeft. Het conceptdocument bevat de hypothese, het bewijs, de dims, de ad copy en de launchplek, zie de skill `concept`.
+geeft. Het conceptdocument bevat de hypothese, de referentie, de key message en het launchvoorstel, en eventueel de ad
+copy. De dims hangen aan het concept zelf. Zie de skill `concept`.
 Bestaat het concept nog niet, maak het dan eerst met `concept`. Staat er in een bestaande brief al tekst, overschrijf
 niets en lever de brief in de chat. Gebruik lijsten, geen tabellen, en geen `/` in de tekst: de editor gebruikt dat
 teken voor nodes. Zie `references/adflow-documents.md`.

@@ -51,7 +51,8 @@ Gebruik voor de zinsbouw `body` en, voor klantwoorden, de research (zie bronnen.
 
 ## Stap 3: opmaak in het conceptdocument
 Zet de copy onder het kopje Ad copy en landingspagina in het conceptdocument (niet in de brief), per variant, in de
-volgorde die de handleiding noemt. Zie [concept-document.md](../../references/concept-document.md). Staat er al tekst,
+volgorde die de handleiding noemt. Dat is een optionele sectie onder Launch proposal; staat ze er nog niet, voeg ze
+dan toe. Heeft het merk een eigen Concept format in de merkinstructies, volg dan die. Zie [concept-document.md](../../references/concept-document.md). Staat er al tekst,
 overschrijf dan niets en lever de copy in de chat. Gebruik geen `/` in de tekst (ook niet in primary text, headline of
 description): de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md](../../references/adflow-documents.md).
 

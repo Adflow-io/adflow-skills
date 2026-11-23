@@ -29,6 +29,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 
 | Stap | Skill |
 |---|---|
+| Vóór S1 (research) | `review-research` (reviews en ad comments omzetten in klantwoorden, twijfels en persona's; bijwerken met nieuwe reviews) |
 | S1 | `slots` |
 | S2 | `static-format`, `video-format` |
 | S4 | `static-voorzet`, `video-voorzet` (met `power-hooks`, `hook-levers`, `body`, `copy-levers`) |

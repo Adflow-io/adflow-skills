@@ -79,7 +79,7 @@ basis; always include research and winners now.
 | Promo | Offer values in the dims, promo agreements in the pillar or brand guidelines |
 | Reviews | Research document with reviews; date of the last update |
 | Comments | Research document with ad comments; date of the last update |
-| Organic | Research or notes on organic posts that did well |
+| Organic | Viral videos in the brand's Inspiratie board in Adflow; date of the last upload |
 | Winners now | Live, last 30 days, judged on spend first, ROAS second |
 | Winners same period last year | Live, same weeks last year. Always for a season (5) or a seasonal brand |
 | Own input | What the user brings (an idea, wish or briefing); recent meeting notes or mail if a connector is available; otherwise ask |
@@ -124,7 +124,7 @@ Send the user to the next step, in one line ("Door naar slots, per pillar."). Th
 | Own input | Turn the input into conditions (what, why, deadline), then `slots` |
 | 5 Season or moment | List what fits the brand in that period (moments, gifting, weather, payday), then `slots` with that as a condition |
 | 6 Launch, 7 Push product | Check that the product exists in the dims (add after approval), then `slots` for that product |
-| 9 New research | `review-research` for reviews and ad comments; organic is manual for now. Then `slots` |
+| 9 New research | `review-research` for reviews and ad comments; for organic follow [organic-research.md](../../references/organic-research.md) (Claude makes the keywords, the person searches on a phone and uploads to Inspiratie). Then `slots` |
 | 10 Competitors | Collect 5 to 10 relevant competitor or inspiration ads and name the pattern in each, then `slots` |
 | 11 Business signals | Ask the user (or the brand's data) which products to push, then `slots` for those products |
 | 12 New market or language | Check market and fallback language in Adflow; winners in the main language are the first candidates for a language version |

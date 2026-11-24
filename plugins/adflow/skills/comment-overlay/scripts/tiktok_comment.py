@@ -178,6 +178,24 @@ class _Typesetter:
                 x += self.font.getlength(part)
 
 
+def blur_name(canvas: Image.Image, tset, x: float, baseline: float, line: str, name: str) -> None:
+    """Vervaagt de naam in een al getekende regel (privacy). Een regel die alleen uit (een deel van) de
+    naam bestaat, wordt helemaal vervaagd."""
+    if not name or not line.strip():
+        return
+    i = line.find(name)
+    if i >= 0:
+        x1, w = x + tset.width(line[:i]), tset.width(name)
+    elif line.strip() in name:
+        x1, w = x, tset.width(line)
+    else:
+        return
+    asc, desc = tset.font.getmetrics()
+    pad = tset.size * 0.12
+    box = (int(x1 - pad), int(baseline - asc * 0.9 - pad), int(x1 + w + pad), int(baseline + desc * 0.6 + pad))
+    canvas.paste(canvas.crop(box).filter(ImageFilter.GaussianBlur(tset.size * 0.2)), box)
+
+
 def _wrap_words(text: str, ts: _Typesetter, max_w: float) -> list[str]:
     lines: list[str] = []
     for paragraph in text.split("\n"):
@@ -280,6 +298,7 @@ def render_comment_reply(
     header: str | None = None,
     shadow: bool = True,
     tail: bool = True,
+    blur: bool = False,
     font_text: str | None = None,
     font_header: str | None = None,
 ) -> Image.Image:
@@ -347,6 +366,8 @@ def render_comment_reply(
     # tekst
     for n, line in enumerate(head_lines):
         ts_head.draw(canvas, x0 + text_x, y0 + s["first_baseline"] + n * s["header_line"], line, colors["header"])
+        if blur:
+            blur_name(canvas, ts_head, x0 + text_x, y0 + s["first_baseline"] + n * s["header_line"], line, name)
     for n, line in enumerate(body_lines):
         ts_text.draw(canvas, x0 + text_x, y0 + last_head + s["header_to_text"] + n * s["text_line"], line, colors["text"])
 
@@ -397,6 +418,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--font-header", help="pad naar font voor de kopregel")
     p.add_argument("--no-shadow", action="store_true")
     p.add_argument("--no-tail", action="store_true")
+    p.add_argument("--blur-name", action="store_true", help="gebruikersnaam vervagen (privacy)")
     p.add_argument("--video")
     p.add_argument("--start", type=float)
     p.add_argument("--end", type=float)
@@ -419,7 +441,7 @@ def main(argv: list[str] | None = None) -> int:
             job["username"], job["comment"], job.get("avatar"),
             scale=scale, theme=job.get("theme", "invert" if args.invert else args.theme), width=job.get("width", args.width), fit=job.get("fit", args.fit),
             max_lines=job.get("max_lines", args.max_lines), header=job.get("header", args.header),
-            shadow=not args.no_shadow, tail=not args.no_tail,
+            shadow=not args.no_shadow, tail=not args.no_tail, blur=job.get("blur_name", args.blur_name),
             font_text=job.get("font_text", args.font_text), font_header=job.get("font_header", args.font_header),
         )
         out = Path(job["out"])

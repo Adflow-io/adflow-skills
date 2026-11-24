@@ -29,7 +29,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tiktok_comment import (  # noqa: E402  gedeelde helpers
-    EMOJI_FONT, EMOJI_NATIVE, POSITIONS, SS, _runs, _truncate, _video_width, _wrap_words, overlay_on_video,
+    EMOJI_FONT, EMOJI_NATIVE, POSITIONS, SS, blur_name, _runs, _truncate, _video_width, _wrap_words, overlay_on_video,
 )
 
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
@@ -150,6 +150,7 @@ def render_instagram_comment(
     max_lines: int | None = None,
     sub: str | None = None,
     shadow: bool = True,
+    blur: bool = False,
 ) -> Image.Image:
     """
     Geeft een RGBA-afbeelding van de Instagram comment-reply kaart terug.
@@ -194,6 +195,8 @@ def render_instagram_comment(
         tt.draw(canvas, m + s["text_x"], m + s["first_baseline"] + n * s["line"], line, colors["text"])
     for n, line in enumerate(sub_lines):
         ts.draw(canvas, m + s["text_x"], m + last + s["sub_gap"] + n * s["line"] * 0.8, line, colors["sub"])
+        if blur:
+            blur_name(canvas, ts, m + s["text_x"], m + last + s["sub_gap"] + n * s["line"] * 0.8, line, name)
     # BOX: geen overshoot, zodat de grijswaarden exact blijven
     return canvas.resize((max(1, canvas.width // SS), max(1, canvas.height // SS)), Image.BOX)
 
@@ -211,6 +214,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--max-lines", type=int)
     p.add_argument("--sub", help='eigen onderregel, bv. "Antwoord aan {user}"')
     p.add_argument("--no-shadow", action="store_true")
+    p.add_argument("--blur-name", action="store_true", help="gebruikersnaam vervagen (privacy)")
     p.add_argument("--video")
     p.add_argument("--start", type=float)
     p.add_argument("--end", type=float)
@@ -232,7 +236,7 @@ def main(argv: list[str] | None = None) -> int:
             job["username"], job["comment"], job.get("avatar"), scale=scale,
             theme=job.get("theme", "invert" if args.invert else "light"), width=job.get("width", args.width),
             fit=not job.get("fixed", args.fixed), max_lines=job.get("max_lines", args.max_lines),
-            sub=job.get("sub", args.sub), shadow=not args.no_shadow,
+            sub=job.get("sub", args.sub), shadow=not args.no_shadow, blur=job.get("blur_name", args.blur_name),
         )
         out = Path(job["out"])
         if video:

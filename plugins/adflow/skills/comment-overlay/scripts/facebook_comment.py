@@ -32,7 +32,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from instagram_comment import _IGType  # noqa: E402
-from tiktok_comment import POSITIONS, SS, _truncate, _video_width, _wrap_words, overlay_on_video  # noqa: E402
+from tiktok_comment import POSITIONS, SS, blur_name, _truncate, _video_width, _wrap_words, overlay_on_video  # noqa: E402
 
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
 ROBOTO = FONT_DIR / "Roboto.ttf"
@@ -156,6 +156,7 @@ def render_facebook_comment(
     background: bool = False,
     like_label: str = "Like",
     reply_label: str = "Reply",
+    blur: bool = False,
 ) -> Image.Image:
     """
     likes       aantal likes rechtsonder met blauw duimpje (standaard 1); None of 0 = geen like
@@ -199,6 +200,8 @@ def render_facebook_comment(
     canvas.alpha_composite(_avatar(avatar, int(s["avatar"]), c, k), (int(s["avatar_x"]), int(s["avatar_y"])))
     d.rounded_rectangle((bx, by, bx + bw, by + bh), radius=s["radius"], fill=c["bubble"])
     tn.draw(canvas, bx + s["text_x"], by + s["name_baseline"], name, c["name"])
+    if blur:
+        blur_name(canvas, tn, bx + s["text_x"], by + s["name_baseline"], name, name)
     for n, line in enumerate(lines):
         tt.draw(canvas, bx + s["text_x"], by + s["name_baseline"] + s["text_gap"] + n * s["line"], line, c["text"])
 
@@ -231,6 +234,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--invert", action="store_true", help="donkere modus")
     p.add_argument("--background", action="store_true", help="witte kaart achter de comment (standaard aan bij --video)")
     p.add_argument("--transparent", action="store_true", help="geen kaart, ook niet bij --video")
+    p.add_argument("--blur-name", action="store_true", help="naam vervagen (privacy)")
     p.add_argument("--scale", type=float, help="standaard: videobreedte/1080, of 1.0 zonder video")
     p.add_argument("--width", type=int, help="maximale bubbelbreedte (standaard 823)")
     p.add_argument("--fixed", action="store_true", help="altijd maximale breedte")
@@ -258,6 +262,7 @@ def main(argv: list[str] | None = None) -> int:
             scale=scale, theme=job.get("theme", "invert" if args.invert else "light"),
             width=job.get("width", args.width), fit=not job.get("fixed", args.fixed),
             max_lines=job.get("max_lines", args.max_lines), background=job.get("background", (args.background or bool(video)) and not args.transparent),
+            blur=job.get("blur_name", args.blur_name),
         )
         out = Path(job["out"])
         if video:

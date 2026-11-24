@@ -29,7 +29,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tiktok_comment import (  # noqa: E402  gedeelde helpers
-    EMOJI_FONT, EMOJI_NATIVE, POSITIONS, SS, blur_name, _runs, _truncate, _video_width, _wrap_words, overlay_on_video,
+    EMOJI_FONT, EMOJI_NATIVE, POSITIONS, SS, blur_name, resolve_avatar, _runs, _truncate, _video_width, _wrap_words, overlay_on_video,
 )
 
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
@@ -104,9 +104,10 @@ class _IGType:
 
 
 def _avatar(source, size: int, colors: dict) -> Image.Image:
+    source = resolve_avatar(source)
     mask = Image.new("L", (size, size), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
-    if source and Path(source).exists():
+    if source:
         img = ImageOps.fit(Image.open(source).convert("RGBA"), (size, size), Image.LANCZOS)
     else:
         img = Image.new("RGBA", (size, size), colors["avatar_bg"])

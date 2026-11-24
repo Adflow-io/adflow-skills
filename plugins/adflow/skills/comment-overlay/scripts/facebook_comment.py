@@ -32,7 +32,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from instagram_comment import _IGType  # noqa: E402
-from tiktok_comment import POSITIONS, SS, blur_name, _truncate, _video_width, _wrap_words, overlay_on_video  # noqa: E402
+from tiktok_comment import POSITIONS, SS, blur_name, resolve_avatar, _truncate, _video_width, _wrap_words, overlay_on_video  # noqa: E402
 
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
 ROBOTO = FONT_DIR / "Roboto.ttf"
@@ -99,9 +99,10 @@ def _font(size: float, weight: str) -> ImageFont.FreeTypeFont:
 
 
 def _avatar(source, size: int, colors: dict, k: float) -> Image.Image:
+    source = resolve_avatar(source)
     mask = Image.new("L", (size, size), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
-    if source and Path(source).exists():
+    if source:
         img = ImageOps.fit(Image.open(source).convert("RGBA"), (size, size), Image.LANCZOS)
     else:
         img = Image.new("RGBA", (size, size), colors["avatar_bg"])

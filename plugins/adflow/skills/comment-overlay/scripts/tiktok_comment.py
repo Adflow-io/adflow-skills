@@ -258,10 +258,29 @@ def _truncate(lines: list[str], ts: _Typesetter, max_w: float, max_lines: int | 
 
 
 # ---------- avatar ----------
+AVATAR_DIR = Path(__file__).resolve().parent / "avatars"  # AI-gegenereerde profielfoto's (verzonnen mensen)
+
+
+def resolve_avatar(source) -> Path | None:
+    """Pad naar een foto, of een korte naam uit avatars/ (bv. "vrouw-72-bank"). Niets gevonden = None."""
+    if not source:
+        return None
+    p = Path(source)
+    if p.exists():
+        return p
+    for cand in (AVATAR_DIR / source, AVATAR_DIR / f"{source}.jpg"):
+        if cand.exists():
+            return cand
+    print(f"let op: avatar '{source}' niet gevonden, standaard-icoon gebruikt. Keuze: "
+          + ", ".join(sorted(f.stem for f in AVATAR_DIR.glob("*.jpg"))), file=sys.stderr)
+    return None
+
+
 def _avatar(source: str | Path | None, size: int, colors: dict) -> Image.Image:
+    source = resolve_avatar(source)
     mask = Image.new("L", (size, size), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
-    if source and Path(source).exists():
+    if source:
         img = ImageOps.fit(Image.open(source).convert("RGBA"), (size, size), Image.LANCZOS)
     else:
         # standaard grijs profielicoon: hoofd (afgerond) + schouders

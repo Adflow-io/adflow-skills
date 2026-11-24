@@ -61,7 +61,12 @@ username without a space is blurred completely), for real comments without conse
 `--video`, `--start`, `--end`, `--position top|center|upper-left`, `--scale`, `--no-shadow` (Instagram and Facebook), and `--batch file.json` for many at once: a JSON list of objects with the same fields
 (`username`/`name`, `comment` or `question`/`answer`, `out`, optional `video`, `start`, `end`, `theme`, `style`).
 
-Without `--avatar` every platform shows its own grey default profile icon.
+Without `--avatar` every platform shows its own grey default profile icon. `--avatar` takes a path to a photo or a
+short name from [scripts/avatars/](scripts/avatars/): 13 realistic profile photos of men and women aged 21 to 72
+(`man-24-straat`, `man-30-hond`, `man-35-vakantie`, `man-35-vakantie-b`, `man-45-fiets`, `man-67-tuin`,
+`vrouw-21-spiegelselfie`, `vrouw-28-auto`, `vrouw-32-bruiloft`, `vrouw-40-met-dochter`, `vrouw-50-verjaardag`,
+`vrouw-58-terras`, `vrouw-72-bank`). These are AI-generated, invented people: fine as a stand-in avatar, but never use
+one to make an invented comment look like it came from a real customer.
 
 ## Output
 

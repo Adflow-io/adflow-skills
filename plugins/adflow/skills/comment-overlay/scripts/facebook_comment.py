@@ -160,7 +160,8 @@ def render_facebook_comment(
     """
     likes       aantal likes rechtsonder met blauw duimpje (standaard 1); None of 0 = geen like
     time        tijd links onder de bubbel ("45m", "9h", "2d")
-    background  True = witte (of donkere) pagina-achtergrond i.p.v. transparant
+    background  True = witte (of donkere) kaart achter de comment i.p.v. transparant
+                (standaard aan bij --video, anders is "Like · Reply" slecht leesbaar)
     """
     if theme == "dark":
         theme = "invert"
@@ -185,9 +186,14 @@ def render_facebook_comment(
     bx, by = s["bubble_x"], s["bubble_y"]
     meta_base = by + bh + s["meta_gap"]
     show_like = bool(likes)
-    right = bx + bw + (s["like_right"] if show_like else 0) + 20 * k
+    fm_bold_tmp = fm_bold
+    footer_end = bx + s["text_x"] + sum(f.getlength(t) for t, f in ((time, fm_reg), (like_label, fm_bold_tmp),
+                                                                     (reply_label, fm_bold_tmp))) + 2 * s["meta_space"]
+    right = max(bx + bw + (s["like_right"] if show_like else 0), footer_end) + 25 * k
     W, H = int(right), int(meta_base + s["pad_bottom"])
-    canvas = Image.new("RGBA", (W, H), c["page"] if background else (0, 0, 0, 0))
+    canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    if background:  # witte (of donkere) kaart achter de comment, zoals een screenshot
+        ImageDraw.Draw(canvas).rounded_rectangle((0, 0, W - 1, H - 1), radius=int(32 * k), fill=c["page"])
     d = ImageDraw.Draw(canvas)
 
     canvas.alpha_composite(_avatar(avatar, int(s["avatar"]), c, k), (int(s["avatar_x"]), int(s["avatar_y"])))
@@ -223,7 +229,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--likes", type=int, default=1, help="aantal likes (standaard 1)")
     p.add_argument("--no-like", action="store_true", help="zonder like-teller en duimpje")
     p.add_argument("--invert", action="store_true", help="donkere modus")
-    p.add_argument("--background", action="store_true", help="pagina-achtergrond i.p.v. transparant")
+    p.add_argument("--background", action="store_true", help="witte kaart achter de comment (standaard aan bij --video)")
+    p.add_argument("--transparent", action="store_true", help="geen kaart, ook niet bij --video")
     p.add_argument("--scale", type=float, help="standaard: videobreedte/1080, of 1.0 zonder video")
     p.add_argument("--width", type=int, help="maximale bubbelbreedte (standaard 823)")
     p.add_argument("--fixed", action="store_true", help="altijd maximale breedte")
@@ -244,13 +251,13 @@ def main(argv: list[str] | None = None) -> int:
                  "video": args.video, "start": args.start, "end": args.end}]
     for job in jobs:
         video = Path(job["video"]) if job.get("video") else None
-        scale = job.get("scale") or args.scale or (_video_width(video) / 1080 if video else 1.0)
+        scale = job.get("scale") or args.scale or (_video_width(video) / 1080 * 0.92 if video else 1.0)  # marge t.o.v. de videorand
         likes = None if (job.get("no_like", args.no_like)) else job.get("likes", args.likes)
         img = render_facebook_comment(
             job["name"], job["comment"], job.get("avatar"), time=job.get("time", args.time), likes=likes,
             scale=scale, theme=job.get("theme", "invert" if args.invert else "light"),
             width=job.get("width", args.width), fit=not job.get("fixed", args.fixed),
-            max_lines=job.get("max_lines", args.max_lines), background=job.get("background", args.background),
+            max_lines=job.get("max_lines", args.max_lines), background=job.get("background", (args.background or bool(video)) and not args.transparent),
         )
         out = Path(job["out"])
         if video:

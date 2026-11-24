@@ -56,7 +56,8 @@ not like iPhone emoji; render on a Mac when the iPhone look matters.
 | Instagram question sticker | `instagram_question.py` | style `black` | `--style black\|grey\|purple\|blue` |
 | Facebook comment | `facebook_comment.py` | with like (1 and blue thumb), shrinks to fit; on a video it gets a white card behind it so "Like · Reply" stays readable | `--no-like`, `--likes 12`, `--time 45m`, `--avatar`, `--invert` (dark mode), `--background` (white card on a PNG too), `--transparent` (no card on video) |
 
-Shared options: `--blur-name` (blurs the username or name, for real comments without consent to show the name),
+Shared options: `--blur-name` (blurs the whole name or username) or `--blur-name last` (blurs only the last name; a
+username without a space is blurred completely), for real comments without consent to show the name,
 `--video`, `--start`, `--end`, `--position top|center|upper-left`, `--scale`, `--no-shadow` (Instagram and Facebook), and `--batch file.json` for many at once: a JSON list of objects with the same fields
 (`username`/`name`, `comment` or `question`/`answer`, `out`, optional `video`, `start`, `end`, `theme`, `style`).
 

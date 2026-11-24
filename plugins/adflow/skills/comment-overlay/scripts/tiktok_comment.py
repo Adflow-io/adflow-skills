@@ -178,14 +178,21 @@ class _Typesetter:
                 x += self.font.getlength(part)
 
 
-def blur_name(canvas: Image.Image, tset, x: float, baseline: float, line: str, name: str) -> None:
-    """Vervaagt de naam in een al getekende regel (privacy). Een regel die alleen uit (een deel van) de
-    naam bestaat, wordt helemaal vervaagd."""
+def blur_name(canvas: Image.Image, tset, x: float, baseline: float, line: str, name: str, part="all") -> None:
+    """Vervaagt de naam in een al getekende regel (privacy). part: "all" (hele naam) of "last" (alleen
+    de achternaam, alles na de eerste spatie). Een naam zonder spatie (gebruikersnaam) wordt altijd
+    helemaal vervaagd. Een regel die alleen uit (een deel van) de naam bestaat, wordt helemaal vervaagd."""
     if not name or not line.strip():
         return
+    if part != "last":
+        part = "all"
+    first, _, last = name.partition(" ")
+    target, offset = name, 0
+    if last and part == "last":
+        target, offset = last, len(first) + 1
     i = line.find(name)
     if i >= 0:
-        x1, w = x + tset.width(line[:i]), tset.width(name)
+        x1, w = x + tset.width(line[:i + offset]), tset.width(target)
     elif line.strip() in name:
         x1, w = x, tset.width(line)
     else:
@@ -298,7 +305,7 @@ def render_comment_reply(
     header: str | None = None,
     shadow: bool = True,
     tail: bool = True,
-    blur: bool = False,
+    blur: bool | str = False,
     font_text: str | None = None,
     font_header: str | None = None,
 ) -> Image.Image:
@@ -367,7 +374,7 @@ def render_comment_reply(
     for n, line in enumerate(head_lines):
         ts_head.draw(canvas, x0 + text_x, y0 + s["first_baseline"] + n * s["header_line"], line, colors["header"])
         if blur:
-            blur_name(canvas, ts_head, x0 + text_x, y0 + s["first_baseline"] + n * s["header_line"], line, name)
+            blur_name(canvas, ts_head, x0 + text_x, y0 + s["first_baseline"] + n * s["header_line"], line, name, blur)
     for n, line in enumerate(body_lines):
         ts_text.draw(canvas, x0 + text_x, y0 + last_head + s["header_to_text"] + n * s["text_line"], line, colors["text"])
 
@@ -418,7 +425,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--font-header", help="pad naar font voor de kopregel")
     p.add_argument("--no-shadow", action="store_true")
     p.add_argument("--no-tail", action="store_true")
-    p.add_argument("--blur-name", action="store_true", help="gebruikersnaam vervagen (privacy)")
+    p.add_argument("--blur-name", nargs="?", const="all", choices=["all", "last"],
+                   help="naam vervagen: zonder waarde de hele naam, 'last' = alleen de achternaam")
     p.add_argument("--video")
     p.add_argument("--start", type=float)
     p.add_argument("--end", type=float)

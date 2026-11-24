@@ -156,7 +156,7 @@ def render_facebook_comment(
     background: bool = False,
     like_label: str = "Like",
     reply_label: str = "Reply",
-    blur: bool = False,
+    blur: bool | str = False,
 ) -> Image.Image:
     """
     likes       aantal likes rechtsonder met blauw duimpje (standaard 1); None of 0 = geen like
@@ -190,7 +190,12 @@ def render_facebook_comment(
     fm_bold_tmp = fm_bold
     footer_end = bx + s["text_x"] + sum(f.getlength(t) for t, f in ((time, fm_reg), (like_label, fm_bold_tmp),
                                                                      (reply_label, fm_bold_tmp))) + 2 * s["meta_space"]
-    right = max(bx + bw + (s["like_right"] if show_like else 0), footer_end) + 25 * k
+    # like rechts: normaal net voorbij de bubbel; bij een korte bubbel pas na "Reply"
+    like_end = bx + bw + s["like_right"]
+    if show_like:
+        like_min = footer_end + 40 * k + fm_reg.getlength(str(likes)) + s["like_num_gap"] + s["like_d"]
+        like_end = max(like_end, like_min)
+    right = max(like_end if show_like else bx + bw, footer_end) + 25 * k
     W, H = int(right), int(meta_base + s["pad_bottom"])
     canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     if background:  # witte (of donkere) kaart achter de comment, zoals een screenshot
@@ -201,7 +206,7 @@ def render_facebook_comment(
     d.rounded_rectangle((bx, by, bx + bw, by + bh), radius=s["radius"], fill=c["bubble"])
     tn.draw(canvas, bx + s["text_x"], by + s["name_baseline"], name, c["name"])
     if blur:
-        blur_name(canvas, tn, bx + s["text_x"], by + s["name_baseline"], name, name)
+        blur_name(canvas, tn, bx + s["text_x"], by + s["name_baseline"], name, name, blur)
     for n, line in enumerate(lines):
         tt.draw(canvas, bx + s["text_x"], by + s["name_baseline"] + s["text_gap"] + n * s["line"], line, c["text"])
 
@@ -212,7 +217,7 @@ def render_facebook_comment(
 
     if show_like:
         ld = int(s["like_d"])
-        icon_x = int(bx + bw + s["like_right"] - ld)
+        icon_x = int(like_end - ld)
         cap = fm_reg.getbbox("1", anchor="ls")[1]  # negatief: hoogte boven baseline
         icon_y = int(meta_base + cap / 2 - ld / 2)
         canvas.alpha_composite(_like_icon(ld, c["ring"] if background else (255, 255, 255, 255)), (icon_x, icon_y))
@@ -234,7 +239,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--invert", action="store_true", help="donkere modus")
     p.add_argument("--background", action="store_true", help="witte kaart achter de comment (standaard aan bij --video)")
     p.add_argument("--transparent", action="store_true", help="geen kaart, ook niet bij --video")
-    p.add_argument("--blur-name", action="store_true", help="naam vervagen (privacy)")
+    p.add_argument("--blur-name", nargs="?", const="all", choices=["all", "last"],
+                   help="naam vervagen: zonder waarde de hele naam, 'last' = alleen de achternaam")
     p.add_argument("--scale", type=float, help="standaard: videobreedte/1080, of 1.0 zonder video")
     p.add_argument("--width", type=int, help="maximale bubbelbreedte (standaard 823)")
     p.add_argument("--fixed", action="store_true", help="altijd maximale breedte")

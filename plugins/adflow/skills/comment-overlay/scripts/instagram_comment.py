@@ -150,7 +150,7 @@ def render_instagram_comment(
     max_lines: int | None = None,
     sub: str | None = None,
     shadow: bool = True,
-    blur: bool = False,
+    blur: bool | str = False,
 ) -> Image.Image:
     """
     Geeft een RGBA-afbeelding van de Instagram comment-reply kaart terug.
@@ -196,7 +196,7 @@ def render_instagram_comment(
     for n, line in enumerate(sub_lines):
         ts.draw(canvas, m + s["text_x"], m + last + s["sub_gap"] + n * s["line"] * 0.8, line, colors["sub"])
         if blur:
-            blur_name(canvas, ts, m + s["text_x"], m + last + s["sub_gap"] + n * s["line"] * 0.8, line, name)
+            blur_name(canvas, ts, m + s["text_x"], m + last + s["sub_gap"] + n * s["line"] * 0.8, line, name, blur)
     # BOX: geen overshoot, zodat de grijswaarden exact blijven
     return canvas.resize((max(1, canvas.width // SS), max(1, canvas.height // SS)), Image.BOX)
 
@@ -214,7 +214,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--max-lines", type=int)
     p.add_argument("--sub", help='eigen onderregel, bv. "Antwoord aan {user}"')
     p.add_argument("--no-shadow", action="store_true")
-    p.add_argument("--blur-name", action="store_true", help="gebruikersnaam vervagen (privacy)")
+    p.add_argument("--blur-name", nargs="?", const="all", choices=["all", "last"],
+                   help="naam vervagen: zonder waarde de hele naam, 'last' = alleen de achternaam")
     p.add_argument("--video")
     p.add_argument("--start", type=float)
     p.add_argument("--end", type=float)

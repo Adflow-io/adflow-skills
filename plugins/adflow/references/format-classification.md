@@ -8,10 +8,15 @@ also contain creative types that are not a format under the rules below.
 
 ## Order of sources
 
-1. **The brand's AI instructions in Adflow**, the section `## Format`. What it says wins: the brand's own format
-   list, definitions and decisions.
-2. **This reference**, for everything the brand did not define.
-3. Still in doubt? Name the two closest formats, say which rule decides it, and let the user choose. Never create a
+1. **The brand's dimensions in Adflow.** Check whether the brand has a Format dimension and which values it uses.
+   The name or slug can differ per brand (for example a dimension renamed from another name). Only tag with values
+   that exist there. No Format dimension? Say so, and do not create one without the user's approval (see
+   [dimension-hygiene.md](dimension-hygiene.md)).
+2. **The brand's AI instructions in Adflow**, the section `## Format`. What it says wins over this reference: the
+   brand's own definitions and decisions.
+3. **This reference**, for everything the brand did not define. When a brand value fails the rules below, say so and
+   suggest the value from this reference, but tag with the brand's value until the user decides.
+4. Still in doubt? Name the two closest formats, say which rule decides it, and let the user choose. Never create a
    new Format value without the user's approval (see [dimension-hygiene.md](dimension-hygiene.md)).
 
 ## What a format is

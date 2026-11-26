@@ -48,7 +48,7 @@ dimensions + gaps + winners
 | # | Stap | Static-skill | Video-skill | Wie |
 |---|---|---|---|---|
 | **S1** | slots | `slots` *(vehicle-agnostisch; dient beide)* | *idem* | **mens beslist**, AI stelt voor |
-| **S2** | delivery/format | `static-format` (static visuele formats, bron `static-formats.md`) | `video-format` (vehicle + uitvoering) | AI + mens QC |
+| **S2** | delivery/format | `static-format` (static formats uit `format-gallery.md`, messaging-wetten uit `static-formats.md`) | `video-format` (video formats uit `format-gallery.md`) | AI + mens QC |
 | **S3** | arc *(video only)* | — *(structuur zit in static-format)* | **menu** van de 20 arcs (`script-frameworks.md`) met fit → mens kiest | AI stelt voor · **mens kiest** |
 | **S4** | voorzet | `static-voorzet` (headline + on-image) | `video-voorzet` (hook(s) + body, via `hook-levers` + `power-hooks` + `body`) | AI · **mens kiest** |
 | **S5** | script *(video only)* | — *(static: voorzet ís de copy)* | volledig script (arc-skelet in de gekozen delivery) → **humanizer-pass** (`humanizer-passes.md`) → mens keurt goed | AI schrijft · **mens keurt goed** |
@@ -70,17 +70,10 @@ delivery (bv. talking-head) kan een PAS-, Myth→Truth- of Listicle-arc dragen. 
 vóór de voorzet vast. Volgorde: **delivery/format (S2) → arc (S3)**.
 
 ## S2 — Delivery/format (video)
-De vehicle + uitvoering. Kies uit (Notion-visuele formats als Staged Moment/POV/Flat Lay zijn instanties hiervan):
-- **Talking-head (to-cam)** — spreker praat recht in de camera.
-- **Voice-over over broll** — narratie over beeld, geen zichtbare spreker.
-- **Observational / fly-on-the-wall** — natuurlijk geluid, geen VO; boodschap via de scène (+ evt. tekst). (bv. Staged Moment)
-- **Dialoog / two-hander** — 2+ personen praten (skit, gesprek).
-- **Tekst-only op broll** — geen stem; on-screen tekst + muziek dragen het.
-- **Green screen** — to-cam spreker vóór relevante beelden.
-- **Foto/slideshow + VO** — stills met voice-over (voiceover-format).
-- **Animatie / motion graphics** — incl. AI-animation; geen live footage.
-- **Hands / POV (no face)** — handen/eerste-persoon + VO of tekst. (bv. POV, Flat Lay)
-- **Interview / podcast / street-interview** — Q&A of vox-pop, audio-gedreven.
+De vehicle + uitvoering. De namen komen uit de Format-dimensie van het merk, of anders uit de
+[format-gallery](format-gallery.md): 19 video-formats in drie families (een persoon in beeld, het product in beeld,
+beeld met stem of tekst). Hoe je een bestaande ad een format geeft: [format-classification.md](format-classification.md).
+Een idee als testimonial of founder is geen format; dat komt als idee naast een format te staan.
 
 Constraint/weging = klant-fit (de format-fit, de winners) + de brand guidelines. De gekozen delivery gaat mee naar S3/S4/S5 en
 staat in de S6-brief als productie-spec (bv. "VO over broll, rustige ouder-stem").

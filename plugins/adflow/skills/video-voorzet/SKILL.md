@@ -26,7 +26,8 @@ komt. Dit is de "voorzetjes-first"-stap: kort, meerdere opties, geen volledige b
   Schrijf de voorzet-copy passend bij díe vorm — een VO-hook leest anders dan een to-cam- of tekst-only-hook.
 - **Klantwoorden:** de research (reviews en comments, zie `references/bronnen.md`). **Lees die eerst** — de copy komt hieruit, niet uit je
   eigen kop. Ook de winners (winnende hook/angle/taal, bv. bewezen hook-patronen in de hookbank) en de brand guidelines
-  (master + DON'Ts).
+  (master + DON'Ts). Haal de hook van een winnende video uit de analyse per seconde (wat gezegd wordt en wat er in
+  beeld staat), niet uit de thumbnail of de adnaam: zie [judging-video.md](../../references/judging-video.md).
 
 Ontbreekt slot of format? Vraag het, of stel er één voor met één regel waarom. Raad nooit blind.
 

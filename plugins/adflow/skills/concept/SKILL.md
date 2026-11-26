@@ -22,7 +22,9 @@ writing rules: [concept-document.md](../../references/concept-document.md). Pipe
 4. **Gather the evidence** from the sources in [bronnen.md](../../references/bronnen.md): research (reviews and
    comments), the pillar document for this format or creator if there is one (it can name the winner and the original
    it was based on), live winners judged on spend first per creative family (all ads and markets of a creative together,
-   not one ad or one country), and the brand's handbooks. Note any confound (audience, offer, volume).
+   not one ad or one country), and the brand's handbooks. Note any confound (audience, offer, volume). Describe a
+   video winner or reference from its per-second analysis, not its thumbnail or ad name (see
+   [judging-video.md](../../references/judging-video.md)).
 5. **Check the dims.** Reuse values that exist. List new values you would need and ask the user to confirm the names
    before you create them. Never remove or replace values on other concepts.
 6. **Create the concept** (a root concept, not a brief), under the pillar if there is one, with a plain name: the idea

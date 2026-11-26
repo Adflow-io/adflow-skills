@@ -21,6 +21,8 @@ delivery/formats; de gebruiker kiest (mag meerdere → testvarianten).
   Green Screen…) zijn **instanties** van deze delivery-vormen. **Klant-agnostisch.**
 - de format-fit van de klant (zie `references/bronnen.md`) — de **klant-fit** (welke delivery-vormen passen bij déze klant).
 - de winners (live opgehaald, zie `references/bronnen.md`) — wat op spend draait (bv. VO/observational over ouder-kind broll).
+  Bepaal de delivery van een winner uit de analyse per seconde (beeld, tekst in beeld, spraak of alleen muziek), nooit
+  uit de thumbnail of de adnaam: zie [judging-video.md](../../references/judging-video.md).
 - de brand guidelines — DON'Ts + client-specifieke regels.
 
 ## De delivery/formats

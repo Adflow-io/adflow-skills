@@ -21,7 +21,8 @@ prioriteert**; de gebruiker beslist (ideation/prioritering/beslissing blijven me
 ## Methode — 3 bronnen voor slots
 1. **Repliceer winners.** Neem de angles/persona's die op spend dragen en zet ze in. Een winner in het ene vehicle
    (bv. video) is vaak een sterk slot om óók in het andere vehicle (static) te maken — noteer dat als kans, maar het
-   vehicle kies je pas in S2. (Hoogste zekerheid.)
+   vehicle kies je pas in S2. (Hoogste zekerheid.) Beschrijf een winnende video op basis van de analyse per seconde,
+   niet de thumbnail of de adnaam: zie [judging-video.md](../../references/judging-video.md).
 2. **Vul de 3 gaps** (Dara Denney):
    - **Persona-gap:** welke persona's targeten we niet / over-indexeren we? (bv. onbenutte audiences uit comments/reviews)
    - **Awareness-gap:** te veel bottom/mid → maak **TOF-acquisitieslots** bij om de funnel te voeden.

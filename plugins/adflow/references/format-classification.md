@@ -51,7 +51,7 @@ thumbnail or the ad name. Song lyrics are not speech.
 ## Decision tree
 
 **Static**
-1. Is it a screenshot of something native (a comment, a notes app, a message, a receipt)? Go to *Native screenshot*
+1. Is it a screenshot of something native (a comment, a notes app, a message, a receipt)? Go to the *native screenshot*
    formats.
 2. Is the main element text in a fixed layout (a letter, a list, a big number, a table)? Go to *Text-led* formats.
 3. Otherwise it is *Image-led*: pick by what the image shows.
@@ -78,8 +78,17 @@ thumbnail or the ad name. Song lyrics are not speech.
 | **Grid** | Several products or photos in separate tiles | *Flat lay* |
 | **Quote card** | A customer quote or review is the main visual element | *Comment screenshot*: there it is a real screenshot |
 | **Comment screenshot** | A real social comment or review as a screenshot | *Quote card* |
-| **Native screenshot** | Looks like a phone screen: notes app, message, receipt, search | *Comment screenshot* |
-| **Letter** | A personal letter or note fills the ad, signed by a person | *Native screenshot (notes app)* |
+| **Comment response** | A comment plus the brand's reply, as a screenshot | *Comment screenshot*: no reply |
+| **Text message** | A chat or message thread | *Comment screenshot* |
+| **Notes app** | A phone note | *Post-it*: paper, not a screen |
+| **Web search** | Search results or a search bar | *Notes app* |
+| **Receipt** | An itemised receipt, ticket, coupon or cart screen is the hero, with lines and a total | *Comparison table*, *Notes app* |
+| **Letter** | A personal letter or note fills the ad, signed by a person | *Notes app*, *Post-it* |
+| **Post-it** | The message as a handwritten sticky note | *Letter*: longer and signed |
+| **Announcement** | Looks like a notice, flyer or policy | *Headline + benefits* |
+| **Diagram** | A chart that explains a choice: flowchart, venn, matching chart | *Comparison table*, *Statistic* |
+| **Ad in the wild** | The ad shown in a real place: billboard, poster, phone mockup | *Lifestyle photo* |
+| **Sign** | A person or place holding a sign with the message | *Post-it* |
 | **Listicle** | A numbered or bulleted list is the main element | *Headline + benefits*: a few benefits, no list |
 | **Statistic** | One big number is the eye-catcher | *Headline + benefits* |
 | **Press** | Looks like an article, headline from a publication, or logos of press | *Quote card* |
@@ -102,6 +111,12 @@ thumbnail or the ad name. Song lyrics are not speech.
 | **B-roll with text** | Footage with on-screen text carrying the story, no speech | *B-roll with voice-over* |
 | **Skit** | An acted scene with roles | *Talking head* |
 | **Vlog** | Handheld, following someone through their day | *B-roll with voice-over* |
+| **Podcast** | Two or more people at microphones, podcast set | *Talking head* |
+| **Whiteboard** | A person explains on a whiteboard or flip chart | *Talking head* |
+| **Phone call** | A recorded call, the phone on screen | *Talking head* |
+| **POV** | First-person camera, hands in frame | *Product demo*: filmed from the side |
+| **Animation** | Drawn, motion graphics or claymation | *B-roll with text* |
+| **Before / after** | The same subject in two states | *Product demo* |
 
 ## Common mistakes
 

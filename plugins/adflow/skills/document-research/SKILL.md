@@ -1,16 +1,16 @@
 ---
 name: document-research
-description: Leg research voor een merk vast als Google Doc in de Research-map van het merk in Drive (format Door / Datum / Inzicht / Vertaling) en zet het in het Index-doc als het merk die heeft. Gebruik bij "zet dit in een research doc", "maak hier een research doc van", "documenteer deze research", of als er research is gedaan (web, reviews, prijzen, data van het team) die bewaard moet worden. Niet voor het concept zelf (gebruik concept) of voor klantwoorden uit reviews in Adflow (gebruik review-research). Lean output.
+description: Leg research voor een merk vast als Google Doc in de Research-map van het merk in Drive (format Door / Datum / Inzicht / Vertaling) en zet het in het Index-doc als het merk er een heeft. Gebruik bij "zet dit in een research doc", "maak hier een research doc van", "documenteer deze research", of als er research is gedaan (web, reviews, prijzen, data van het team) die bewaard moet worden. Niet voor het concept zelf (gebruik concept) of voor klantwoorden uit reviews in Adflow (gebruik review-research). Lean output.
 ---
 
 # Document research
 
 Research that we do for a brand (web research, reviews, prices, data from the team) has to be findable for the whole
-team. This skill puts that research in one fixed format in the brand's Drive folder and adds it to the brand's Index
-doc. It serves the research stage that comes before `slots` in the [ad pipeline](../../references/ad-pipeline.md).
+team. This skill puts that research in one fixed format in the brand's Drive folder and, when the brand has an Index
+doc, adds it there. It serves the research stage that comes before `slots` in the [ad pipeline](../../references/ad-pipeline.md).
 
-The doc is written in Dutch, in the format below. The research folder is often shared with the client's team, so write
-as if the client reads everything in the doc.
+The doc is written in Dutch, in the format below. The folder may be shared with the client, so write as if the client
+reads everything in the doc.
 
 ## What does and does not belong in a research doc
 - **Yes:** the research itself and what we take from it (angles, messaging, ideas, claims that can or cannot be made).
@@ -21,14 +21,15 @@ as if the client reads everything in the doc.
   docs.
 
 ## Steps
-1. **Find the place in Drive** (see [bronnen.md](../../references/bronnen.md)). Don't assume a folder structure, it
-   differs per brand.
-   1. Look for the brand's research folder in Drive (a folder called `Research` inside the brand's folder) and for
-      the brand's Index doc (a doc with `Index` in the title, next to or above that folder).
-   2. Found both? Use them.
-   3. Not found, or unclear which one is right? **Ask the user once:** in which folder should the research docs go,
-      and is there an Index doc to add them to? Take the answer for the rest of the chat and for the next docs.
-   4. Never create a new folder or a new Index doc without asking.
+1. **Find the place in Drive** (see [bronnen.md](../../references/bronnen.md)). Don't assume a folder structure: some
+   brands have a folder shared with the client, some don't, and an Index doc is optional.
+   1. Look for the brand's research folder in Drive (a folder called `Research` in the brand's folder).
+   2. Found one? Use it. Not found, or more than one and unclear which is right? **Ask the user once** in which
+      folder the research docs should go. Take the answer for the rest of the chat. Never create a folder without
+      asking.
+   3. Then look for an Index doc in or next to that folder (a doc with `Index` in the title). Found one? You add to it
+      in step 4. None? Skip the Index; don't ask about it and never create one. Say in the report that there was no
+      Index.
 2. **Write the doc** in the format below. Name: `Research – [Onderwerp] ([Naam], DD-MM-JJJJ)`.
    - Naam is who did the research. Does the data come from someone else (for example a sheet from a colleague)? Then
      it is that person.
@@ -36,7 +37,7 @@ as if the client reads everything in the doc.
    - Example: `Research – Prijzen in de markt (Anna, 26-11-2026)`
 3. **Create it in Drive** as an HTML file (content type `text/html`) in the Research folder. Drive then converts
    headings, lists, tables and links into a proper Google Doc.
-4. **Add it to the Index** (skip this step when the brand has no Index doc and the user did not want one). Under the
+4. **Add it to the Index** (only when step 1 found one, otherwise skip). Under the
    heading about research (the one that already holds research docs, or the closest match) add one bullet:
    `[Research – Onderwerp (Naam, DD-MM-JJJJ)](link): what is in it, in one line (map Research)`
    - Follow the style of the bullets that are already there; the line above is the default.

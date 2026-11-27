@@ -71,6 +71,6 @@ lijsten voor varianten en codes (zie Layout in `references/adflow-documents.md`)
 
 ## Notes
 - Workflow **S6 (video)** in `references/ad-pipeline.md`. In = concept uit Adflow (+ goedgekeurd script waar nodig).
-  Uit = brief onder het concept, daarna productie, launch volgens de Launch handleiding, en feedback uit de cijfers.
+  Uit = brief onder het concept, daarna productie, launch volgens de AI-instructies van het merk in Adflow, en feedback uit de cijfers.
 - Beslist niet over de copy. Die is in S4 en S5 gekozen; deze skill maakt hem producereerbaar.
 - De Meta-adnaam maakt Adflow bij het launchen uit de dims. Zie `naming`.

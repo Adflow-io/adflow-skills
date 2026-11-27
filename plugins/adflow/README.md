@@ -9,10 +9,12 @@ launch. Skills roep je aan als `adflow:<skill>`, bijvoorbeeld `adflow:slots`. Pl
 - **Eén bron per soort informatie.** Deze repo bevat alleen de werkwijze. De rest leeft elders en wordt per merk
   opgehaald via connectors. Zie [references/bronnen.md](references/bronnen.md).
   - Klantkennis (brand guidelines, dims, concepten, briefs, research, Copy library): **Adflow**
-  - Hoe we per merk briefen, copy schrijven en launchen: **Drive-handleidingen**
-    (`<Merk> – Briefing handleiding`, `– Ad copy handleiding Meta`, `– Launch handleiding Meta`)
+  - Hoe we per merk briefen en copy schrijven: **Drive-handleidingen**
+    (`<Merk> – Briefing handleiding`, `– Ad copy handleiding Meta`)
+  - Hoe we per merk launchen (namen van campagne, adset en copy, talen, regio's, vertalen): de **AI-instructies van
+    het merk in Adflow**
   - Winners en performance: **live** uit Adflow of Meta, nooit uit een bestand
-- **De Drive-handleidingen zijn leidend** voor alles wat per merk verschilt. De skills zijn de generieke motor eronder
+- **De Drive-handleidingen en de AI-instructies in Adflow zijn leidend** voor alles wat per merk verschilt. De skills zijn de generieke motor eronder
   en bevatten alleen generieke voorbeelden als vertrekpunt voor een nieuw merk.
 - **Geen klantdata in deze repo.** Geen reviews, comments, winners of briefings per klant.
 

@@ -85,9 +85,11 @@ description: Schrijf de Meta ad copy (primary text, headline, description) voor 
 ### Sources: what does and does not belong in the repo
 - **No client data.** No client names, reviews, comments, winners, numbers, briefs, scripts or screenshots of a
   client. Not even as an example. Use invented, generic examples.
-- **Client knowledge lives in Adflow**, the per-brand handbooks in Google Drive. A skill says where it fetches them
+- **Client knowledge lives in Adflow**, the per-brand briefing and ad copy handbooks in Google Drive. A skill says where it fetches them
   (see [references/bronnen.md](plugins/adflow/references/bronnen.md)), not what they contain.
-- **Brand-specific rules belong in that brand's Drive handbook**, not in a skill. A skill is the method for all brands.
+- **Brand-specific rules do not belong in a skill.** Launch rules (names of campaigns, adsets and copy, languages,
+  markets, translating) go in the brand's AI instructions in Adflow. Briefing and ad copy rules go in that brand's
+  Drive handbook. A skill is the method for all brands.
 - Refer to Adflow data by what it is (dims, concepts, Copy library), not by the technical name of a tool. Tool names
   can change.
 - **No copied text** from courses, books, swipe files or paid sources. Summarise in your own words and cite the source.

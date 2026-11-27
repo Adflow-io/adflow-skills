@@ -57,8 +57,10 @@ Want to start over or throw a change away? Tell Claude ("discard this branch and
 
 - **One topic per pull request.** Small and easy to review.
 - **No client data in the repo**: no client names, reviews, winners, numbers or briefs, not even as an example.
-  Client knowledge lives in Adflow, the per-brand handbooks in Drive.
-- **Brand-specific rules belong in the brand's Drive handbook**, not in a skill.
+  Client knowledge lives in Adflow, the per-brand briefing and ad copy handbooks in Drive.
+- **Brand-specific rules do not belong in a skill.** Launch rules (names of campaigns, adsets and copy, languages,
+  markets, translating) go in the brand's AI instructions in Adflow. Briefing and ad copy rules go in the brand's
+  Drive handbook.
 - **The `description` decides when Claude uses a skill.** If you change it, test that Claude still picks the skill
   for an ordinary question.
 - **Rename or delete only after agreement.** Users and other skills rely on the name.

@@ -37,7 +37,7 @@ dimensions + gaps + winners
   verbeterd script (video)
         │  S6 brief  [AI + mens QC]
         ▼
-  producereerbare brief + variantcodes  →  meta-copy (copy + templates)  →  launch (Launch handleiding) → live
+  producereerbare brief + variantcodes  →  meta-copy (copy + templates)  →  launch (AI-instructies in Adflow) → live
         │  E feedbackloop  [AI pullt · mens beslist]          ← gedeeld
         ▼
   winners (live uit Adflow of Meta)  ──(welke persona/angle/vehicle/delivery/arc wint)──► terug naar S1

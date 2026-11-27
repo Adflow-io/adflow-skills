@@ -34,7 +34,7 @@ writing rules: [concept-document.md](../../references/concept-document.md). Pipe
    - Write it after the concept exists, with the document edit tools. Text and embeds placed while creating the
      concept can disappear. Read the document back when you are done.
    - Key message: from the approved voorzet or script, or from the pillar agreements.
-   - Launch proposal: use the brand's launch handbook for campaign and ad set naming and for what has to be created new.
+   - Launch proposal: use the brand's AI instructions in Adflow for campaign and ad set naming and for what has to be created new.
    - Ad copy: write it with `meta-copy` if it is not written yet. It goes in the Copy library, and in the optional
      Ad copy section of the concept, not in the brief.
    - Empty document: write it. Document with text: don't overwrite, show the text in the chat instead.

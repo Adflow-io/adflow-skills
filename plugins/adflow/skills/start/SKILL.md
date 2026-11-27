@@ -85,7 +85,7 @@ basis; always include research and winners now.
 | Own input | What the user brings (an idea, wish or briefing); recent meeting notes or mail if a connector is available; otherwise ask |
 | Existing concepts | Open concepts and briefs, so nothing is made twice |
 | Markets and languages | Markets in Adflow (for 12) |
-| Handbooks | The brand's briefing, ad copy and launch handbooks in Drive |
+| Handbooks | The brand's briefing and ad copy handbooks in Drive, and its AI instructions in Adflow for launch rules |
 
 Status per row: ✅ present and recent · ⚠️ present but old (older than 3 months) or thin · ❌ missing.
 

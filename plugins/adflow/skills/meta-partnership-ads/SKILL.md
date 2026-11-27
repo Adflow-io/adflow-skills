@@ -24,7 +24,7 @@ in the [pipeline](../../references/ad-pipeline.md).
   user agrees. Never use the "Discard Draft" button in Ads Manager: it can also discard drafts of other ads.
 - **Never swap the creative in a draft that is already open.** That also gives "Unknown Error". Discard it first.
 - **Default order:** creator as first identity, brand as second, header "Dynamic identity". Follow the brand's
-  `<Brand> – Launch handleiding Meta` in Drive when it says otherwise.
+  AI instructions in Adflow when they say otherwise.
 - **Ads that already run** (spend, likes, comments): a new creative means a new review, possibly a new learning phase
   and losing the social proof on the old post. Say so and ask before changing them.
 

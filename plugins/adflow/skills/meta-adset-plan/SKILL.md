@@ -23,10 +23,10 @@ the adsets, then the ads go in.
 ## Steps
 
 ### 1. Read
-1. **The brand's rules for adsets.** Look in the AI instructions of the brand in Adflow and in the brand's launch
-   handbook in Drive (see [bronnen.md](../../references/bronnen.md)). Note: the campaign per market, the name pattern,
-   the time zone, and which adset a new one copies. If the two disagree, say so and ask which one counts. If there
-   are no rules yet, say that, use the defaults, and suggest writing the rules down first.
+1. **The brand's rules for adsets.** Look in the AI instructions of the brand in Adflow (see
+   [bronnen.md](../../references/bronnen.md)). Note: the campaign per market, the name pattern, the time zone, and
+   which adset a new one copies. If there are no rules yet, say that, use the defaults, and suggest writing the
+   rules down there first.
 2. **The pillar.** Name, start and end date, main dim value and the agreements. If the agreements already hold an
    adset plan, you are making a new version (see *A new version*).
 3. **The ad account in Meta.** The campaigns, the adsets in them and how they are named, the daily budget per

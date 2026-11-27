@@ -60,7 +60,7 @@ The words the concept carries, as a short list: the headline and the subline.
 - The briefs under the concept use the same words, so the concept and its briefs say the same.
 
 ### 4. Launch proposal
-- **Campaign** and **Adset**, named per the brand's launch handbook. Say whether they exist or have to be created new.
+- **Campaign** and **Adset**, named per the brand's AI instructions in Adflow. Say whether they exist or have to be created new.
 - **Why:** the reasoning in one line, based on the dims (for example the offer decides the ad set type).
 - Anything else to create new (copy template) and the open points as `[check]` items with an owner.
 
@@ -103,6 +103,6 @@ Dims are attached to the concept, not listed in the document.
 > - Now 3 plus 1 free
 >
 > **Launch proposal**
-> - Campaign: the fixed sales campaign of the region, per the launch handbook.
-> - Adset: new, named per the handbook with the offer as its value.
+> - Campaign: the fixed sales campaign of the region, per the brand's AI instructions.
+> - Adset: new, named per the brand's AI instructions with the offer as its value.
 > - Why: a deal with an end date gets its own ad set. No ad set for this offer exists yet.

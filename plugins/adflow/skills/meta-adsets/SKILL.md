@@ -27,8 +27,8 @@ draft in Meta**, so the media buyer can check it in Ads Manager and publish it. 
   convert (step 3). Do not trust a note in the plan about "Meta time" without checking the account.
 - **Discard a draft only after a preview and the user's OK**, and only through the Meta Ads MCP. Never use "Discard
   draft" in Ads Manager: it can discard drafts of other people.
-- **Brand rules live in the brand's launch handbook in Drive**, not in this skill. Follow the handbook for names,
-  campaign structure and settings when it says something the plan does not.
+- **Brand rules live in the brand's AI instructions in Adflow**, not in this skill. Follow them for names,
+  campaign structure and settings when they say something the plan does not.
 
 ## Steps
 

@@ -1,6 +1,6 @@
 ---
 name: meta-copy
-description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive, en zet die daarna met een versie per taal in de Adflow Copy library volgens de launch handleiding. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Gebruik bij "schrijf de ad copy", "maak de Meta copy", "headline en primary text", "zet de copy in de Copy library" of als een concept klaar is voor launch. Niet voor alleen de body (gebruik body). Lean output.
+description: Schrijf de Meta ad copy (URL, primary text, headline, description) voor een concept, volgens de ad copy handleiding van het merk in Drive en de AI-instructies van het merk in Adflow, en zet die daarna met een versie per taal in de Adflow Copy library. Verzamelt eerst de vier bronnen (vergelijkbare ad, landingspagina, creative, brief). Gebruik bij "schrijf de ad copy", "maak de Meta copy", "headline en primary text", "zet de copy in de Copy library" of als een concept klaar is voor launch. Niet voor alleen de body (gebruik body). Lean output.
 ---
 
 # Ad copy
@@ -8,8 +8,9 @@ description: Schrijf de Meta ad copy (URL, primary text, headline, description) 
 Schrijft de ad copy van één concept en zet die klaar voor het launchen. Ad copy is niet de tekst in beeld: die staat in
 de briefing handleiding. Dit gaat over primary text, headline en description.
 
-> **De handleiding van het merk is leidend.** Opmaak, copytypes, schrijfregels en de naam van de copy staan in
-> `<Merk> – Ad copy handleiding Meta` en `<Merk> – Launch handleiding Meta` in Drive. Zie
+> **De regels van het merk zijn leidend.** Opmaak, copytypes en schrijfregels staan in
+> `<Merk> – Ad copy handleiding Meta` in Drive. De naam van de copy, de talen, de regio's en de vertaalinstructies
+> staan in de AI-instructies van het merk in Adflow. Zie
 > [bronnen.md](../../references/bronnen.md). Deze skill bevat alleen de generieke werkwijze.
 
 ## Tools
@@ -19,9 +20,10 @@ landingspagina aan een concept koppelen. Vind je geen tool die doet wat een stap
 omheen werken.
 
 ## Voordat je begint
-1. **Zoek de ad copy handleiding en de launch handleiding** van het merk in Drive en lees ze helemaal.
-2. **Bestaan ze niet?** Zeg dat. Werk met [voorbeelden.md](voorbeelden.md) als vertrekpunt en stel voor om de
-   handleidingen eerst op te zetten. Verzin geen merkspecifieke regels, ook niet voor talen en regio's.
+1. **Zoek de ad copy handleiding** van het merk in Drive en lees hem helemaal. Lees ook de **AI-instructies van het
+   merk in Adflow**: daar staan de regels voor launchen.
+2. **Bestaat de handleiding niet, of staat er in de AI-instructies niets over launchen?** Zeg dat. Werk met
+   [voorbeelden.md](voorbeelden.md) als vertrekpunt en stel voor om de regels eerst vast te leggen. Verzin geen merkspecifieke regels, ook niet voor talen en regio's.
 
 ## Stap 1: bronnen verzamelen
 Loop de vier bronnen af en zet de bevindingen kort onder elkaar.
@@ -29,7 +31,7 @@ Loop de vier bronnen af en zet de bevindingen kort onder elkaar.
 | Bron | Waar | Wat |
 |---|---|---|
 | Vergelijkbare ad | Adflow (zoek op dezelfde angle, persona of awareness) en de Copy library (zoek op dezelfde dims) | Copy van een ad met dezelfde soort hoek die goed liep |
-| Landingspagina | De pagina uit de brief, op het domein of de taalmap uit de launch handleiding | Productnaam, prijs, aanbod, aantallen, verzending |
+| Landingspagina | De pagina uit de brief, op het domein of de taalmap uit de AI-instructies van het merk | Productnaam, prijs, aanbod, aantallen, verzending |
 | Creative | De video of image van de ad | Hook en boodschap |
 | Concept en brief | Het conceptdocument en de brief in Adflow | Persona, angle, hook type, awareness |
 
@@ -59,13 +61,13 @@ description): de editor gebruikt dat teken voor nodes. Zie [adflow-documents.md]
 ## Stap 4: copy in de Copy library
 Eén concept krijgt één copy in de library. Die copy heeft een versie per taal, niet per regio.
 
-1. **Opzoeken.** Haal uit de launch handleiding de naam van de copy, de talen en de regio's. Haal de talen en markets
+1. **Opzoeken.** Haal uit de AI-instructies van het merk de naam van de copy, de talen en de regio's. Haal de talen en markets
    van het merk ook op in Adflow.
 2. **Bestaat hij al?** Zoek in de Copy library op de naam of via het concept. Bestaat hij, werk hem bij. Maak nooit
    een tweede aan.
-3. **Aanmaken.** Bestaat hij niet, maak hem aan met de naam uit de handleiding, de dims van het concept, de copy in
+3. **Aanmaken.** Bestaat hij niet, maak hem aan met de naam uit de AI-instructies, de dims van het concept, de copy in
    de mastertaal en de landingspagina als standaard-URL. Koppel hem aan het concept.
-4. **Vertalen.** Lees de mastertaal, vertaal per taal volgens de vertaalinstructies in de launch handleiding
+4. **Vertalen.** Lees de mastertaal, vertaal per taal volgens de vertaalinstructies in de AI-instructies van het merk
    (natuurlijk boven letterlijk, taalregels, notatie) en zet per taal één versie. Regio's met dezelfde taal delen die
    versie (bijvoorbeeld NL en BE-NL).
 5. **Market-versie alleen bij afwijking.** Wijkt een regio inhoudelijk af van zijn taal (andere valuta, ander aanbod,

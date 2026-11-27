@@ -109,5 +109,7 @@ Number every row so the user can approve by number. Keep "What is on screen" fac
 - Never create or rename Format values, and never remove values, without the user's approval.
 - One correction from the user about a value is a signal for the brand's `## Format` section: offer to add it there
   (a brand rule, not a change to this skill).
+- Is the brand's value list itself in doubt (values that are not a form, no descriptions)? Run `format-audit`
+  first, then tag.
 - Next step: with good coverage, a format analysis (spend first, then ROAS per format), then `static-format` or
   `video-format` for the formats the brand has not tested.

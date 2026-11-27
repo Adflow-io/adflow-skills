@@ -29,6 +29,8 @@ All six must be a yes. One no means it is a tag, a note or a field in the concep
 
 ## Every two or three months
 
+For the Format dimension, the skill `format-audit` runs these tests together with the format rules.
+
 | Test | Question | A no means |
 |---|---|---|
 | **Spread** | Do the values really differ between ads? If around 90% of ads share one value, the dimension teaches nothing. | Split the big value, or drop the dimension. |

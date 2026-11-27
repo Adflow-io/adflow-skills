@@ -1,5 +1,5 @@
 ---
-name: adset-plan
+name: meta-adset-plan
 description: "Make an adset plan for a pillar. It says which new Meta adsets the pillar needs, in which campaign, with which name, when they run and which adset they copy. Shows the plan as a table in the chat and, after the user's OK, saves a short version with the pillar in Adflow. Use when someone says 'maak een adset plan voor pillar X', 'welke adsets hebben we nodig voor deze pillar', 'make an adset plan', or brings a counter-proposal to an existing adset plan. Meta only. Never creates anything in Meta (use meta-adsets for that) and does not write ad copy or briefs."
 ---
 

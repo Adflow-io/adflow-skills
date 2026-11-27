@@ -23,8 +23,10 @@ Optional "text_style" in spec.json:
   "boxed"  (default) dark text on white rounded boxes, Avenir Next.
   "tiktok" white TikTok Sans (bold) with a dark outline, no box, centred like the TikTok/Reels "Classic" text.
            pos: "mid" (45%, default), "upper" (20%), "top" (30%), "low" (66%). "high" counts as "upper".
-           Emoji are drawn in colour (Apple Color Emoji on macOS). A warning is printed when a card leaves the
-           Reels safe zone (top 270 px and bottom 670 px kept free).
+           Emoji are drawn in colour (Apple Color Emoji on macOS).
+Both styles keep text inside the safe zone (see SAFE): lines that reach the lower right are wrapped narrower and
+centred in the usable width; a warning is printed if a card still leaves the zone. Storyboard stills show the zone
+as a red outline so product and faces can be checked too.
 Optional zoom (6th shot field, e.g. 1.3): zooms in from the top edge, so the subject moves down in the frame. Use it
 to make room above a product for text that must stay out of the top safe zone.
 """
@@ -62,16 +64,46 @@ def wrap(d, text, maxw=860):
 def card(text, path, pos="high"):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
     y = int(H * (0.60 if pos == "low" else 0.22)); lh, pad = 84, 26
-    for ln in wrap(d, text):
-        tw = d.textlength(ln, font=FONT); x = (W - tw) / 2
+    lines = wrap(d, text)
+    left, right = zone_for(y, y + len(lines) * (lh + 6))
+    if right < SAFE["right"]: lines = wrap(d, text, maxw=right - left - 2 * pad - 20)
+    cx = (left + right) / 2 if right < SAFE["right"] else W / 2
+    for ln in lines:
+        tw = d.textlength(ln, font=FONT); x = cx - tw / 2
         d.rounded_rectangle([x - pad, y - 10, x + tw + pad, y + lh - 4], radius=18, fill=(255, 255, 255, 240))
         d.text((x, y), ln, font=FONT, fill=(20, 20, 20, 255)); y += lh + 6
-    img.save(path); return path
+    img.save(path); check_safe(path, text); return path
 
 TT_FONT_PATH = os.path.join(HERE, "fonts", "TikTokSans.ttf")
 EMOJI_PATH = "/System/Library/Fonts/Apple Color Emoji.ttc"
 TT_POS = {"mid": 0.45, "upper": 0.20, "high": 0.20, "top": 0.30, "low": 0.66}
-SAFE_TOP, SAFE_BOTTOM = 270, H - 670   # Reels: keep the top 14% and bottom 35% free of text
+# Safe zone for 9:16 (Adflow template, scaled to 1080x1920). Important text and image stay inside:
+# x 73-1029 and y 283-1533, except the lower right (y >= 862), where the platform buttons sit: there x stays <= 887.
+SAFE = {"left": 73, "right": 1029, "top": 283, "bottom": 1533, "notch_y": 862, "notch_right": 887}
+
+def zone_for(y0, y1):
+    """Left/right limits for a text block between y0 and y1."""
+    right = SAFE["notch_right"] if y1 > SAFE["notch_y"] else SAFE["right"]
+    return SAFE["left"], right
+
+def check_safe(path, text):
+    a = Image.open(path).split()[3]; box = a.getbbox()
+    if not box: return
+    x0, y0, x1, y1 = box; px = a.load(); issues = []
+    if y0 < SAFE["top"]: issues.append(f"top {y0} < {SAFE['top']}")
+    if y1 > SAFE["bottom"]: issues.append(f"bottom {y1} > {SAFE['bottom']}")
+    if x0 < SAFE["left"]: issues.append(f"left {x0} < {SAFE['left']}")
+    for y in range(y0, y1):
+        lim = SAFE["notch_right"] if y >= SAFE["notch_y"] else SAFE["right"]
+        if any(px[x, y] for x in range(lim + 1, x1)): issues.append(f"right edge past {lim} at y {y}"); break
+    if issues: print(f"WARNING: text '{text}' leaves the safe zone: " + "; ".join(issues))
+
+def draw_safe(path):
+    """Thin outline of the safe zone on a storyboard still (not on renders)."""
+    im = Image.open(path).convert("RGB"); d = ImageDraw.Draw(im); c = (255, 60, 60)
+    L, R, T, B, NY, NR = SAFE["left"], SAFE["right"], SAFE["top"], SAFE["bottom"], SAFE["notch_y"], SAFE["notch_right"]
+    d.line([(L, T), (R, T), (R, NY), (NR, NY), (NR, B), (L, B), (L, T)], fill=c, width=4)
+    im.save(path, quality=92)
 
 def tt_font(size=84):
     f = ImageFont.truetype(TT_FONT_PATH, size)
@@ -86,15 +118,21 @@ def tt_card(text, path, pos="mid"):
     f = tt_font(); old = FONT; FONT = f
     text = text.replace("\ufe0f", "")
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
-    try: lines = wrap(d, text, maxw=900)
+    lh = 92; yc = int(H * TT_POS.get(pos, 0.45))
+    try:
+        lines = wrap(d, text, maxw=880)
+        left, right = zone_for(yc - len(lines) * lh // 2, yc + len(lines) * lh // 2 + 10)
+        if right - left - 40 < 880: lines = wrap(d, text, maxw=right - left - 40)
+        left, right = zone_for(yc - len(lines) * lh // 2, yc + len(lines) * lh // 2 + 10)
     finally: FONT = old
     try: emo_font = ImageFont.truetype(EMOJI_PATH, 160)
     except Exception: emo_font = None
-    lh = 92; y0 = int(H * TT_POS.get(pos, 0.45)) - len(lines) * lh // 2
+    y0 = yc - len(lines) * lh // 2
+    cx = (left + right) / 2 if right < SAFE["right"] else W / 2
     emw = 80
     def width(s): return sum(emw if is_emoji(c) else d.textlength(c, font=f) for c in s)
     for i, ln in enumerate(lines):
-        x = (W - width(ln)) / 2; y = y0 + i * lh
+        x = cx - width(ln) / 2; y = y0 + i * lh
         for ch in ln:
             if is_emoji(ch):
                 if emo_font:
@@ -105,10 +143,7 @@ def tt_card(text, path, pos="mid"):
             else:
                 d.text((x, y), ch, font=f, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(30, 30, 30, 255))
                 x += d.textlength(ch, font=f)
-    box = img.split()[3].getbbox()
-    if box and (box[1] < SAFE_TOP or box[3] > SAFE_BOTTOM):
-        print(f"WARNING: text '{text}' at y {box[1]}-{box[3]} leaves the safe zone ({SAFE_TOP}-{SAFE_BOTTOM}).")
-    img.save(path); return path
+    img.save(path); check_safe(path, text); return path
 
 VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps=30,setsar=1"
 
@@ -176,6 +211,7 @@ def main():
     if mode == "storyboard":
         items = [(seg(spec, tmp, f"hook{v}", h, still=True), f"HOOK {v} · {h[2]}s") for v, h in spec["hooks"].items()]
         items += [(seg(spec, tmp, f"b{i:02d}", b, still=True), f"{b[0]} · {b[2]}s") for i, b in enumerate(spec["body"])]
+        for p, _ in items: draw_safe(p)   # red outline = safe zone for text, product and faces
         total = list(spec["hooks"].values())[0][2] + sum(b[2] for b in spec["body"])
         p = label_sheet(items, 6, f"Storyboard · ±{total:.1f}s · hooks first, then the shared body", f"{out}/storyboard.jpg")
         print(p); return

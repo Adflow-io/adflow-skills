@@ -53,8 +53,8 @@ Requires on the machine: `ffmpeg`, `curl` and Python with Pillow. The script is
      the spec. Positions are then `mid` (45%, default), `upper`, `top` and `low`. Ask which style the user wants when
      the brief or reference does not make it clear.
    - **Safe zone (9:16, 1080×1920).** Important text **and** image (product, face, payoff) stay inside
-     x 73–1029 and y 283–1533; in the lower right (from y 862) the platform buttons sit, so there x stays ≤ 887.
-     Top and bottom matter most. The script wraps and centres text inside the zone, warns when a card still leaves
+     x 73–1029 and y 283–1533; in the lower right (from y 862) the platform buttons sit, so there x stays ≤ 887 (centred text may reach 90 px further so lines stay wide).
+     Top and bottom matter most. Text always stays centred on the frame; the script wraps it narrower where needed to stay inside the zone, warns when a card still leaves
      it, and draws the zone as a red outline on storyboard stills. No room above a product? Give the shot a 6th
      field `zoom` (for example `1.3`): it zooms in from the top so the product moves down and the text fits above it.
    - **No clip twice** in one variant, and repeat the same setting (the same stand or table) as little as possible.

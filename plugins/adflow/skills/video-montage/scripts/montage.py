@@ -24,8 +24,8 @@ Optional "text_style" in spec.json:
   "tiktok" white TikTok Sans (bold) with a dark outline, no box, centred like the TikTok/Reels "Classic" text.
            pos: "mid" (45%, default), "upper" (20%), "top" (30%), "low" (66%). "high" counts as "upper".
            Emoji are drawn in colour (Apple Color Emoji on macOS).
-Both styles keep text inside the safe zone (see SAFE): lines that reach the lower right are wrapped narrower and
-centred in the usable width; a warning is printed if a card still leaves the zone. Storyboard stills show the zone
+Both styles keep text inside the safe zone (see SAFE): lines that reach the lower right are wrapped narrower
+(symmetrically, so text always stays centred on the frame); a warning is printed if a card still leaves the zone. Storyboard stills show the zone
 as a red outline so product and faces can be checked too.
 Optional zoom (6th shot field, e.g. 1.3): zooms in from the top edge, so the subject moves down in the frame. Use it
 to make room above a product for text that must stay out of the top safe zone.
@@ -59,15 +59,35 @@ def wrap(d, text, maxw=860):
         t = (cur + " " + x).strip()
         if d.textlength(t, font=FONT) <= maxw: cur = t
         else: lines.append(cur); cur = x
-    return lines + [cur]
+    lines.append(cur)
+    # Same number of lines, but balanced: minimise the widest line (no orphan word on the last line).
+    k, n = len(lines), len(w)
+    width = lambda i, j: d.textlength(" ".join(w[i:j]), font=FONT)
+    from functools import lru_cache
+    @lru_cache(None)
+    def split(i, parts):
+        if parts == 1: return (width(i, n), (n,))
+        bestc = None
+        for j in range(i + 1, n - parts + 2):
+            m = max(width(i, j), split(j, parts - 1)[0])
+            if bestc is None or m < bestc[0]: bestc = (m, (j,) + split(j, parts - 1)[1])
+        return bestc
+    for kk in range(2, k + 1):   # fewest lines that fit, then balanced
+        m, cuts = split(0, kk)
+        if m <= maxw: break
+    if m > maxw: return lines
+    out, i = [], 0
+    for j in cuts: out.append(" ".join(w[i:j])); i = j
+    return out
 
 def card(text, path, pos="high"):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
     y = int(H * (0.60 if pos == "low" else 0.22)); lh, pad = 84, 26
     lines = wrap(d, text)
     left, right = zone_for(y, y + len(lines) * (lh + 6))
-    if right < SAFE["right"]: lines = wrap(d, text, maxw=right - left - 2 * pad - 20)
-    cx = (left + right) / 2 if right < SAFE["right"] else W / 2
+    half = min(W / 2 - left, right + NOTCH_TOLERANCE - W / 2)   # stay centred on the frame
+    if 2 * half < 860 + 2 * pad: lines = wrap(d, text, maxw=2 * half - 2 * pad - 10)
+    cx = W / 2
     for ln in lines:
         tw = d.textlength(ln, font=FONT); x = cx - tw / 2
         d.rounded_rectangle([x - pad, y - 10, x + tw + pad, y + lh - 4], radius=18, fill=(255, 255, 255, 240))
@@ -80,6 +100,7 @@ TT_POS = {"mid": 0.45, "upper": 0.20, "high": 0.20, "top": 0.30, "low": 0.66}
 # Safe zone for 9:16 (Adflow template, scaled to 1080x1920). Important text and image stay inside:
 # x 73-1029 and y 283-1533, except the lower right (y >= 862), where the platform buttons sit: there x stays <= 887.
 SAFE = {"left": 73, "right": 1029, "top": 283, "bottom": 1533, "notch_y": 862, "notch_right": 887}
+NOTCH_TOLERANCE = 90   # centred text may reach 90 px into the button column, so lines don't get too narrow
 
 def zone_for(y0, y1):
     """Left/right limits for a text block between y0 and y1."""
@@ -94,7 +115,7 @@ def check_safe(path, text):
     if y1 > SAFE["bottom"]: issues.append(f"bottom {y1} > {SAFE['bottom']}")
     if x0 < SAFE["left"]: issues.append(f"left {x0} < {SAFE['left']}")
     for y in range(y0, y1):
-        lim = SAFE["notch_right"] if y >= SAFE["notch_y"] else SAFE["right"]
+        lim = SAFE["notch_right"] + NOTCH_TOLERANCE if y >= SAFE["notch_y"] else SAFE["right"]
         if any(px[x, y] for x in range(lim + 1, x1)): issues.append(f"right edge past {lim} at y {y}"); break
     if issues: print(f"WARNING: text '{text}' leaves the safe zone: " + "; ".join(issues))
 
@@ -122,13 +143,13 @@ def tt_card(text, path, pos="mid"):
     try:
         lines = wrap(d, text, maxw=880)
         left, right = zone_for(yc - len(lines) * lh // 2, yc + len(lines) * lh // 2 + 10)
-        if right - left - 40 < 880: lines = wrap(d, text, maxw=right - left - 40)
-        left, right = zone_for(yc - len(lines) * lh // 2, yc + len(lines) * lh // 2 + 10)
+        half = min(W / 2 - left, right + NOTCH_TOLERANCE - W / 2)   # stay centred: narrow lines symmetrically
+        if 2 * half - 30 < 880: lines = wrap(d, text, maxw=2 * half - 30)
     finally: FONT = old
     try: emo_font = ImageFont.truetype(EMOJI_PATH, 160)
     except Exception: emo_font = None
     y0 = yc - len(lines) * lh // 2
-    cx = (left + right) / 2 if right < SAFE["right"] else W / 2
+    cx = W / 2
     emw = 80
     def width(s): return sum(emw if is_emoji(c) else d.textlength(c, font=f) for c in s)
     for i, ln in enumerate(lines):

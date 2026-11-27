@@ -14,7 +14,8 @@ Back to the [gallery](../format-gallery.md) · rules in [format-classification.m
 
 - **B-roll with text:** no one speaks; text on screen carries the story.
 - **Behind the scenes:** the footage shows making, packing or the workplace.
-- **Product demo:** one sustained use of the product, not mixed footage.
+- **Product demo:** one sustained use of the product, not mixed footage. Shots of pouring or using the product inside
+  mixed footage under a voice stay B-roll with voice-over.
 - **Talking head:** the speaker is on screen for most of the video.
 
 ## Quick test

@@ -11,6 +11,8 @@ pick a format, or tag a concept.
    thumbnail shows one moment and the ad name says what was planned, not what was made.
 2. **Speech is not song lyrics.** Check where the audio comes from. When it is marked as lyrics or sung, nobody is
    speaking: there is only music. A video with only music and text on screen is not a talking head or a voice-over.
+   When the source is marked uncertain: a few loose words count as no speech; running sentences count as speech.
+   An analysis marked partial is usable when the picture and the speech cover the whole video.
 3. **Text on screen is not always a caption.** Tell subtitles of what is said apart from text that carries the ad on
    its own, such as a comment bubble or a headline.
 4. **Names are not in the analysis.** It describes people ("a woman in a kitchen"), not who they are. Do not conclude

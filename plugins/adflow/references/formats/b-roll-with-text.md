@@ -15,7 +15,10 @@ Back to the [gallery](../format-gallery.md) · rules in [format-classification.m
 
 - **B-roll with voice-over:** a spoken voice carries the story.
 - **Animation:** the picture is drawn, motion graphics or rendered.
-- **Product demo:** one sustained use of the product carries the video, the text only labels it.
+- **Product demo:** one sustained use of the product carries the video, the text only labels it. A text card only at
+  the start, then the use carries the rest: Product demo.
+- **Product hero (static):** a short video that is a static in motion (product placed or moving, big text carries the
+  message) is still a video: tag it B-roll with text.
 
 ## Quick test
 

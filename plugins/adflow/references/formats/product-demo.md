@@ -16,6 +16,8 @@ Back to the [gallery](../format-gallery.md) · rules in [format-classification.m
 - **POV:** the same use filmed first-person, hands in frame.
 - **Unboxing / Try-on / First-try reaction:** opening a package, showing how it looks on, or a first reaction.
 - **Behind the scenes:** making or packing the product, not using it.
+- **B-roll with voice-over / B-roll with text:** when a voice or text carries the story over changing shots (some of
+  them pouring or using the product), it is B-roll. It is Product demo only when the use itself is the story.
 
 ## Quick test
 

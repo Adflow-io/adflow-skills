@@ -22,17 +22,25 @@ and format performance can be trusted. It serves step **E (feedback)** of the
    - the brand's **Format dimension** in Adflow and its values (the name or slug can differ, for example a renamed
      dimension). No Format dimension? Stop, say so, and ask whether to create one (see
      [dimension-hygiene.md](../../references/dimension-hygiene.md));
-   - the `## Format` section in the brand's AI instructions, if there is one: its definitions win;
+   - the `## Format` section in the brand's AI instructions, if there is one: its definitions win. The brand
+     instructions come along with the Adflow responses for that brand; no `## Format` section? Say so;
    - for everything the brand did not define: the cards in [format-gallery.md](../../references/format-gallery.md)
      and `references/formats/`.
+   - Check the brand's existing values against the rules. Values that are not a form (a message, a sender, a
+     production style) stay usable, but list them under "Values that are not a format" with the matching gallery
+     format, so the user can decide.
 3. **Find what needs a tag.** Pull performance for the period and see which spend already has a Format value and
-   which does not. Report the coverage first: the share of spend that is tagged. Then list the untagged creatives,
-   most spend first, grouped per concept (one creative family: all ads and markets of the same creative together).
+   which does not. Grouping performance by the brand's own Format dimension may not work; then filter on all its
+   values for the tagged spend, pull the same period unfiltered, and take the difference per creative. Report the
+   coverage first: the share of total spend that is tagged. Then list the untagged creatives, most spend first, one
+   row per creative family (all ads, sizes and markets of the same creative together). The concept code in the ad
+   name may be used to group rows, never to judge them; link each row to its concept before writing.
    Already tagged ones are only in scope for an audit; never change them without asking.
 4. **Look at each creative.** Judge what is on screen, never the thumbnail, the ad name or the concept title:
    - **Video:** the per-second analysis in Adflow, following [judging-video.md](../../references/judging-video.md).
      Song lyrics are not speech; text on screen is not always a caption. No analysis? Leave it open and say so.
-   - **Static:** the image, and read the text on it yourself.
+   - **Static:** the image, and read the text on it yourself. An ad shows one size; open the creative itself when
+     the sizes might differ.
    - Adflow's own automatic format label may be a hint. It uses other names and is never the answer.
 5. **Pick the value** with the decision tree and the cards in
    [format-classification.md](../../references/format-classification.md):
@@ -57,13 +65,15 @@ and format performance can be trusted. It serves step **E (feedback)** of the
 ```
 # Format tags — <brand> · <period> · coverage <x>% of spend tagged
 
-| # | Concept | Spend share | What is on screen (1 line) | Format | Zeker/twijfel | Note |
-|---|---|---|---|---|---|---|
-| 1 | <concept name or number> | 12% | woman talks to camera in her car, product in hand | Talking head | zeker | Creator: founder? not confirmed |
-| 2 | … | 8% | split image, old vs new product | Split screen | twijfel | or Comparison table: no rows, so Split screen |
-| 3 | … | 5% | no per-second analysis | — | open | please check by eye |
+| # | Concept | Spend share | What is on screen (1 line) | Format (brand value) | Gallery format | Zeker/twijfel | Note |
+|---|---|---|---|---|---|---|---|
+| 1 | <concept name or number> | 12% | woman talks to camera in her car, product in hand | <brand value> | Talking head | zeker | Creator: founder? not confirmed |
+| 2 | … | 8% | split image, old vs new product | — (no brand value) | Split screen | twijfel | or Comparison table: no rows, so Split screen |
+| 3 | … | 5% | no per-second analysis | — | — | open | please check by eye |
 
+Spend share = share of the brand's total spend in the period.
 Missing brand values: <gallery format> for #… (propose to add?)
+Values that are not a format: <brand value> → <gallery format or other dimension>
 Conflicts: <concept already tagged with another value>
 Which rows may I write? (for example "all zeker", "1–5, 8")
 ```

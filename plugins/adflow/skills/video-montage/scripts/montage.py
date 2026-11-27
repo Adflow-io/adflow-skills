@@ -17,10 +17,21 @@ spec.json:
   "hooks": {"V1": ["Received", 0.3, 2.2, "Hook text", "low"]},
   "body":  [["Received", 6.3, 1.4, null], ["Product", 4.0, 2.2, "On-screen text"]]
 }
-Shot = [clip, start_sec, duration_sec, text|null, pos] with pos "high" (22%, default) or "low" (60%, below faces).
+Shot = [clip, start_sec, duration_sec, text|null, pos, zoom] with pos "high" (22%, default) or "low" (60%, below faces).
+
+Optional "text_style" in spec.json:
+  "boxed"  (default) dark text on white rounded boxes, Avenir Next.
+  "tiktok" white TikTok Sans (bold) with a dark outline, no box, centred like the TikTok/Reels "Classic" text.
+           pos: "mid" (45%, default), "upper" (20%), "top" (30%), "low" (66%). "high" counts as "upper".
+           Emoji are drawn in colour (Apple Color Emoji on macOS). A warning is printed when a card leaves the
+           Reels safe zone (top 270 px and bottom 670 px kept free).
+Optional zoom (6th shot field, e.g. 1.3): zooms in from the top edge, so the subject moves down in the frame. Use it
+to make room above a product for text that must stay out of the top safe zone.
 """
 import json, os, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
+
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 W, H = 1080, 1920
 FONT_PATH = "/System/Library/Fonts/Avenir Next.ttc"
@@ -57,18 +68,68 @@ def card(text, path, pos="high"):
         d.text((x, y), ln, font=FONT, fill=(20, 20, 20, 255)); y += lh + 6
     img.save(path); return path
 
+TT_FONT_PATH = os.path.join(HERE, "fonts", "TikTokSans.ttf")
+EMOJI_PATH = "/System/Library/Fonts/Apple Color Emoji.ttc"
+TT_POS = {"mid": 0.45, "upper": 0.20, "high": 0.20, "top": 0.30, "low": 0.66}
+SAFE_TOP, SAFE_BOTTOM = 270, H - 670   # Reels: keep the top 14% and bottom 35% free of text
+
+def tt_font(size=84):
+    f = ImageFont.truetype(TT_FONT_PATH, size)
+    f.set_variation_by_axes([36, 100, 740, 0])   # opsz, width, weight (bold), slant
+    return f
+
+def is_emoji(ch): return ord(ch) >= 0x1F000 or 0x2190 <= ord(ch) <= 0x2BFF
+
+def tt_card(text, path, pos="mid"):
+    """White TikTok Sans with a 4 px dark outline, centred, colour emoji; same wrapping as the boxed style."""
+    global FONT
+    f = tt_font(); old = FONT; FONT = f
+    text = text.replace("\ufe0f", "")
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    try: lines = wrap(d, text, maxw=900)
+    finally: FONT = old
+    try: emo_font = ImageFont.truetype(EMOJI_PATH, 160)
+    except Exception: emo_font = None
+    lh = 92; y0 = int(H * TT_POS.get(pos, 0.45)) - len(lines) * lh // 2
+    emw = 80
+    def width(s): return sum(emw if is_emoji(c) else d.textlength(c, font=f) for c in s)
+    for i, ln in enumerate(lines):
+        x = (W - width(ln)) / 2; y = y0 + i * lh
+        for ch in ln:
+            if is_emoji(ch):
+                if emo_font:
+                    e = Image.new("RGBA", (180, 180), (0, 0, 0, 0))
+                    ImageDraw.Draw(e).text((0, 0), ch, font=emo_font, embedded_color=True)
+                    if e.getbbox(): img.alpha_composite(e.crop(e.getbbox()).resize((72, 72)), (int(x + 6), int(y + 12)))
+                x += emw
+            else:
+                d.text((x, y), ch, font=f, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(30, 30, 30, 255))
+                x += d.textlength(ch, font=f)
+    box = img.split()[3].getbbox()
+    if box and (box[1] < SAFE_TOP or box[3] > SAFE_BOTTOM):
+        print(f"WARNING: text '{text}' at y {box[1]}-{box[3]} leaves the safe zone ({SAFE_TOP}-{SAFE_BOTTOM}).")
+    img.save(path); return path
+
 VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps=30,setsar=1"
 
+def zoom_vf(z):
+    w, h = int(W * z) // 2 * 2, int(H * z) // 2 * 2
+    return f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={W}:{H}:(iw-{W})/2:0,fps=30,setsar=1"
+
 def seg(spec, tmp, tag, shot, still=False):
-    clip, ss, dur, text = shot[:4]; pos = shot[4] if len(shot) > 4 else "high"
+    clip, ss, dur, text = shot[:4]
+    tiktok = spec.get("text_style") == "tiktok"
+    pos = shot[4] if len(shot) > 4 and shot[4] else ("mid" if tiktok else "high")
+    vf = zoom_vf(float(shot[5])) if len(shot) > 5 and shot[5] else VF
+    make_card = tt_card if tiktok else card
     url = spec["clips"][clip]["url"]
     t = ss + dur * 0.6 if still else ss
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(t)] + ([] if still else ["-t", str(dur)]) + ["-i", url]
     if text:
-        cmd += ["-i", card(text, f"{tmp}/{tag}.png", pos), "-filter_complex",
-                f"[0:v]{VF}[v];[v][1:v]overlay=0:0,format=yuv420p[o]", "-map", "[o]"]
+        cmd += ["-i", make_card(text, f"{tmp}/{tag}.png", pos), "-filter_complex",
+                f"[0:v]{vf}[v];[v][1:v]overlay=0:0,format=yuv420p[o]", "-map", "[o]"]
     else:
-        cmd += ["-vf", VF + ",format=yuv420p"]
+        cmd += ["-vf", vf + ",format=yuv420p"]
     out = f"{tmp}/{tag}.{'jpg' if still else 'mp4'}"
     cmd += (["-frames:v", "1", "-update", "1"] if still else ["-an", "-c:v", "libx264", "-preset", "medium", "-crf", "18"]) + [out]
     subprocess.run(cmd, check=True); return out

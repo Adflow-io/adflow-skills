@@ -40,6 +40,7 @@ S4 voorzet, S5 script (video), S6 brief, daarna ad copy en launch, en feedback u
 | Na S6 (static) | `static-qa` (laatste check van een opgeleverde static vóór die naar de klant gaat) |
 | Naamgeving | `naming` |
 | Ad copy en Copy library | `meta-copy` |
+| Vóór launch (Meta) | `adset-plan` (adset plan per pillar: welke nieuwe adsets, in welke campagne, met welke naam en looptijd), daarna `meta-adsets` (de adsets uit het plan als lege, gepauzeerde concepten aanmaken) |
 | Na launch (Meta) | `meta-partnership-ads` (creators uit het concept als partner koppelen aan de gelanceerde ads) |
 
 ## Wijzigingen in 0.2.0

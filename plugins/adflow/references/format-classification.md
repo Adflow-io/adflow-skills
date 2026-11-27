@@ -1,7 +1,8 @@
 # Format classification: which Format value an ad gets
 
 How to decide which value of a brand's **Format** dimension an ad gets, so that everyone on the team tags the same ad
-the same way. Use it when tagging a concept or an ad, and when auditing existing tags. For the rules on adding a new
+the same way. Use it when tagging a concept or an ad, and when auditing existing tags; the skill `format-tag` applies
+it to a batch of concepts. For the rules on adding a new
 dimension or value, see [dimension-hygiene.md](dimension-hygiene.md). For ideas on which formats to make, see
 [static-formats.md](static-formats.md) and [ugc-format-templates.md](ugc-format-templates.md): those are idea lists and
 also contain creative types that are not a format under the rules below.
